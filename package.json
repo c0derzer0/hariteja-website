@@ -1,0 +1,10 @@
+{
+  "name": "hariteja-website",
+  "version": "1.0.0",
+  "description": "Personal website for Hari Teja",
+  "scripts": {
+    "dev": "hugo server -D",
+    "build": "hugo --minify",
+    "clean": "rm -rf public resources"
+  }
+}
