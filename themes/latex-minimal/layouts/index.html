@@ -1,0 +1,56 @@
+{{ define "main" }}
+<div class="home">
+    <section class="hero">
+        <h1>{{ .Site.Title }}</h1>
+        <p class="tagline">{{ .Site.Params.description }}</p>
+
+        <div class="quick-links">
+            <a href="/about/">About</a>
+            <span class="separator">·</span>
+            <a href="https://github.com/c0derzer0">GitHub</a>
+            <span class="separator">·</span>
+            <a href="https://linkedin.com/in/hari-teja-at-linkedn">LinkedIn</a>
+            <span class="separator">·</span>
+            <a href="mailto:contactme.teja@gmail.com">Email</a>
+        </div>
+    </section>
+
+    {{ if .Content }}
+    <div class="intro">
+        {{ .Content }}
+    </div>
+    {{ end }}
+
+    <section class="highlights">
+        <div class="column">
+            <h2>Recent Writing</h2>
+            {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
+            <article class="item">
+                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                <p>{{ .Summary | truncate 120 }}</p>
+            </article>
+            {{ end }}
+            <a href="/posts/" class="see-all">→ All posts</a>
+        </div>
+
+        <div class="column">
+            <h2>Featured Work</h2>
+            <article class="item">
+                <h3><a href="/exploration/#building-earth-from-pixels">Building Earth from Pixels</a></h3>
+                <p>3D reconstruction from satellite imagery with 120x speedup.</p>
+            </article>
+            <article class="item">
+                <h3><a href="/exploration/#teaching-machines-to-navigate-the-web">LLaMA Browser Agent</a></h3>
+                <p>Fine-tuned LLaMA-3.2B for autonomous web navigation.</p>
+            </article>
+            <article class="item">
+                <h3><a href="/exploration/#the-journey-into-probabilistic-reasoning">Probabilistic Reasoning</a></h3>
+                <p>Novel Recurrent-SPMNs architecture for sequential decision-making.</p>
+            </article>
+            <a href="/exploration/" class="see-all">→ Explore my journey</a>
+        </div>
+    </section>
+
+</div>
+{{ end }}

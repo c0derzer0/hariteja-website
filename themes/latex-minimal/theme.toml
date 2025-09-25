@@ -1,0 +1,8 @@
+name = "LaTeX Minimal"
+license = "MIT"
+description = "A minimal Hugo theme with LaTeX-inspired typography"
+homepage = ""
+min_version = "0.41"
+
+[author]
+  name = "Hari Teja"

@@ -1,0 +1,1 @@
+Thoughts on AI, philosphy, economics, mind and the journey of learning.

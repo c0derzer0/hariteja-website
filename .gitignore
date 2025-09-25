@@ -1,0 +1,21 @@
+# Hugo default build directory
+/public/
+/resources/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Hugo cache
+.hugo_build.lock

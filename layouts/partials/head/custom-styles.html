@@ -1,0 +1,10 @@
+{{ range $.Site.Params.customSCSS }}
+  {{ if resources.Get . }}
+    {{ $styles := resources.Get . | toCSS | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+  {{ end }}
+{{ end }}
+
+<!-- LaTeX-style font override - MUST load last -->
+<link rel="stylesheet" href="{{ "css/latex-override.css" | relURL }}">
+<script src="{{ "js/force-latex-font.js" | relURL }}" defer></script>
