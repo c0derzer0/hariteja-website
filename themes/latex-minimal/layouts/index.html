@@ -24,12 +24,28 @@
     <section class="highlights">
         <div class="column">
             <h2>Recent Writing</h2>
-            {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
+            {{ $postsSection := .Site.GetPage "section" "posts" }}
+            {{ if $postsSection.Content }}
+            <div class="posts-intro">
+                <p>{{ $postsSection.Summary | truncate 150 }}</p>
+            </div>
+            {{ end }}
+            {{ $posts := where .Site.RegularPages "Type" "posts" }}
+            {{ if $posts }}
+            <h3>Latest Posts</h3>
+            {{ range first 3 $posts }}
             <article class="item">
-                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
                 <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-                <p>{{ .Summary | truncate 120 }}</p>
             </article>
+            {{ end }}
+            {{ else }}
+            <p><em>Posts coming soon...</em></p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li>• GPU Programming Foundations (in progress)</li>
+                <li>• Building Effective AI Agents (planned)</li>
+                <li>• Complexity as Illusion (planned)</li>
+            </ul>
             {{ end }}
             <a href="/posts/" class="see-all">→ All posts</a>
         </div>
