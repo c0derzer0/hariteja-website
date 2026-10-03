@@ -1,5 +1,5 @@
 ---
-title: "BELIEVE: What Agent Memory Is Missing"
+title: "What Agent Memory Is Missing"
 tags: ["AI", "Agents", "Memory", "Bayesian Networks", "LLMs"]
 date: 2026-10-03
 draft: false

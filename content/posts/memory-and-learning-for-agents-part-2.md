@@ -1,5 +1,5 @@
 ---
-title: "BELIEVE, Part 2: A Memory That Knows How Sure It Is"
+title: "A Memory That Knows How Sure It Is"
 tags: ["AI", "Agents", "Memory", "Bayesian Networks", "LLMs"]
 date: 2026-10-03
 draft: false
