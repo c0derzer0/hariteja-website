@@ -1,11 +1,11 @@
 ---
-title: "Wealth, Value and Growth, Seen Through One Small Firm"
-tags: ["Economics", "AI", "Labor", "First Principles"]
+title: "Wealth, Value and Growth, Seen Through One Tutoring Center"
+tags: ["Economics", "First Principles"]
 date: 2026-10-16
 draft: true
 series: "Economics from First Principles"
 series_order: 1
-summary: "I'm learning economics from the definitions up, the way I'd learn a new ML subfield. Part 1: what wealth is, how value gets created and split, what growth means, and where money comes from, all worked through one small bookkeeping firm. AI shows up at the end as a set of questions."
+summary: "Learning economics from the definitions up, the way I'd learn a new ML subfield. Part 1: what wealth is, how value gets created and split, marginal thinking, opportunity cost, what growth means, and where money comes from, all worked through one small tutoring center."
 ---
 
 I want to understand what AI will do to the economy: to wages, to jobs, to who gets rich and who doesn't. I realized I couldn't reason about that well without the basics. Most takes on AI and labor skip straight to conclusions, and I couldn't tell which ones were built on solid ground.
@@ -16,17 +16,17 @@ To keep things concrete, I'll run every idea through one example.
 
 ---
 
-## The Firm
+## The Example
 
-Monet runs a small bookkeeping firm. The numbers are made up but realistic enough.
+Sam runs a small tutoring center.
 
-- 4 bookkeepers, each handling 25 small-business clients
-- Each client pays $400 a month
-- Software, office and supplies cost $4,000 a month
-- Each bookkeeper is paid $6,000 a month
-- Monet borrowed $60,000 from a bank to set up the office
+- 2 tutors, each teaching 10 students
+- Parents pay $100 a month per student
+- Books, supplies and electricity cost $200 a month
+- Each tutor is paid $600 a month
+- Sam borrowed $5,000 from a bank to open the center
 
-That's 100 clients and $40,000 a month in revenue. Hold onto these numbers. Every section below uses them.
+That's 20 students and $2,000 a month coming in.
 
 ---
 
@@ -34,168 +34,188 @@ That's 100 clients and $40,000 a month in revenue. Hold onto these numbers. Ever
 
 **Wealth is a stock of things that can provide benefits in the future.**
 
-Two parts of that definition do the work. *Stock* means it's what you have at a moment, as opposed to *income*, which is a flow over time. A lake versus the river feeding it. *Future benefits* means something counts as wealth because of what it can do later. A thing with no future use is worth nothing, whatever it cost.
+**Stock** means an amount measured at one point in time. If you froze time today and listed everything Sam owns (the classroom, the books, the money in her account, her own teaching skill), that list is a stock. Her monthly profit isn't part of it. Profit arrives over time, and it adds to the stock.
 
-There are two kinds, and the difference matters more than anything else in this post:
+**Future benefits** means what something will do for you from now on. The classroom is wealth because students can be taught in it for years to come. If the building were condemned tomorrow, it would be worth nothing, no matter what Sam paid for it. What something cost in the past doesn't matter. What it can do going forward does.
 
-- **Real wealth** is the actual productive stuff: land, buildings, machines, software, skills, knowledge.
-- **Financial wealth** is claims: cash, bank deposits, loans, stocks, bonds. Every financial asset is someone else's liability.
+Wealth comes in two kinds, and it's worth separating them early. One kind actually adds to what a society has. The other only records who owes what to whom. Mixing them up leads to classic mistakes, like believing a country gets richer by printing money or piling up debt.
 
-The test is simple: *is it anyone's debt?* If yes, it's financial. If not, it's real.
+- **Real wealth** is the actual productive stuff: land, buildings, tools, skills, knowledge.
+- **Financial wealth** is claims: cash, bank deposits, loans, stocks, bonds.
 
-Here's Monet's firm sorted:
+To tell them apart, ask: *is it someone else's debt?* A bank deposit is money the bank owes you. A loan is money someone owes the bank. Every financial asset is one person's asset and another person's obligation. Real wealth isn't owed by anyone. A classroom just exists.
+
+Here's Sam's center sorted that way:
 
 | Item | Kind | Who owns it |
 | --- | --- | --- |
-| Computers, software, office furniture | Real | Monet |
-| Client relationships and reputation | Real | Monet, loosely |
-| Bookkeepers' skills | Real | **The bookkeepers** |
-| Monet's bank balance | Financial | Monet (the bank's liability) |
-| The $60,000 loan | Financial | The bank (Monet's liability) |
-| Invoices clients haven't paid yet | Financial | Monet (the clients' liability) |
+| Classroom and books | Real | Sam |
+| Reputation with parents | Real | Sam, loosely |
+| Tutors' teaching skill | Real | **The tutors** |
+| Sam's bank balance | Financial | Sam (the bank owes it to her) |
+| The $5,000 loan | Financial | The bank (Sam owes it) |
 
-Two things stand out.
+Sorting it this way shows two things you'd never see from the center's revenue or bank balance.
 
-First, the most valuable real asset in the firm is the bookkeepers' skill, and Monet doesn't own it. It goes home every evening. Economists call skill **human capital**, and for most working people it's their largest asset, larger than savings or a house. But it's an odd asset. You can't sell it, can't borrow against it, it fades if unused, and it's worth only what the market will pay for it. Keep that last point in mind for the AI section.
+**First, the most valuable asset isn't Sam's.** What parents really pay for is the tutors' ability to teach. Sam doesn't own that. If her best tutor quits tomorrow, the center loses its most valuable asset and she can't stop it. Economists call skill **human capital**, and for most working people it's their largest asset, bigger than savings or a house. But it's an odd asset. You can't sell it, can't borrow against it, it fades if unused, and it's worth only what the market will pay for it. That last point will matter a lot later in this series.
 
-Second, financial claims cancel out. Monet's loan is an asset for the bank and a liability for her. Add up every claim in an economy and they net to zero. Printing more claims doesn't make a society richer. Only more real wealth does.
+**Second, financial claims cancel out.** Sam's $5,000 loan is an asset for the bank and an equal debt for her. Add up every claim in an economy and they net to zero. Creating more claims doesn't make a society richer. Only more real wealth does.
 
-That doesn't make finance pointless. *Net to zero* is not the same as *zero-sum*. The bank's loan let Monet build a firm that now produces something real. Both sides came out ahead. Financial claims are plumbing that moves resources to people who can create real wealth.
+That doesn't make finance pointless. *Net to zero* is not the same as *zero-sum*. The loan let Sam open a center that now teaches 20 students. Both she and the bank came out ahead. Financial claims are plumbing that moves resources to people who can create real wealth.
 
-**Land** is a useful edge case. It's real wealth, since it isn't anyone's debt. But nobody can make more of it, so when land prices rise because a city gets richer, landowners gain without producing anything. Those gains behave more like transfers than creation.
+**Land is a useful edge case.** It's real wealth, since nobody owes it. But no one can make more of it, and that changes how its value behaves. Say Sam owns the small lot her center sits on, worth $20,000. A subway station opens nearby, and the lot is now worth $40,000. Sam is $20,000 richer, yet nothing new exists: no extra classroom, no better teaching. Her gain comes from what future buyers or renters will have to pay for that spot. It's money moving from them to her, a **transfer**. Compare that with Sam hiring a great tutor whose students learn more. That's value that didn't exist before, **creation**.
 
 ---
 
 ## Creating Value vs. Capturing It
 
+So far we've looked at what Sam's center *has*. This section is about what it *does*: create value, and split it among the people involved.
+
 **Value is created when something is worth more to people than the resources used up to make it.**
 
-Monet's clients pay $400 a month. But what is the service worth to them? Say each client values it at $1,000 a month: time they'd otherwise spend on books, plus avoided tax penalties. Then across 100 clients:
+Parents pay Sam $100 a month per student. But what is tutoring actually worth to them? Better grades, a calmer kid, fewer fights over homework. Say each family would happily pay up to $250 a month for it. Then across 20 students:
 
 | | Per month |
 | --- | --- |
-| Worth to clients | $100,000 |
-| Resources used up (software, office) | −$4,000 |
-| **Value created** | **$96,000** |
+| Worth to parents (20 × $250) | $5,000 |
+| Resources used up (books, supplies, electricity) | −$200 |
+| **Value created** | **$4,800** |
 
-Now, who gets it? That's **value capture**, and it's a separate question.
+That $4,800 didn't exist before the center opened. It's new.
 
-| Who | Captures |
-| --- | --- |
-| Clients (worth $1,000, paid $400) | $60,000 |
-| Bookkeepers (wages) | $24,000 |
-| Monet (profit) | $12,000 |
-| **Total** | **$96,000** |
+Who gets it is a separate question. Economists call this **value capture**: how much of the value each party ends up with.
 
-A few things I didn't appreciate before working through this:
+| Who | How | Captures |
+| --- | --- | --- |
+| Parents | Worth $250, paid $100, 20 students | $3,000 |
+| Tutors | Wages, 2 × $600 | $1,200 |
+| Sam | What's left: $2,000 − $200 − $1,200 | $600 |
+| **Total** | | **$4,800** |
 
-**Wages aren't lost value.** It's tempting to see wages as a cost that eats into value. From Monet's point of view, they are. From society's point of view, wages are just the bookkeepers' share of what got created. If the bookkeepers captured everything and Monet made zero profit, the firm would still have created $96,000 of value.
+Three things in this table are easy to miss.
 
-**The biggest share went to the clients.** The gap between what something is worth to you and what you pay is called **consumer surplus**. It's real value, and it's often the largest slice.
+**Wages aren't lost value.** From Sam's point of view, the tutors' pay is a cost. From everyone's point of view combined, it's just the tutors' share of the $4,800. If the tutors took everything and Sam made zero profit, the center would still have created exactly the same value. Only the split would change.
 
-**GDP doesn't see most of it.** GDP measures value added at market prices: here, $40,000 of revenue minus $4,000 of inputs, so $36,000. The $60,000 of client surplus is invisible to it. That matters later, because if AI makes services much cheaper, a lot of the gain may show up as surplus that GDP never counts.
+**The biggest share went to the parents.** The gap between what something is worth to you and what you pay for it is called **consumer surplus**. Parents get $150 of value per month per child that they never pay for. It's often the largest slice, and it's easy to forget because no money changes hands for it.
 
-How much each party captures comes down to **bargaining power**: how replaceable you are, what alternatives the other side has, and whether you own anything. Value creation and value capture can come completely apart. Open source maintainers create enormous value and capture little. Monopolies can capture a lot while creating little.
+**The official numbers miss most of it.** GDP, the standard measure of an economy's output, counts only what's paid for, minus what's used up: $2,000 − $200 = $1,800. That's the tutors' $1,200 plus Sam's $600. The parents' $3,000 never shows up. This matters later: when a service gets much cheaper, much of the gain can land in exactly this invisible slice.
+
+What decides the split? Mostly **bargaining power**: how easy you are to replace, what alternatives the other side has, and whether you own something others need. If tutors were scarce, they could demand more pay. If there were five other centers on the same street, Sam would have to cut prices and parents would capture more.
+
+That's also why creating value and capturing it can come completely apart. Open source developers create enormous value and capture almost none of it. A monopoly can capture a lot while creating little.
 
 ---
 
 ## Thinking at the Margin
 
-**"Marginal" means the next one.** Not the total, not the average.
+The last section was about the value the center creates as it is. The next question is one every business faces: should it get bigger?
 
-Should Monet hire a fifth bookkeeper? The tempting reasoning: each bookkeeper brings in $10,000 of revenue on average and costs $6,000, so yes, and keep hiring.
+**"Marginal" means the next one.** Not the total, not the average. The next unit.
 
-That's average thinking, and it's wrong. What matters is what the *next* hire adds. Monet's referrals are running thin, so a new bookkeeper won't find 25 clients.
+Should Sam hire a third tutor? Here's the tempting reasoning: the center brings in $2,000 a month with two tutors, so each tutor brings in $1,000 on average. A tutor costs $600. So hire another one, and keep hiring.
 
-| Hire | New clients | Extra revenue | Extra cost | Worth it? |
+That's **average thinking**, and it's wrong. What matters is what the *next* tutor adds, not what the current ones average. And the next one won't fill a full class. Only so many families nearby know about the center, so each new tutor finds fewer students than the last.
+
+| Hire | New students | Extra revenue | Extra cost (wage + supplies) | Worth it? |
 | --- | --- | --- | --- | --- |
-| 5th | 20 | $8,000 | $6,500 | Yes |
-| 6th | 10 | $4,000 | $6,500 | No |
+| 3rd tutor | 8 | $800 | $650 | Yes |
+| 4th tutor | 4 | $400 | $650 | No |
 
-Each additional bookkeeper adds less than the one before. That's **diminishing returns**, and it shows up almost everywhere. The marginal question also tells you to ignore what's already spent. If Monet sunk $20,000 into a marketing campaign that flopped, that money is gone either way. The only question is whether the *next* dollar is worth spending.
+Each additional tutor adds less than the one before. That's called **diminishing returns**, and it shows up almost everywhere: the third coffee is worth less than the first, the tenth hour of studying teaches less than the second.
+
+Marginal thinking also says to **ignore what's already spent**. Say Sam spent $500 on flyers last month and got zero new students. It's tempting to keep advertising "so the $500 wasn't wasted." But that money is gone no matter what she does next. The only question is whether the *next* dollar of advertising will bring in more than a dollar. Money that's already spent and can't be recovered is called a **sunk cost**, and the rule is to leave it out of the decision.
 
 ---
 
 ## Opportunity Cost
 
-**The real cost of anything is what it could have done otherwise.**
+Marginal thinking asks whether the next step is worth its cost. But what *is* the cost? It's not always the price tag.
 
-Tav, one of Monet's bookkeepers, could get a job as a data analyst paying $9,000 a month. If Monet keeps paying him $6,000, he'll leave. To keep him she has to pay roughly what he could earn elsewhere.
+**The real cost of anything is the best thing you gave up to get it.** That's called **opportunity cost**. An evening spent studying costs you the evening out you skipped. A tutor's hour at Sam's center costs whatever else that tutor could have done with the hour.
 
-There are two different questions here:
+Say one of Sam's tutors, Leo, gets an offer to teach at a private school for $900 a month. Sam pays him $600. If she doesn't raise his pay to around $900, he'll leave. His real cost to Sam isn't $600 anymore. It's what he could earn elsewhere.
 
-- **Monet's question:** does Tav bring in more than I pay him?
-- **Society's question:** does Tav create more value here than he would elsewhere?
+This splits into two different questions:
 
-If Tav creates $8,000 of value as a bookkeeper but would create $12,000 as an analyst, the world is poorer with him at Monet's firm, even if Monet is happy.
+- **Sam's question:** does Leo bring in more than I pay him?
+- **Everyone's question:** does Leo create more value at the center than he would somewhere else?
 
-Wages are what line these two questions up. A higher-paying job elsewhere pulls Tav toward where he's more productive. When that mechanism breaks, because people are stuck, skills go unused, or hiring is discriminatory, economists call it **misallocation**, and it makes a whole country poorer than it could be.
+Suppose Leo's teaching is worth $2,400 a month to the families at Sam's center, but at the private school, where classes are bigger, it would be worth $3,000. Then the world is $600 a month poorer with Leo at Sam's center, even if Sam is happy with the deal.
+
+What lines these two questions up is pay. The school can offer Leo more because he's more valuable there, and the higher offer pulls him toward where he does the most good. Nobody has to plan it.
+
+When that pull breaks down, because people are stuck where they are, their skills go unused, or they're turned away for reasons that have nothing to do with ability, economists call it **misallocation**. Each case looks small, but added up across a country, misallocation makes everyone poorer than they could be.
 
 ---
 
 ## What Growth Means
 
-**Growth means output going up.** There are exactly two ways to get it:
+So far, Sam's center has been a snapshot. But businesses and economies change over time, and the word you hear most about that change is *growth*.
 
-1. **Add more inputs.** Monet hires two more bookkeepers and serves 150 clients.
-2. **Get more from the same inputs.** Monet adopts better accounting software, and each bookkeeper can now handle 40 clients. Same 4 people, 160 clients.
+**Growth means output going up.** For Sam, output is students taught. For a country, it's everything produced. There are exactly two ways to get more of it:
 
-The first is **extensive growth**: getting bigger. The second is **intensive growth**: getting better. The second is what economists call higher **productivity**.
+1. **Add more inputs.** Sam hires two more tutors, and with enough demand, the center teaches 40 students instead of 20.
+2. **Get more out of the same inputs.** Sam switches to small-group sessions with practice software, and each tutor can now teach 20 students well instead of 10. Same two tutors, 40 students.
 
-Economists usually write the inputs as labor and capital (where capital means tools and machines, not money), with productivity multiplying them:
+Both get to 40 students, but they're very different. The first is **extensive growth**: getting bigger. The second is **intensive growth**: getting better. Getting more output from the same inputs is what economists mean by higher **productivity**.
+
+Economists usually write this as one line:
 
 > Output = Productivity × f(Capital, Labor)
 
-Productivity is the recipe; labor and capital are the ingredients. The distinction matters because ingredients hit diminishing returns. The tenth bookkeeper in a firm with three clients' worth of referrals adds nothing. A better recipe has no such ceiling. That's why long-run living standards rise mostly through productivity, not through piling up more workers and machines.
+- **Labor** is people working: Sam's tutors.
+- **Capital** is the tools people work with: the classroom, books, software. (Here capital means physical tools, not money.)
+- **Productivity** is how well the two are combined: the teaching method, the schedule, the know-how.
+- **f** just means output depends on how much capital and labor you have.
 
-Which number you look at depends on the question:
+A kitchen is a good way to picture it. Labor and capital are the ingredients. Productivity is the recipe.
 
-| Measure | For Monet's firm | What it tells you |
+The distinction matters because ingredients run into diminishing returns, just like the extra tutors in the margin section. A tenth tutor in a center with one small classroom adds almost nothing. A better recipe has no such ceiling. That's why, over the long run, living standards rise mostly through productivity, not through piling up more workers and more machines.
+
+Which number you watch depends on what you want to know:
+
+| Measure | For Sam's center | What it tells you |
 | --- | --- | --- |
-| Total output | Total revenue | Size and power |
-| Output per person | Revenue per bookkeeper | How well people are paid, eventually |
-| Output per input | Clients per bookkeeper, per dollar of software | Real progress |
+| Total output | Total students taught | How big it is |
+| Output per person | Students per tutor | How well tutors can eventually be paid |
+| Output per input | Students per tutor, per dollar of supplies | Whether it's actually getting better |
 
-The same three measures apply to a country. A country can grow total GDP just by adding people, without anyone getting richer. Per-person and per-input growth are where living standards come from.
+The same three apply to a country. A country can grow its total output just by adding people, without anyone getting richer. Growth per person and per input is where better lives come from.
 
-One thing I found striking: productivity is measured as a leftover. Economists estimate how much growth more labor and capital *should* explain, and call whatever's left productivity. Moses Abramovitz famously called it a measure of our ignorance. Historically, that leftover explains most of long-run growth.
+Here's a surprising detail: nobody measures productivity directly. Economists work it out by subtraction. Say Sam goes from 2 tutors and 20 students to 3 tutors and 40 students. The extra tutor explains about 10 more students. The other 10 can't be explained by more people or tools, so they get credited to productivity: a better method, smarter scheduling, more experience. The economist Moses Abramovitz called this leftover "a measure of our ignorance," because it tells you something made things better without saying what. For whole countries over long periods, that leftover turns out to explain most of the growth.
 
 ---
 
 ## Where Money Comes From
 
-**Money is a claim on real wealth, not wealth itself.** If everyone suddenly had twice as much money and nothing else changed, prices would roughly double and nobody would be richer.
+Every section so far has had money in it: fees, wages, a loan. But what is money, and where does it come from?
 
-What surprised me most is where money comes from. When Monet took her $60,000 loan, the bank didn't hand her someone else's savings. It added $60,000 to her account. No other depositor's balance went down. New money now existed.
+**Money is a claim on real wealth, not wealth itself.** It's a ticket you can trade for things other people produce. If everyone suddenly had twice as much money and nothing else changed, prices would roughly double and nobody would be any richer. There'd be the same classrooms, the same tutors, the same books.
 
-| | Monet | Bank |
+The surprising part is where money comes from. You'd expect banks to lend out other people's savings. Mostly, they don't.
+
+When Sam took her $5,000 loan, the bank didn't move money out of someone else's account and into hers. It just added $5,000 to her account. No other customer's balance went down. New money now existed that hadn't existed a minute earlier.
+
+On paper, nobody got richer:
+
+| | Sam | Bank |
 | --- | --- | --- |
-| New asset | $60,000 deposit | $60,000 loan |
-| New liability | $60,000 loan | $60,000 deposit owed to Monet |
-| Change in net worth | 0 | 0 |
+| What they gained | $5,000 in her account | Sam's promise to repay $5,000 |
+| What they now owe | $5,000 to the bank | $5,000 to Sam, whenever she withdraws it |
+| Change in net worth | $0 | $0 |
 
-Nobody got richer on paper. But Monet now had spending power. She bought furniture and computers, which became income for the people who sold them, who spent some of it, and so on. **One person's spending is another person's income.** That loop is why lending matters so much to the economy even though it creates no wealth by itself.
+Both sides gained something and owe something of equal size. But Sam now had money she could spend. She bought desks and books, which became income for the people who sold them, who then spent some of it on other things, and so on. **One person's spending is another person's income.** That chain is why lending matters so much to an economy, even though a loan creates no wealth by itself.
 
-When Monet repays, she pays from her deposit. Her balance drops and the loan drops by the same amount, and that money stops existing. So money expands when lending grows and contracts when loans are repaid. The central bank steers this mainly through the interest rate: cheaper borrowing means more loans, more money and more spending.
+When Sam pays the loan back, it runs in reverse. She pays from her account, so her balance goes down and her debt goes down by the same amount. That money stops existing. So the amount of money in an economy grows when people borrow more and shrinks when they pay back.
+
+The **central bank** (the Federal Reserve in the US) steers this mainly through the **interest rate**, the price of borrowing. When borrowing is cheap, people and businesses take more loans, more money is created, and more spending flows through the economy. When borrowing is expensive, the reverse happens.
 
 ---
 
-## Where AI Enters
+## What's Next
 
-Now give every bookkeeper an AI system that does most of the routine work. Here's the framework above applied to it. I don't have answers yet. These are the questions the definitions force.
+This post covered what wealth is, how value gets created and split, how to think about the next step, what growth means, and where money comes from.
 
-**Is AI capital or labor?** It's capital: a tool someone owns. But it's the first capital that does cognitive work we used to buy only from people. That blurs the line the whole growth formula is built on.
+The next piece is discounting: why a dollar tomorrow is worth less than a dollar today. It's the idea behind interest rates, bond prices, and how anything gets valued, from a company to a plot of land to a skill. After that come inflation and central banks.
 
-**Extensive or intensive growth?** If each bookkeeper can now handle 200 clients, that's productivity growth on a scale no software upgrade ever delivered. But Monet might instead keep 100 clients and need one bookkeeper. Same technology, very different outcome for the people involved.
-
-**Who captures the value?** The $96,000 gets split differently. Competition might push prices down, so clients capture more. Monet might keep fees high and capture more profit. The AI provider captures a share through what it charges. And the bookkeepers lose bargaining power, because they've become easier to replace.
-
-**What happens to human capital?** Tav's bookkeeping skill hasn't gone anywhere. He knows exactly what he knew. But a skill is worth only what the market will pay for it, and that price can collapse even while the skill stays intact. This is the mechanism by which AI could hit labor: not by destroying skills, but by making them cheap.
-
-**What's the opportunity cost of displaced workers?** If AI frees up three bookkeepers, society gains only if they move to something productive. If they end up stuck, that's misallocation on a large scale.
-
-**Will GDP even see it?** If AI makes bookkeeping almost free, much of the gain shows up as consumer surplus: clients get a $1,000 service for $50. Real value, mostly invisible in the numbers people use to judge whether the economy is growing.
-
-Each of these needs more machinery than I have yet. The next piece I'm working on is discounting: why a dollar tomorrow is worth less than a dollar today. It turns out to be the idea behind interest rates, bond prices, how companies and land get valued, and how much a skill like Tav's is worth over a career. After that come inflation, central banks, and eventually the question I started with.
-
-Once those pieces are in place, the goal is to find where AI breaks the assumptions this framework rests on, and where that leaves gaps and opportunities.
+Once the fundamentals are in place, I'll come back to the question I started with: what AI does to all of this, and where that leaves gaps and opportunities.
