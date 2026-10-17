@@ -1,0 +1,50 @@
+{{- /*
+  Shared table component. Every markdown table on the site renders through this hook.
+  - Wraps the table so wide tables scroll sideways on phones while normal tables fill the column.
+  - Keeps any alignment set in the markdown (:--, :-:, --:).
+  - Right-aligns a column (header included) when every body cell in it is a plain number
+    or amount ($4,800, −$200, 90%, 12), so figures line up.
+*/ -}}
+{{- $numeric := `^\s*[−\-+]?\$?[0-9][0-9,]*(\.[0-9]+)?\s*(%|x|×)?\s*$` -}}
+{{- $cols := 0 -}}
+{{- range first 1 .THead }}{{ $cols = len . }}{{ end -}}
+{{- $right := slice -}}
+{{- range $i := seq 0 (sub $cols 1) -}}
+  {{- $all := true -}}{{- $any := false -}}
+  {{- range $.TBody -}}
+    {{- with index . $i -}}
+      {{- $t := .Text | plainify | htmlUnescape | strings.TrimSpace -}}
+      {{- if $t -}}
+        {{- $any = true -}}
+        {{- if not (findRE $numeric $t) }}{{ $all = false }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $right = $right | append (and $any $all) -}}
+{{- end -}}
+<div class="table-wrap">
+<table{{ range $k, $v := .Attributes }} {{ $k }}="{{ $v }}"{{ end }}>
+  <thead>
+    {{- range .THead }}
+    <tr>
+      {{- range $i, $c := . }}
+      {{- $align := $c.Alignment }}
+      {{- if and (not $align) (index $right $i) }}{{ $align = "right" }}{{ end }}
+      <th{{ with $align }} style="text-align: {{ . }}"{{ end }}>{{ $c.Text }}</th>
+      {{- end }}
+    </tr>
+    {{- end }}
+  </thead>
+  <tbody>
+    {{- range .TBody }}
+    <tr>
+      {{- range $i, $c := . }}
+      {{- $align := $c.Alignment }}
+      {{- if and (not $align) (index $right $i) }}{{ $align = "right" }}{{ end }}
+      <td{{ with $align }} style="text-align: {{ . }}"{{ end }}>{{ $c.Text }}</td>
+      {{- end }}
+    </tr>
+    {{- end }}
+  </tbody>
+</table>
+</div>

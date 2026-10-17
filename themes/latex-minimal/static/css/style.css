@@ -392,29 +392,40 @@ hr {
 .content h2 { margin-top: 2.75rem; }
 .content h3 { margin-top: 2rem; }
 
-/* Tables */
-.content table {
-    display: block;
+/* Tables (markup comes from layouts/_default/_markup/render-table.html) */
+.table-wrap {
     overflow-x: auto;
+    margin: 1.75rem 0;
+    -webkit-overflow-scrolling: touch;
+}
+.table-wrap table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.75rem 0;
     font-size: 0.88rem;
     line-height: 1.45;
 }
-.content th,
-.content td {
+.table-wrap th,
+.table-wrap td {
     padding: 0.55rem 0.8rem;
     border-bottom: 1px solid #e3e3e3;
     text-align: left;
     vertical-align: top;
 }
-.content th {
+.table-wrap th {
     border-bottom: 2px solid #333;
     font-weight: 600;
-    white-space: nowrap;
 }
-.content tbody tr:last-child td { border-bottom: 1px solid #333; }
+.table-wrap td { font-variant-numeric: tabular-nums; }
+.table-wrap tbody tr:last-child td { border-bottom: 1px solid #333; }
+.table-wrap td:first-child,
+.table-wrap th:first-child { padding-left: 0; min-width: 5.5rem; }
+.table-wrap td:last-child,
+.table-wrap th:last-child { padding-right: 0; }
+
+@media (max-width: 768px) {
+    .table-wrap table { font-size: 0.82rem; }
+    .table-wrap th, .table-wrap td { padding: 0.5rem 0.55rem; }
+}
 
 /* Tags */
 .tags { margin: 3rem 0 0 0; }
