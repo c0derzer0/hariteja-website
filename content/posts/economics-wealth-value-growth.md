@@ -18,13 +18,13 @@ To keep things concrete, I'll run every idea through one example.
 
 ## The Firm
 
-Oru runs a small bookkeeping firm. The numbers are made up but realistic enough.
+Monet runs a small bookkeeping firm. The numbers are made up but realistic enough.
 
 - 4 bookkeepers, each handling 25 small-business clients
 - Each client pays $400 a month
 - Software, office and supplies cost $4,000 a month
 - Each bookkeeper is paid $6,000 a month
-- Oru borrowed $60,000 from a bank to set up the office
+- Monet borrowed $60,000 from a bank to set up the office
 
 That's 100 clients and $40,000 a month in revenue. Hold onto these numbers. Every section below uses them.
 
@@ -43,24 +43,24 @@ There are two kinds, and the difference matters more than anything else in this 
 
 The test is simple: *is it anyone's debt?* If yes, it's financial. If not, it's real.
 
-Here's Oru's firm sorted:
+Here's Monet's firm sorted:
 
 | Item | Kind | Who owns it |
 | --- | --- | --- |
-| Computers, software, office furniture | Real | Oru |
-| Client relationships and reputation | Real | Oru, loosely |
+| Computers, software, office furniture | Real | Monet |
+| Client relationships and reputation | Real | Monet, loosely |
 | Bookkeepers' skills | Real | **The bookkeepers** |
-| Oru's bank balance | Financial | Oru (the bank's liability) |
-| The $60,000 loan | Financial | The bank (Oru's liability) |
-| Invoices clients haven't paid yet | Financial | Oru (the clients' liability) |
+| Monet's bank balance | Financial | Monet (the bank's liability) |
+| The $60,000 loan | Financial | The bank (Monet's liability) |
+| Invoices clients haven't paid yet | Financial | Monet (the clients' liability) |
 
 Two things stand out.
 
-First, the most valuable real asset in the firm is the bookkeepers' skill, and Oru doesn't own it. It goes home every evening. Economists call skill **human capital**, and for most working people it's their largest asset, larger than savings or a house. But it's an odd asset. You can't sell it, can't borrow against it, it fades if unused, and it's worth only what the market will pay for it. Keep that last point in mind for the AI section.
+First, the most valuable real asset in the firm is the bookkeepers' skill, and Monet doesn't own it. It goes home every evening. Economists call skill **human capital**, and for most working people it's their largest asset, larger than savings or a house. But it's an odd asset. You can't sell it, can't borrow against it, it fades if unused, and it's worth only what the market will pay for it. Keep that last point in mind for the AI section.
 
-Second, financial claims cancel out. Oru's loan is an asset for the bank and a liability for her. Add up every claim in an economy and they net to zero. Printing more claims doesn't make a society richer. Only more real wealth does.
+Second, financial claims cancel out. Monet's loan is an asset for the bank and a liability for her. Add up every claim in an economy and they net to zero. Printing more claims doesn't make a society richer. Only more real wealth does.
 
-That doesn't make finance pointless. *Net to zero* is not the same as *zero-sum*. The bank's loan let Oru build a firm that now produces something real. Both sides came out ahead. Financial claims are plumbing that moves resources to people who can create real wealth.
+That doesn't make finance pointless. *Net to zero* is not the same as *zero-sum*. The bank's loan let Monet build a firm that now produces something real. Both sides came out ahead. Financial claims are plumbing that moves resources to people who can create real wealth.
 
 **Land** is a useful edge case. It's real wealth, since it isn't anyone's debt. But nobody can make more of it, so when land prices rise because a city gets richer, landowners gain without producing anything. Those gains behave more like transfers than creation.
 
@@ -70,7 +70,7 @@ That doesn't make finance pointless. *Net to zero* is not the same as *zero-sum*
 
 **Value is created when something is worth more to people than the resources used up to make it.**
 
-Oru's clients pay $400 a month. But what is the service worth to them? Say each client values it at $1,000 a month: time they'd otherwise spend on books, plus avoided tax penalties. Then across 100 clients:
+Monet's clients pay $400 a month. But what is the service worth to them? Say each client values it at $1,000 a month: time they'd otherwise spend on books, plus avoided tax penalties. Then across 100 clients:
 
 | | Per month |
 | --- | --- |
@@ -84,12 +84,12 @@ Now, who gets it? That's **value capture**, and it's a separate question.
 | --- | --- |
 | Clients (worth $1,000, paid $400) | $60,000 |
 | Bookkeepers (wages) | $24,000 |
-| Oru (profit) | $12,000 |
+| Monet (profit) | $12,000 |
 | **Total** | **$96,000** |
 
 A few things I didn't appreciate before working through this:
 
-**Wages aren't lost value.** It's tempting to see wages as a cost that eats into value. From Oru's point of view, they are. From society's point of view, wages are just the bookkeepers' share of what got created. If the bookkeepers captured everything and Oru made zero profit, the firm would still have created $96,000 of value.
+**Wages aren't lost value.** It's tempting to see wages as a cost that eats into value. From Monet's point of view, they are. From society's point of view, wages are just the bookkeepers' share of what got created. If the bookkeepers captured everything and Monet made zero profit, the firm would still have created $96,000 of value.
 
 **The biggest share went to the clients.** The gap between what something is worth to you and what you pay is called **consumer surplus**. It's real value, and it's often the largest slice.
 
@@ -103,16 +103,16 @@ How much each party captures comes down to **bargaining power**: how replaceable
 
 **"Marginal" means the next one.** Not the total, not the average.
 
-Should Oru hire a fifth bookkeeper? The tempting reasoning: each bookkeeper brings in $10,000 of revenue on average and costs $6,000, so yes, and keep hiring.
+Should Monet hire a fifth bookkeeper? The tempting reasoning: each bookkeeper brings in $10,000 of revenue on average and costs $6,000, so yes, and keep hiring.
 
-That's average thinking, and it's wrong. What matters is what the *next* hire adds. Oru's referrals are running thin, so a new bookkeeper won't find 25 clients.
+That's average thinking, and it's wrong. What matters is what the *next* hire adds. Monet's referrals are running thin, so a new bookkeeper won't find 25 clients.
 
 | Hire | New clients | Extra revenue | Extra cost | Worth it? |
 | --- | --- | --- | --- | --- |
 | 5th | 20 | $8,000 | $6,500 | Yes |
 | 6th | 10 | $4,000 | $6,500 | No |
 
-Each additional bookkeeper adds less than the one before. That's **diminishing returns**, and it shows up almost everywhere. The marginal question also tells you to ignore what's already spent. If Oru sunk $20,000 into a marketing campaign that flopped, that money is gone either way. The only question is whether the *next* dollar is worth spending.
+Each additional bookkeeper adds less than the one before. That's **diminishing returns**, and it shows up almost everywhere. The marginal question also tells you to ignore what's already spent. If Monet sunk $20,000 into a marketing campaign that flopped, that money is gone either way. The only question is whether the *next* dollar is worth spending.
 
 ---
 
@@ -120,14 +120,14 @@ Each additional bookkeeper adds less than the one before. That's **diminishing r
 
 **The real cost of anything is what it could have done otherwise.**
 
-Tav, one of Oru's bookkeepers, could get a job as a data analyst paying $9,000 a month. If Oru keeps paying him $6,000, he'll leave. To keep him she has to pay roughly what he could earn elsewhere.
+Tav, one of Monet's bookkeepers, could get a job as a data analyst paying $9,000 a month. If Monet keeps paying him $6,000, he'll leave. To keep him she has to pay roughly what he could earn elsewhere.
 
 There are two different questions here:
 
-- **Oru's question:** does Tav bring in more than I pay him?
+- **Monet's question:** does Tav bring in more than I pay him?
 - **Society's question:** does Tav create more value here than he would elsewhere?
 
-If Tav creates $8,000 of value as a bookkeeper but would create $12,000 as an analyst, the world is poorer with him at Oru's firm, even if Oru is happy.
+If Tav creates $8,000 of value as a bookkeeper but would create $12,000 as an analyst, the world is poorer with him at Monet's firm, even if Monet is happy.
 
 Wages are what line these two questions up. A higher-paying job elsewhere pulls Tav toward where he's more productive. When that mechanism breaks, because people are stuck, skills go unused, or hiring is discriminatory, economists call it **misallocation**, and it makes a whole country poorer than it could be.
 
@@ -137,8 +137,8 @@ Wages are what line these two questions up. A higher-paying job elsewhere pulls 
 
 **Growth means output going up.** There are exactly two ways to get it:
 
-1. **Add more inputs.** Oru hires two more bookkeepers and serves 150 clients.
-2. **Get more from the same inputs.** Oru adopts better accounting software, and each bookkeeper can now handle 40 clients. Same 4 people, 160 clients.
+1. **Add more inputs.** Monet hires two more bookkeepers and serves 150 clients.
+2. **Get more from the same inputs.** Monet adopts better accounting software, and each bookkeeper can now handle 40 clients. Same 4 people, 160 clients.
 
 The first is **extensive growth**: getting bigger. The second is **intensive growth**: getting better. The second is what economists call higher **productivity**.
 
@@ -150,7 +150,7 @@ Productivity is the recipe; labor and capital are the ingredients. The distincti
 
 Which number you look at depends on the question:
 
-| Measure | For Oru's firm | What it tells you |
+| Measure | For Monet's firm | What it tells you |
 | --- | --- | --- |
 | Total output | Total revenue | Size and power |
 | Output per person | Revenue per bookkeeper | How well people are paid, eventually |
@@ -166,17 +166,17 @@ One thing I found striking: productivity is measured as a leftover. Economists e
 
 **Money is a claim on real wealth, not wealth itself.** If everyone suddenly had twice as much money and nothing else changed, prices would roughly double and nobody would be richer.
 
-What surprised me most is where money comes from. When Oru took her $60,000 loan, the bank didn't hand her someone else's savings. It added $60,000 to her account. No other depositor's balance went down. New money now existed.
+What surprised me most is where money comes from. When Monet took her $60,000 loan, the bank didn't hand her someone else's savings. It added $60,000 to her account. No other depositor's balance went down. New money now existed.
 
-| | Oru | Bank |
+| | Monet | Bank |
 | --- | --- | --- |
 | New asset | $60,000 deposit | $60,000 loan |
-| New liability | $60,000 loan | $60,000 deposit owed to Oru |
+| New liability | $60,000 loan | $60,000 deposit owed to Monet |
 | Change in net worth | 0 | 0 |
 
-Nobody got richer on paper. But Oru now had spending power. She bought furniture and computers, which became income for the people who sold them, who spent some of it, and so on. **One person's spending is another person's income.** That loop is why lending matters so much to the economy even though it creates no wealth by itself.
+Nobody got richer on paper. But Monet now had spending power. She bought furniture and computers, which became income for the people who sold them, who spent some of it, and so on. **One person's spending is another person's income.** That loop is why lending matters so much to the economy even though it creates no wealth by itself.
 
-When Oru repays, she pays from her deposit. Her balance drops and the loan drops by the same amount, and that money stops existing. So money expands when lending grows and contracts when loans are repaid. The central bank steers this mainly through the interest rate: cheaper borrowing means more loans, more money and more spending.
+When Monet repays, she pays from her deposit. Her balance drops and the loan drops by the same amount, and that money stops existing. So money expands when lending grows and contracts when loans are repaid. The central bank steers this mainly through the interest rate: cheaper borrowing means more loans, more money and more spending.
 
 ---
 
@@ -186,9 +186,9 @@ Now give every bookkeeper an AI system that does most of the routine work. Here'
 
 **Is AI capital or labor?** It's capital: a tool someone owns. But it's the first capital that does cognitive work we used to buy only from people. That blurs the line the whole growth formula is built on.
 
-**Extensive or intensive growth?** If each bookkeeper can now handle 200 clients, that's productivity growth on a scale no software upgrade ever delivered. But Oru might instead keep 100 clients and need one bookkeeper. Same technology, very different outcome for the people involved.
+**Extensive or intensive growth?** If each bookkeeper can now handle 200 clients, that's productivity growth on a scale no software upgrade ever delivered. But Monet might instead keep 100 clients and need one bookkeeper. Same technology, very different outcome for the people involved.
 
-**Who captures the value?** The $96,000 gets split differently. Competition might push prices down, so clients capture more. Oru might keep fees high and capture more profit. The AI provider captures a share through what it charges. And the bookkeepers lose bargaining power, because they've become easier to replace.
+**Who captures the value?** The $96,000 gets split differently. Competition might push prices down, so clients capture more. Monet might keep fees high and capture more profit. The AI provider captures a share through what it charges. And the bookkeepers lose bargaining power, because they've become easier to replace.
 
 **What happens to human capital?** Tav's bookkeeping skill hasn't gone anywhere. He knows exactly what he knew. But a skill is worth only what the market will pay for it, and that price can collapse even while the skill stays intact. This is the mechanism by which AI could hit labor: not by destroying skills, but by making them cheap.
 
