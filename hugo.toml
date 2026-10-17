@@ -22,6 +22,10 @@ defaultContentLanguage = "en"
     name = "World Models"
     description = "What world models are, how V-JEPA and LeWorldModel work, and where they fit in robot learning."
 
+  [[params.series]]
+    name = "Breaking Down the Barriers of GPU"
+    description = "GPU programming from the ground up: threads, memory and CUDA, without the intimidating jargon."
+
 [markup]
   [markup.highlight]
     anchorLineNos = false

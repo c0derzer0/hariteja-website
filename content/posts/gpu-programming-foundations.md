@@ -1,8 +1,10 @@
 ---
-title: "GPU Programming Foundations: Breaking Down the Barriers Series"
+title: "GPU Programming Foundations"
 tags: ["GPU", "CUDA", "Programming", "Tutorial"]
 date: 2025-09-29
 draft: false
+series: "Breaking Down the Barriers of GPU"
+series_order: 1
 summary: "GPU programming often feels intimidating with terminology like threads, blocks, warps, and SMs. But at its core, it's about one beautiful idea: breaking big problems into thousands of tiny parallel tasks."
 ---
 
