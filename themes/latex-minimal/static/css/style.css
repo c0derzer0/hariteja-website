@@ -42,13 +42,13 @@ p {
 }
 
 /* Navigation */
-header {
+body > header {
     margin-bottom: 3rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #ddd;
 }
 
-nav {
+body > header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -360,4 +360,144 @@ footer {
     .nav-links a {
         margin-left: 1rem;
     }
+}
+/* ---------- Refresh: post pages ---------- */
+img { max-width: 100%; height: auto; }
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2.5rem 0;
+}
+
+.post-header { margin-bottom: 2.5rem; }
+.post-header h1 { margin: 0.25rem 0 0.5rem 0; }
+
+.series-label {
+    margin: 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #777;
+}
+.series-label a { color: #777; }
+
+.post-meta {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+.post-meta .dot { margin: 0 0.5rem; color: #bbb; }
+
+.content h2 { margin-top: 2.75rem; }
+.content h3 { margin-top: 2rem; }
+
+/* Tables */
+.content table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.75rem 0;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+.content th,
+.content td {
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: left;
+    vertical-align: top;
+}
+.content th {
+    border-bottom: 2px solid #333;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.content tbody tr:last-child td { border-bottom: 1px solid #333; }
+
+/* Tags */
+.tags { margin: 3rem 0 0 0; }
+.tag {
+    display: inline-block;
+    margin: 0 0.4rem 0.4rem 0;
+    padding: 0.1rem 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* Series navigation at the end of a post */
+.series-nav {
+    margin-top: 2.5rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #e3e3e3;
+    border-radius: 6px;
+    background: #fafafa;
+}
+.series-nav-title {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #777;
+}
+.series-nav ol { margin: 0 0 1rem 1.25rem; font-size: 0.95rem; }
+.series-nav li { margin-bottom: 0.3rem; }
+.series-nav li.current { font-weight: 600; }
+.prev-next {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+.prev-next .next { margin-left: auto; text-align: right; }
+
+/* ---------- Refresh: blog list by series ---------- */
+.series-group { margin: 2.5rem 0; }
+.series-group h2 {
+    font-size: 1.4rem;
+    margin: 0 0 0.4rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #ddd;
+}
+.series-desc { color: #666; font-size: 0.95rem; margin-bottom: 0.9rem; }
+.series-list { margin: 0 0 0 1.4rem; }
+.series-list.plain { list-style: none; margin-left: 0; }
+.series-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.45rem;
+}
+.series-list li::marker { color: #999; }
+.series-list time {
+    flex-shrink: 0;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* ---------- Refresh: home ---------- */
+.item-series {
+    margin: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #888;
+}
+
+/* ---------- Refresh: Work and CV pages ---------- */
+.page .content h2 { margin-top: 2.5rem; margin-bottom: 0.25rem; }
+.page .content h2 + p em:only-child { color: #777; }
+.page .content h3 { margin-top: 1.5rem; margin-bottom: 0.25rem; font-size: 1.15rem; }
+
+@media (max-width: 768px) {
+    .series-list li { flex-direction: column; gap: 0; }
+    .series-nav { padding: 1rem; }
+    .prev-next { flex-direction: column; }
+    .prev-next .next { margin-left: 0; text-align: left; }
+    body > header nav { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .nav-links a { margin-left: 0; margin-right: 1rem; }
 }

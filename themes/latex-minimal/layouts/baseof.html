@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Params.summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
 <body>
     <header>
         <nav>
-            <a href="{{ .Site.BaseURL }}" class="site-title">{{ .Site.Title }}</a>
+            <a href="{{ "/" | relURL }}" class="site-title">{{ .Site.Title }}</a>
             <div class="nav-links">
-                <a href="/about/">About</a>
-                <a href="/posts/">Blog</a>
-                <a href="/exploration/">Exploration</a>
+                <a href="{{ "about/" | relURL }}">About</a>
+                <a href="{{ "posts/" | relURL }}">Blog</a>
+                <a href="{{ "exploration/" | relURL }}">Work</a>
+                <a href="{{ "cv/" | relURL }}">CV</a>
             </div>
         </nav>
     </header>

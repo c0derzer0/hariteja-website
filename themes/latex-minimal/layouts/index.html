@@ -5,7 +5,9 @@
         <p class="tagline">{{ .Site.Params.description }}</p>
 
         <div class="quick-links">
-            <a href="/about/">About</a>
+            <a href="{{ "about/" | relURL }}">About</a>
+            <span class="separator">·</span>
+            <a href="{{ "cv/" | relURL }}">CV</a>
             <span class="separator">·</span>
             <a href="https://github.com/c0derzer0">GitHub</a>
             <span class="separator">·</span>
@@ -24,49 +26,33 @@
     <section class="highlights">
         <div class="column">
             <h2>Recent Writing</h2>
-            {{ $postsSection := .Site.GetPage "section" "posts" }}
-            {{ if $postsSection.Content }}
-            <div class="posts-intro">
-                <p>{{ $postsSection.Summary | truncate 150 }}</p>
-            </div>
-            {{ end }}
-            {{ $posts := where .Site.RegularPages "Type" "posts" }}
-            {{ if $posts }}
-            <h3>Latest Posts</h3>
-            {{ range first 3 $posts }}
+            {{ $posts := where .Site.RegularPages "Section" "posts" }}
+            {{ range first 4 $posts }}
             <article class="item">
-                <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-                <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                {{ with .Params.series }}<p class="item-series">{{ . }}</p>{{ end }}
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
             </article>
             {{ end }}
-            {{ else }}
-            <p><em>Posts coming soon...</em></p>
-            <ul style="list-style: none; padding-left: 0;">
-                <li>• GPU Programming Foundations (in progress)</li>
-                <li>• Building Effective AI Agents (planned)</li>
-                <li>• Complexity as Illusion (planned)</li>
-            </ul>
-            {{ end }}
-            <a href="/posts/" class="see-all">→ All posts</a>
+            <a href="{{ "posts/" | relURL }}" class="see-all">→ All posts, by series</a>
         </div>
 
         <div class="column">
-            <h2>Featured Work</h2>
+            <h2>Selected Work</h2>
             <article class="item">
-                <h3><a href="/exploration/#building-earth-from-pixels">Building Earth from Pixels</a></h3>
-                <p>3D reconstruction from satellite imagery with 120x speedup.</p>
+                <h3><a href="{{ "exploration/" | relURL }}#agents-that-improve-themselves">Agents That Improve Themselves</a></h3>
+                <p>The agent platform behind Didero's procurement automation, and the loop that keeps it improving.</p>
             </article>
             <article class="item">
-                <h3><a href="/exploration/#teaching-machines-to-navigate-the-web">LLaMA Browser Agent</a></h3>
-                <p>Fine-tuned LLaMA-3.2B for autonomous web navigation.</p>
+                <h3><a href="{{ "exploration/" | relURL }}#recurrent-sum-product-max-networks">Recurrent Sum-Product-Max Networks</a></h3>
+                <p>A probabilistic model for sequential decisions. ICAPS and IJCAI 2021.</p>
             </article>
             <article class="item">
-                <h3><a href="/exploration/#the-journey-into-probabilistic-reasoning">Probabilistic Reasoning</a></h3>
-                <p>Novel Recurrent-SPMNs architecture for sequential decision-making.</p>
+                <h3><a href="{{ "exploration/" | relURL }}#building-earth-from-pixels">Building Earth from Pixels</a></h3>
+                <p>3D city reconstruction from aerial imagery at Geopipe.</p>
             </article>
-            <a href="/exploration/" class="see-all">→ Explore my journey</a>
+            <a href="{{ "exploration/" | relURL }}" class="see-all">→ All work</a>
         </div>
     </section>
-
 </div>
 {{ end }}

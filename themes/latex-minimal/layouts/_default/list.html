@@ -1,3 +1,5 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
 {{ define "main" }}
 <div class="list">
     <h1>{{ .Title }}</h1>
@@ -8,15 +10,49 @@
     </div>
     {{ end }}
 
-    {{ if .Pages }}
-    <h2>Posts</h2>
-    {{ range .Pages }}
+    {{ $pages := .Pages }}
+    {{ if eq .Section "posts" }}
+
+    {{ range site.Params.series }}
+    {{ $name := .name }}
+    {{ $parts := sort (where $pages "Params.series" $name) "Params.series_order" }}
+    {{ if $parts }}
+    <section class="series-group" id="{{ $name | urlize }}">
+        <h2>{{ $name }}</h2>
+        {{ with .description }}<p class="series-desc">{{ . }}</p>{{ end }}
+        <ol class="series-list">
+            {{ range $parts }}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            </li>
+            {{ end }}
+        </ol>
+    </section>
+    {{ end }}
+    {{ end }}
+
+    {{ $solo := where $pages "Params.series" "==" nil }}
+    {{ if $solo }}
+    <section class="series-group" id="other-posts">
+        <h2>Other Posts</h2>
+        <ul class="series-list plain">
+            {{ range $solo }}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
+
+    {{ else if $pages }}
+    {{ range $pages }}
     <article class="post-preview">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         <time>{{ .Date.Format "January 2, 2006" }}</time>
-        {{ with .Summary }}
-        <p>{{ . }}</p>
-        {{ end }}
+        {{ with .Summary }}<p>{{ . }}</p>{{ end }}
     </article>
     {{ end }}
     {{ end }}
