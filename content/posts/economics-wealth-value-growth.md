@@ -8,7 +8,7 @@ series_order: 1
 summary: "I'm learning economics from the definitions up, the way I'd learn a new ML subfield. Part 1: what wealth is, how value gets created and split, what growth means, and where money comes from, all worked through one small bookkeeping firm. AI shows up at the end as a set of questions."
 ---
 
-I want to understand what AI will do to the economy: to wages, to jobs, to who gets rich and who doesn't. I also want to see where the gaps and opportunities are. I realized I couldn't reason about any of that well without the basics. Most takes on AI and labor skip straight to conclusions, and I couldn't tell which ones were built on solid ground.
+I want to understand what AI will do to the economy: to wages, to jobs, to who gets rich and who doesn't. I realized I couldn't reason about that well without the basics. Most takes on AI and labor skip straight to conclusions, and I couldn't tell which ones were built on solid ground.
 
 So I'm learning economics the way I'd learn a new ML subfield: start from definitions, make sure each one is precise, and only then build up. These are my notes. They're written for someone like me, technical but new to the field.
 
@@ -197,3 +197,5 @@ Now give every bookkeeper an AI system that does most of the routine work. Here'
 **Will GDP even see it?** If AI makes bookkeeping almost free, much of the gain shows up as consumer surplus: clients get a $1,000 service for $50. Real value, mostly invisible in the numbers people use to judge whether the economy is growing.
 
 Each of these needs more machinery than I have yet. The next piece I'm working on is discounting: why a dollar tomorrow is worth less than a dollar today. It turns out to be the idea behind interest rates, bond prices, how companies and land get valued, and how much a skill like Dev's is worth over a career. After that come inflation, central banks, and eventually the question I started with.
+
+Once those pieces are in place, the goal is to find where AI breaks the assumptions this framework rests on, and where that leaves gaps and opportunities.
