@@ -2,7 +2,7 @@
 title: "Wealth, Value and Growth, Seen Through One Tutoring Center"
 tags: ["Economics", "First Principles"]
 date: 2026-10-16
-draft: true
+draft: false
 series: "Economics from First Principles"
 series_order: 1
 summary: "Learning economics from the definitions up, the way I'd learn a new ML subfield. Part 1: what wealth is, how value gets created and split, marginal thinking, opportunity cost, what growth means, and where money comes from, all worked through one small tutoring center."
