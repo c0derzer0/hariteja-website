@@ -8,9 +8,9 @@ series_order: 1
 summary: "I'm learning economics from the definitions up, the way I'd learn a new ML subfield. Part 1: what wealth is, how value gets created and split, what growth means, and where money comes from, all worked through one small bookkeeping firm. AI shows up at the end as a set of questions."
 ---
 
-The world order is changing with AI, and I want to understand how. Not just what happens to jobs, but what happens to the whole order of operations: how value gets created, who captures it, what labor and capital are worth, and which parts of the system shift underneath us.
+The world order is changing with AI, and I want to understand how. Not just what happens to wages and jobs, or who gets rich and who doesn't, but what happens to the whole order of operations: how value gets created, who captures it, what labor and capital are worth, and which parts of the system shift underneath us.
 
-To predict any of that, I need the fundamentals first. Economics is a complex system, and I can't tell what AI changes until I understand how the pieces work without it. I also want to see where the gaps are: the places where today's way of doing things breaks down, and where the opportunities and potential sit.
+I realized I couldn't reason about that well without the basics. Most takes on AI and labor skip straight to conclusions, and I couldn't tell which ones were built on solid ground. Economics is a complex system, and I can't tell what AI changes until I understand how the pieces work without it. I also want to see where the gaps are: the places where today's way of doing things breaks down, and where the opportunities and potential sit.
 
 So I'm learning economics the way I'd learn a new ML subfield: start from definitions, make sure each one is precise, and only then build up. These are my notes. They're written for someone like me, technical but new to the field.
 
