@@ -5,7 +5,7 @@ date: 2026-10-30
 draft: true
 series: "Economics from Scratch"
 series_order: 3
-summary: "One recipe prices everything: list the money it will bring, discount it to today, add it up. Worked through a bond, Sam's tutoring center, land, a skill, stocks and a startup, and then why all of them move together when interest rates change."
+summary: "One recipe prices everything: list the money it will bring, discount it to today, add it up. Worked through a bond, Sam's tutoring center, land, a skill, a stock and a startup, and then why all of them move together when interest rates change."
 ---
 
 [Part 2](/posts/economics-price-of-time/) built two tools: compounding moves money forward in time, and discounting brings it back. This part uses discounting for what it's really for: working out what something is worth.
@@ -14,25 +14,44 @@ The whole part rests on one idea:
 
 > **What something is worth today = all the money it will bring in the future, discounted back to today.**
 
-Bonds, businesses, land, skills, stocks and startups all get priced with that same recipe. Only the stream of money changes. As before, I've kept the questions I had along the way and what cleared them up.
+Bonds, businesses, land, skills, stocks and startups all get priced with that same recipe. Only the stream of money changes.
+
+Each section follows the same pattern: first the terms, then an example, then working through it with numbers. As before, I've kept the questions I had along the way and what cleared them up.
 
 ---
 
 ## Value, Worth and Price
 
-These three words get used loosely, but they mean different things.
+### Terms
 
-| Term | What it means | Example |
+- **Willingness to pay:** the most a particular person would give up for something. This is the "value" from Part 1, set at the margin, and it differs from person to person.
+- **Intrinsic value:** what something is worth based on everything it will bring in the future, discounted to today. This is what finance means by "what it's worth."
+- **Discounted cash flow (DCF):** the method for working out intrinsic value. List the money something will bring, discount each amount to today, and add them up.
+- **Market price:** what someone actually pays.
+- **Book value:** what the accounts say something is worth, mostly based on what it cost.
+
+### The example
+
+Sam decides to sell her tutoring center. Four different numbers describe it:
+
+| Number | Amount | Where it comes from |
 | --- | --- | --- |
-| **Willingness to pay** | The most a particular person would give up for something | Tutoring is worth $250 a month to a parent |
-| **Intrinsic value** | All of something's future benefits, discounted to today | Sam's center is worth $90,000 to a buyer |
-| **Market price** | What someone actually pays | A buyer pays Sam $85,000 |
+| Book value | $4,000 | What Sam paid for the desks, books and laptops |
+| Intrinsic value to a buyer | $90,000 | The buyer's estimate of all future profits, discounted (worked out later in this post) |
+| Sam's lowest acceptable price | $80,000 | What the center is worth to Sam if she keeps running it herself |
+| Market price | $85,000 | What they agree on |
 
-Willingness to pay is the "value" from Part 1, set at the margin. Intrinsic value is what finance means by what something is worth, and the method for working it out is called a **discounted cash flow** valuation. Market price is where a buyer and a seller, who often disagree about intrinsic value, manage to meet.
+### Working through it
 
-You'll also hear **book value**: what a company's accounts say its assets are worth, mostly based on what they cost. As we'll see, what something cost in the past doesn't decide what it's worth.
+**Book value barely matters.** The desks cost $4,000, but nobody pays $85,000 for desks. The buyer pays for the profits the center will earn.
 
-### The recipe
+**Intrinsic value depends on who's asking.** To the buyer it's worth $90,000. To Sam, who would rather keep it than sell cheap, it's worth $80,000. Neither is wrong. They have different forecasts or different alternatives for their money.
+
+**Price lands between them.** Any price from $80,000 to $90,000 leaves both better off than not trading. Where exactly it lands, $85,000 here, comes down to negotiation and bargaining power, just like the split of value in Part 1.
+
+That's the general pattern: intrinsic value is an estimate each person makes, and market price is where two people with different estimates meet.
+
+### The recipe for intrinsic value
 
 1. **Forecast** every future benefit: profits, interest, rent, a sale later on.
 2. **Convert** each into an amount of money and a date.
@@ -40,9 +59,7 @@ You'll also hear **book value**: what a company's accounts say its assets are wo
 4. **Discount** each amount to today and add them up.
 5. If there's more than one way to use the thing, it's worth the **best** one.
 
-Everything comes down to two inputs: the forecast and the rate. When people disagree about what something is worth, they almost always disagree about one of those two.
-
-Each section below starts by filling in these five steps for its example, so you can see the same recipe at work every time.
+Everything comes down to two inputs: the forecast and the rate. When people disagree about what something is worth, they almost always disagree about one of those two. Each section below fills in these five steps for its example.
 
 {{< stuck "Is something worth only what it earns in the future? Nothing else?" >}}
 In principle, yes, but "what it brings" is broader than profit. Each benefit just has to be turned into an amount of money and a date:
@@ -58,13 +75,18 @@ What doesn't count is the past: what it cost, how hard it was to build, what it 
 
 ## A Bond
 
-A **bond** is a loan you can buy. You lend money to a government or a company, and they promise a fixed schedule of payments back. Three terms describe it:
+### Terms
 
-- **Face value:** the amount you get back at the end, say $1,000.
-- **Coupon:** the fixed interest paid each year, say $40, which is 4% of $1,000.
-- **Maturity:** when it ends, say in 3 years.
+- **Bond:** a loan you can buy. You lend money to a government or a company, and they promise a fixed schedule of payments back.
+- **Face value:** the amount repaid at the end.
+- **Coupon:** the fixed interest paid each year. The **coupon rate** is the coupon as a share of face value. It's written into the contract and never changes.
+- **Maturity:** when the bond ends and the face value is repaid.
+- **Going rate:** what new, similar bonds pay today. It's the discount rate for valuing a bond, and it moves with the market.
+- **Yield:** the return you'd earn by buying a bond at today's price and holding it to the end.
 
-So this bond pays $40, $40, then $1,040: the last coupon plus the $1,000 back.
+### The example
+
+A 3-year US government bond with a face value of $1,000 and a 4% coupon. It pays $40 at the end of year 1, $40 at the end of year 2, and $1,040 at the end of year 3: the last coupon plus the $1,000 back.
 
 | Step | For this bond |
 | --- | --- |
@@ -74,7 +96,9 @@ So this bond pays $40, $40, then $1,040: the last coupon plus the $1,000 back.
 | 4. Discount and add | The table below |
 | 5. Best use | Hold it or sell it. At a fair price, both are worth the same. |
 
-Discount each payment at 4%:
+### Working through it
+
+**At a 4% going rate:**
 
 | Payment | When | Calculation | Worth today |
 | --- | --- | --- | --- |
@@ -85,14 +109,7 @@ Discount each payment at 4%:
 
 It's worth exactly $1,000, which makes sense: it pays 4%, and 4% is the going rate.
 
-### When the going rate changes
-
-There are two different rates here, which is what makes bonds confusing at first:
-
-- **The coupon rate** (4%) is written into the contract. It never changes, so the payments never change.
-- **The going rate** is what new, similar bonds pay today. That's the discount rate, and it moves with the market.
-
-Say rates rise and new bonds now pay 6%. Same payments, discounted at 6%:
+**Now rates rise and new bonds pay 6%.** The payments stay the same, since they're in the contract. Only the discount rate changes:
 
 | Payment | When | Calculation | Worth today |
 | --- | --- | --- | --- |
@@ -101,7 +118,9 @@ Say rates rise and new bonds now pay 6%. Same payments, discounted at 6%:
 | $1,040 | 3 years | $1,040 ÷ 1.06³ | $873.20 |
 | **Total** | | | **$946.54** |
 
-And if rates fell to 2%, the same bond would be worth $1,057.69. So the fair market price of this bond is $946.54 when the going rate is 6%, and $1,057.69 when it's 2%. The rate goes in, the price comes out.
+**And if rates fall to 2%,** the same bond is worth $1,057.69.
+
+So the bond's fair price is $1,000 at 4%, $946.54 at 6% and $1,057.69 at 2%. The rate goes in, the price comes out. When rates rise, a bond's price falls; when rates fall, it rises.
 
 {{< stuck "Why discount it at all? Isn't it just interest on what I paid?" >}}
 I was mixing up two questions.
@@ -139,9 +158,7 @@ Only the payments still to come matter, each discounted by how far away it is fr
 That's the same as the account balance after year 1 in the table above, since both answer the same question. The loss is smaller with two years left than with three, because I'm stuck with the below-market 4% for less time. It's the same reason long bonds fall much more than short ones when rates rise.
 {{< /stuck >}}
 
-### Yield
-
-Bond traders usually talk about **yield** instead of price. Yield runs the calculation backward: given the price, what return do you earn by buying the bond and holding it to the end? Formally, it's the discount rate that makes the remaining payments add up to the current price.
+**Yield runs the calculation backward.** Instead of starting from the rate and finding the price, start from the price and find the rate:
 
 | You pay | You receive | Your yield |
 | --- | --- | --- |
@@ -154,7 +171,16 @@ So when the news says "the 10-year Treasury yield rose," it means prices of 10-y
 
 ---
 
-## Sam's Center
+## A Business
+
+### Terms
+
+- **Profit:** what a business earns after paying all its costs. For valuing a business, it's the stream of money the owner receives.
+- **Perpetuity:** a stream of equal payments that goes on forever. Its value is the yearly amount ÷ the rate.
+- **Growth rate:** how fast the yearly amount is expected to rise.
+- **Growing perpetuity:** a stream that goes on forever and grows each year. Its value is next year's amount ÷ (rate − growth rate).
+
+### The example
 
 Sam's center earns $600 a month in profit, so $7,200 a year. A buyer wants to purchase the whole business. What's a fair price?
 
@@ -163,18 +189,18 @@ Sam's center earns $600 a month in profit, so $7,200 a year. A buyer wants to pu
 | 1. Forecast | Profit of $7,200 a year, assumed to continue indefinitely. Unlike the bond, this is a guess. |
 | 2. Convert | $7,200 at the end of every year, forever |
 | 3. Rate | 8%: a safe rate plus extra, because a small business is risky |
-| 4. Discount and add | The shortcut below |
-| 5. Best use | Keep running it ($90,000) or shut it and sell the desks and books ($3,000). Running it wins. |
+| 4. Discount and add | The perpetuity shortcut below |
+| 5. Best use | Keep running it, or shut it and sell the desks and books for $3,000 |
 
-Adding up an endless stream one year at a time would take forever, so there's a shortcut:
+### Working through it
 
-> Value = Yearly amount ÷ Rate
+Adding up an endless stream one year at a time would take forever, so use the perpetuity shortcut:
 
-$7,200 ÷ 0.08 = **$90,000**.
+> Value = Yearly amount ÷ Rate = $7,200 ÷ 0.08 = **$90,000**
 
-One way to see it: $90,000 in an account paying 8% pays $7,200 a year forever, without ever touching the $90,000. Owning the center and owning $90,000 at 8% give the same stream of money, so they're worth the same.
+A way to check it: $90,000 in an account paying 8% pays $7,200 a year forever without ever touching the $90,000. Owning the center and owning $90,000 at 8% give the same stream of money, so they're worth the same.
 
-Notice what didn't matter: what Sam paid for desks and books. The center is worth what it will earn, not what it cost.
+Step 5: running it is worth $90,000, selling it off for parts is worth $3,000. Running it wins, so the center is worth $90,000. What Sam paid for the desks doesn't enter into it.
 
 {{< stuck "How can profits forever be worth only $90,000?" >}}
 Because money far in the future is worth almost nothing today. Each $7,200 is the same size, but the further away it is, the less it counts:
@@ -215,13 +241,11 @@ So selling doesn't give up the later profits. It collects them all at once:
 Same number. Selling would only change the total if the buyer paid more or less than the stream is worth, for example if they were more optimistic about growth.
 {{< /stuck >}}
 
-### Growth
-
-So far I assumed Sam's profit stays at $7,200 forever. If profits are expected to grow, every later year's payment is bigger, and the whole stream is worth more. The shortcut becomes:
+**Now add growth.** If the buyer expects profits to rise each year, every later payment is bigger, and the stream is worth more. Use the growing perpetuity:
 
 > Value = Next year's profit ÷ (Rate − Growth rate)
 
-Discounting shrinks future money; growth enlarges it. The formula nets the two against each other. With an 8% rate and $7,200 next year:
+Discounting shrinks future money; growth enlarges it. The formula nets the two. With an 8% rate and $7,200 next year:
 
 | Expected profit growth per year | Calculation | Value today |
 | --- | --- | --- |
@@ -236,47 +260,50 @@ Two lessons come out of this table. First, **expectations about growth can matte
 
 (The formula only works when growth is below the rate. If something grew faster than the rate forever, it would be worth infinite money, which is a sign that no growth lasts forever.)
 
-One more thing follows: a price is based on people's **guesses** about future profits, and guesses can be optimistic, scared or wrong. That's why market prices swing far more than the businesses underneath them.
+And since a price rests on people's guesses about future profits, which can be optimistic, scared or wrong, market prices swing far more than the businesses underneath them.
 
 ---
 
 ## Land and Skills
 
-### Land
+### Terms
 
-Land doesn't produce profit by itself. Its benefit is that someone will pay to use it. Sam owns the small lot her center sits on.
+- **Rent:** what someone pays to use land or a building for a period of time. It's land's stream of money.
+- **Human capital:** skills and knowledge that raise what a person can earn (from Part 1). Its stream of money is the extra pay it brings.
+
+### The examples
+
+**Sam's lot.** Sam owns the small lot her center sits on.
 
 | Step | For Sam's lot |
 | --- | --- |
 | 1. Forecast | Rent of $1,000 a year if she leased it out. If she uses it herself, that's the rent she doesn't have to pay. |
 | 2. Convert | $1,000 every year, forever, since land doesn't wear out |
 | 3. Rate | 5%: steadier than a small business, riskier than a government bond |
-| 4. Discount and add | $1,000 ÷ 0.05 = **$20,000** |
+| 4. Discount and add | Perpetuity: $1,000 ÷ 0.05 |
 | 5. Best use | Rent it out, use it for the center, or sell it. It's worth whichever is highest. |
 
-So:
-
-> Land worth = Yearly rent it can earn ÷ Rate
-
-Then the subway station from Part 1 opens nearby. The spot can now earn $2,000 a year in rent: $2,000 ÷ 0.05 = **$40,000**. Nothing about the land changed. The future rents doubled, and the price jumped the moment people expected it, before a single extra dollar of rent was paid.
-
-Now change only the rate. Rents stay at $1,000, but rates fall to 4%: $1,000 ÷ 0.04 = **$25,000**. The land got 25% more valuable with no subway and no new building. That's why housing booms tend to follow low interest rates.
-
-And if rents are expected to grow 2% a year, the growth formula gives $1,000 ÷ (0.05 − 0.02) = **$33,333**. Every valuation here has the same three dials: what it pays now, how fast that grows, and the rate.
-
-### A skill
-
-Leo, one of Sam's tutors, is deciding whether to take a $5,000 course that would raise his pay by $200 a month.
+**Leo's course.** Leo, one of Sam's tutors, is deciding whether to take a $5,000 course that would raise his pay by $200 a month.
 
 | Step | For Leo's course |
 | --- | --- |
 | 1. Forecast | $2,400 a year of extra pay, for the 20 years he plans to keep teaching |
 | 2. Convert | $2,400 at the end of each year, years 1 to 20 |
 | 3. Rate | 5% |
-| 4. Discount and add | $29,909 in the first row below |
-| 5. Best use | Take the course or keep the $5,000. Take it if the skill is worth more than it costs. |
+| 4. Discount and add | Discount each of the 20 payments and add them up |
+| 5. Best use | Take the course, or keep the $5,000. Take it if the skill is worth more than it costs. |
 
-Here is how the answer moves when the forecast changes:
+### Working through it
+
+**The lot** is worth $1,000 ÷ 0.05 = **$20,000**.
+
+Then the subway station from Part 1 opens nearby. The spot can now earn $2,000 a year in rent: $2,000 ÷ 0.05 = **$40,000**. Nothing about the land changed. The future rents doubled, and the price jumped the moment people expected it, before a single extra dollar of rent was paid.
+
+Now change only the rate. Rents stay at $1,000, but rates fall to 4%: $1,000 ÷ 0.04 = **$25,000**. The land got 25% more valuable with no subway and no new building. That's why housing booms tend to follow low interest rates.
+
+And if rents are expected to grow 2% a year, the growing perpetuity gives $1,000 ÷ (0.05 − 0.02) = **$33,333**.
+
+**Leo's course** is worth $29,909 if the skill stays in demand. Here's how that moves when the forecast changes:
 
 | Scenario | Extra pay | How long | Worth today |
 | --- | --- | --- | --- |
@@ -286,46 +313,53 @@ Here is how the answer moves when the forecast changes:
 
 In the first case, the course is a great deal: pay $5,000, get $29,909 of value. In the last, it barely breaks even.
 
-This is the human capital point from Part 1, now with numbers. A skill is worth the extra income it brings, discounted to today. AI doesn't have to destroy a skill to hurt it. It only has to shorten how long the skill pays, or shrink how much it pays.
+That's the human capital point from Part 1, now with numbers. A skill is worth the extra income it brings, discounted to today. AI doesn't have to destroy a skill to hurt it. It only has to shorten how long the skill pays, or shrink how much it pays.
 
 ---
 
-## Stocks
+## A Stock
 
-A company's stock is divided into shares. Owning a share means owning a slice of the company's future profits, which the company either pays out (as **dividends**) or reinvests to grow.
+### Terms
 
-| Step | For a stock |
+- **Share:** one slice of ownership in a company. It entitles you to a slice of the company's future profits.
+- **Dividend:** profit the company pays out to shareholders. Profit it doesn't pay out gets reinvested to grow the business.
+- **Market cap:** share price × number of shares. The market's price for the whole company.
+- **Earnings per share (EPS):** the company's yearly profit ÷ number of shares.
+- **Equity risk premium:** the extra return investors demand for owning stocks instead of safe government bonds.
+- **P/E ratio:** share price ÷ earnings per share. How many dollars investors pay for each dollar of yearly profit.
+
+### The example
+
+Brightpath Learning is a made-up chain of tutoring centers, like hundreds of Sam's. It's listed on the stock market.
+
+- Profit next year: $50 million
+- Shares: 10 million, so earnings per share are $5
+- Expected profit growth: 3% a year
+- Safe rate 4%, plus a 4% equity risk premium, so an 8% discount rate
+
+| Step | For Brightpath |
 | --- | --- |
-| 1. Forecast | The company's profits for years to come, including how fast they'll grow |
-| 2. Convert | Profit in each future year, per share |
-| 3. Rate | A safe rate plus extra for the risk of owning stocks (below) |
-| 4. Discount and add | Usually a few years forecast in detail, then a growth shortcut for the rest |
-| 5. Best use | Hold the share for its profits, or sell it to someone who'll pay more |
+| 1. Forecast | $50 million of profit next year, growing 3% a year |
+| 2. Convert | Profit in each future year: $50M, $51.5M, $53.0M, and so on |
+| 3. Rate | 8%: 4% safe rate plus 4% equity risk premium |
+| 4. Discount and add | Growing perpetuity |
+| 5. Best use | Hold the shares for the profits, or sell them to someone who'll pay more |
 
-So:
+### Working through it
 
-> Company worth = All future profits, discounted to today
-> Share worth = Company worth ÷ Number of shares
+**The whole company:** $50 million ÷ (0.08 − 0.03) = **$1 billion**.
 
-The total price of all the shares is the company's **market cap**. Stock prices move every day because millions of people keep updating their forecasts and rates as news arrives.
+**One share:** $1 billion ÷ 10 million shares = **$100**.
 
-For stocks, the discount rate is usually built in two layers:
+**Its P/E:** $100 ÷ $5 = **20**. Investors pay $20 for each $1 of yearly profit.
 
-> Discount rate = Safe rate + Extra for risk
+That P/E isn't a coincidence. Start with Price = Profit ÷ (Rate − Growth) and divide both sides by the profit:
 
-The safe rate is what lending to the US government pays, which is tied to the Fed. The extra for risk, called the **equity risk premium**, is what investors demand for holding something that can fall. Say 4% plus 4%, giving the 8% used for Sam.
+> P/E = 1 ÷ (Rate − Growth) = 1 ÷ 0.05 = 20
 
-### The P/E ratio
+So a P/E is the rate and growth assumptions in compressed form. You can run it backward too: a P/E of 25 means the market is pricing in a rate only 4 points above long-run profit growth. **A high P/E means the market expects strong growth, uses a low rate, or both.**
 
-You'll often hear the **price-to-earnings ratio**, or P/E: the share price divided by yearly profit per share. A P/E of 20 means investors pay $20 for every $1 of yearly profit.
-
-It comes straight from the growth formula. Start with Price = Profit ÷ (Rate − Growth) and divide both sides by the profit:
-
-> P/E = 1 ÷ (Rate − Growth)
-
-With an 8% rate and 3% growth, 1 ÷ 0.05 = 20. You can run it backward too: a P/E of 25 means the market is pricing in a rate only 4 points above long-run profit growth. So **a high P/E means the market expects strong growth, uses a low rate, or both.**
-
-It's a simplification. It assumes profits are paid out and grow steadily forever. Real P/Es are just prices divided by profits; the formula is a way to read them.
+It's a simplification. It assumes profits keep growing steadily forever and that the market treats them as the owners' money, whether paid out or reinvested. Real P/Es are just prices divided by profits; the formula is a way to read them.
 
 {{< stuck "Does a P/E of 20 really assume the company earns forever?" >}}
 Yes. And growth pushes even more of the value into the far future, because the later payments are bigger. With an 8% rate and 3% growth, here's where the 20 comes from:
@@ -361,21 +395,18 @@ Sources: [FactSet](https://insight.factset.com/sp-500-earnings-season-update-oct
 
 ---
 
-## Startups
+## A Startup
 
-A startup usually has no profit and often little revenue, so there's no steady stream to forecast. Investors think in **scenarios** instead.
+### Terms
 
-Say a startup is building an AI tutor, a direct competitor to Sam.
+- **Scenario:** one possible future, with a chance of happening.
+- **Expected value:** the average outcome across scenarios, each weighted by its chance.
+- **Funding round:** when a startup sells a slice of itself to investors for cash.
+- **Valuation:** the price for the whole company implied by a funding round. If an investor pays $4 million for 20%, the valuation is $20 million.
 
-| Step | For the startup |
-| --- | --- |
-| 1. Forecast | Several possible futures, each with a chance (table below) |
-| 2. Convert | What the company could be worth when investors expect to cash out, in 8 years |
-| 3. Rate | 25%: far higher than for Sam, because the money is far away, locked up and very uncertain |
-| 4. Discount and add | Weight each future by its chance, then discount |
-| 5. Best use | Invest, or put the money into a different startup |
+### The example
 
-An investor might picture where it could be in 8 years:
+A startup is building an AI tutor, a direct competitor to Sam. It has no profit and little revenue, so there's no steady stream to forecast. An investor pictures where it could be in 8 years:
 
 | Outcome | Chance | Company worth then |
 | --- | --- | --- |
@@ -383,9 +414,21 @@ An investor might picture where it could be in 8 years:
 | Decent business, gets acquired | 20% | $100 million |
 | Fails | 75% | $0 |
 
-Weighted by chance, that's 5% × $2 billion + 20% × $100 million = **$120 million** expected in 8 years. It's far off and uncertain, so investors discount steeply, say 25% a year: $120 million ÷ 1.25⁸ ≈ **$20 million** today.
+| Step | For the startup |
+| --- | --- |
+| 1. Forecast | The three scenarios above |
+| 2. Convert | What the company could be worth in 8 years, when investors expect to cash out |
+| 3. Rate | 25%: far higher than for Sam, because the money is far away, locked up and very uncertain |
+| 4. Discount and add | Weight each scenario by its chance, then discount |
+| 5. Best use | Invest in this startup, or in a different one |
 
-If the investor puts in $4 million for 20% of the company, that implies the whole company is worth $20 million. That's what a startup's **valuation** is: the price implied by a funding deal, not a measured worth.
+### Working through it
+
+**Expected value in 8 years:** 5% × $2 billion + 20% × $100 million + 75% × $0 = **$120 million**.
+
+**Worth today:** $120 million ÷ 1.25⁸ ≈ **$20 million**.
+
+**The funding round:** the investor puts in $4 million for 20% of the company, which values the whole company at $20 million, in line with their estimate.
 
 Three things stand out:
 
@@ -397,28 +440,37 @@ Three things stand out:
 
 ## Why Everything Moves When Rates Change
 
-Every valuation in this part divided future money by a discount rate. Every discount rate sits on top of the safe rate, and the safe rate follows the Fed. So when rates move, everything gets repriced at once.
+### Terms
 
-**Bonds.** The bond from earlier is worth $1,057.69 at 2%, $1,000 at 4%, and $946.54 at 6%. Longer bonds move much more: a 30-year bond paying 4% would fall from $1,000 to about $725 if rates went to 6%, because so much of its money is far in the future.
+- **Repricing:** when the market changes what it will pay for something, even though nothing about the thing itself changed.
+- **Interest rate sensitivity:** how much a price moves when rates move. The further away most of the money is, the more sensitive the price.
 
-**Stocks.** Raise the discount rate by one point:
+### The example
 
-| Company | P/E at an 8% rate | P/E at a 9% rate | Change |
-| --- | --- | --- | --- |
-| Steady, 3% growth | 20 | 16.7 | −17% |
-| Fast-growing, 6% growth | 50 | 33 | −33% |
+The Fed raises rates, and every discount rate in this post goes up by one point. Nothing else changes: same payments, same profits, same rents, same forecasts.
 
-Same profits, lower prices. And fast-growing companies fall harder, because more of their value sits far in the future, where a higher rate shrinks it most. That's why tech stocks swing more than utilities when the Fed moves.
+### Working through it
 
-**Land and housing.** Sam's lot earning $1,000 a year is worth $20,000 at 5% and $16,667 at 6%. Mortgages also get more expensive, so buyers can afford less.
+| | Rate before → after | Worth before | Worth after | Change |
+| --- | --- | --- | --- | --- |
+| The bond | 4% → 5% | $1,000 | $973 | −3% |
+| Sam's center | 8% → 9% | $90,000 | $80,000 | −11% |
+| Sam's lot | 5% → 6% | $20,000 | $16,667 | −17% |
+| Leo's course | 5% → 6% | $29,909 | $27,528 | −8% |
+| A Brightpath share | 8% → 9% | $100 | $83 | −17% |
+| The AI tutor startup | 25% → 26% | $20 million | $18.9 million | −6% |
 
-**Startups.** Investors discount even more steeply, and safe returns look better, so less money flows into risky bets.
+Everything fell at once, and nothing about any of them changed. That's what people mean when they say markets react to the Fed.
 
-**Skills.** Leo's course is worth less at a higher rate too, though nobody quotes a price for it.
+The size of the drop depends on how far away the money is:
 
-It works in reverse as well. When rates fall, all of these rise together, often with no change in the businesses underneath, which is why long stretches of low rates tend to bring booms in asset prices.
+- **The bond** barely moved, because its last payment is only 3 years away. A 30-year bond paying 4% would fall from $1,000 to about $725 if rates went from 4% to 6%.
+- **Things that pay forever move much more,** because so much of their value sits far in the future. Low-rate ones move most of all: the lot fell 17% and the center 11%, because going from 5% to 6% is a bigger relative jump than going from 8% to 9%.
+- **Fast-growing companies fall harder than slow ones.** A company growing 6% a year at an 8% rate has a P/E of 50. At 9%, it drops to 33, a 33% fall, twice Brightpath's. More of its value is far away, where a higher rate shrinks it most. That's why tech stocks swing more than utilities when the Fed moves.
 
-In 2022, the Fed raised rates very quickly to fight inflation. Bonds had one of their worst years in decades, stocks fell, fast-growing tech stocks fell the most, and startup funding dried up. For most of those companies, nothing about their products changed that year. The discount rate did.
+It works in reverse too. When rates fall, all of these rise together, often with no change in the businesses underneath, which is why long stretches of low rates tend to bring booms in asset prices.
+
+**A real example:** in 2022, the Fed raised rates very quickly to fight inflation. Bonds had one of their worst years in decades, stocks fell, fast-growing tech stocks fell the most, and startup funding dried up. For most of those companies, nothing about their products changed that year. The discount rate did.
 
 {{< stuck "Why do yields go up when inflation rises or the Fed tightens? And why would a booming economy raise them?" >}}
 What connected it for me: yields are set by the people buying and selling bonds. A yield goes up whenever lenders demand a better return before they'll lend. They show it by paying less for bonds, and a lower price means a higher yield. Each case pushes up one part of the interest rate from Part 2.
@@ -452,7 +504,7 @@ And not everyone loses. Higher yields are good for anyone putting money to work 
 | Sam's center | $7,200 a year, forever | 8% | $90,000 |
 | Sam's lot | $1,000 a year of rent, forever | 5% | $20,000 |
 | Leo's course | $2,400 a year for 20 years | 5% | $29,909 |
-| A stock | Growing profits, forever | Safe rate plus risk premium | P/E = 1 ÷ (rate − growth) |
+| A Brightpath share | $5 of profit next year, growing 3% a year | 8% | $100 |
 | AI tutor startup | 5% chance of $2B, 20% of $100M, in 8 years | 25% | About $20M |
 
 Moving down the table, the forecast becomes less certain and the rate goes up to match.
@@ -461,6 +513,6 @@ Moving down the table, the forecast becomes less certain and the rate goes up to
 
 ## What's Next
 
-This part used one recipe for everything: list the money something will bring, discount it to today, and add it up. Bonds, Sam's center, land, skills, stocks and startups differ only in their stream of money. Three dials drive the answer: what it pays, how fast that grows, and the discount rate. And because the Fed anchors every discount rate, a change in rates reprices all of them at once.
+This part used one recipe for everything: list the money something will bring, discount it to today, and add it up. Bonds, a business, land, a skill, a stock and a startup differ only in their stream of money. Three dials drive the answer: what it pays, how fast that grows, and the discount rate. And because the Fed anchors every discount rate, a change in rates reprices all of them at once.
 
 Part 4 is about markets: how buyers and sellers actually arrive at a price through supply and demand, what stock, bond, commodity and currency markets do, and what's really happening when people say "the market is up."
