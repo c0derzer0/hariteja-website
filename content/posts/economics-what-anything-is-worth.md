@@ -50,7 +50,7 @@ That's the general pattern: intrinsic value is an estimate each person makes, an
 ### The recipe for intrinsic value
 
 1. **Forecast** every future benefit: profits, interest, rent, a sale later on.
-2. **Convert** each into an amount of money and a date.
+2. **Lay out the timeline:** turn each benefit into a dollar amount on a specific date. Discounting needs both, because how much a payment is worth today depends on how far away it is.
 3. **Pick a discount rate**: what your money could earn elsewhere at similar risk.
 4. **Discount** each amount to today and add them up.
 5. If there's more than one way to use the thing, it's worth the **best** one.
@@ -85,7 +85,7 @@ A 3-year US government bond with a face value of $1,000 and a 4% coupon. It pays
 | Step | For this bond |
 | --- | --- |
 | 1. Forecast | $40 of interest a year, plus $1,000 back at the end. Fixed by the contract, so no guessing. |
-| 2. Convert | $40 in year 1, $40 in year 2, $1,040 in year 3 |
+| 2. Timeline | $40 in year 1, $40 in year 2, $1,040 in year 3 |
 | 3. Rate | 4%, what similar safe loans pay today |
 | 4. Discount and add | The table below |
 | 5. Best use | Hold it or sell it. At a fair price, both are worth the same. |
@@ -177,7 +177,7 @@ Sam's center earns $600 a month in profit, so $7,200 a year. A buyer wants to pu
 | Step | For Sam's center |
 | --- | --- |
 | 1. Forecast | Profit of $7,200 a year, assumed to continue indefinitely. Unlike the bond, this is a guess. |
-| 2. Convert | $7,200 at the end of every year, forever |
+| 2. Timeline | $7,200 at the end of every year, forever |
 | 3. Rate | 8%: a safe rate plus extra, because a small business is risky |
 | 4. Discount and add | The perpetuity shortcut below |
 | 5. Best use | Keep running it, or shut it and sell the desks and books for $3,000 |
@@ -264,7 +264,7 @@ Land and skills are streams of money too, just of different kinds:
 | Step | For Sam's lot |
 | --- | --- |
 | 1. Forecast | Rent of $1,000 a year if she leased it out. If she uses it herself, that's the rent she doesn't have to pay. |
-| 2. Convert | $1,000 every year, forever, since land doesn't wear out |
+| 2. Timeline | $1,000 every year, forever, since land doesn't wear out |
 | 3. Rate | 5%: steadier than a small business, riskier than a government bond |
 | 4. Discount and add | Perpetuity: $1,000 ÷ 0.05 |
 | 5. Best use | Rent it out, use it for the center, or sell it. It's worth whichever is highest. |
@@ -282,7 +282,7 @@ And if rents are expected to grow 2% a year, the growing perpetuity gives $1,000
 | Step | For Leo's course |
 | --- | --- |
 | 1. Forecast | $2,400 a year of extra pay, for the 20 years he plans to keep teaching |
-| 2. Convert | $2,400 at the end of each year, years 1 to 20 |
+| 2. Timeline | $2,400 at the end of each year, years 1 to 20 |
 | 3. Rate | 5% |
 | 4. Discount and add | Discount each of the 20 payments and add them up |
 | 5. Best use | Take the course, or keep the $5,000. Take it if the skill is worth more than it costs. |
@@ -322,7 +322,7 @@ Brightpath Learning is a made-up chain of tutoring centers, like hundreds of Sam
 | Step | For Brightpath |
 | --- | --- |
 | 1. Forecast | $50 million of profit next year, growing 3% a year |
-| 2. Convert | Profit in each future year: $50M, $51.5M, $53.0M, and so on |
+| 2. Timeline | Profit in each future year: $50M, $51.5M, $53.0M, and so on |
 | 3. Rate | 8%: 4% safe rate plus 4% equity risk premium |
 | 4. Discount and add | Growing perpetuity |
 | 5. Best use | Hold the shares for the profits, or sell them to someone who'll pay more |
@@ -395,7 +395,7 @@ A startup is building an AI tutor, a direct competitor to Sam. It has no profit 
 | Step | For the startup |
 | --- | --- |
 | 1. Forecast | The three scenarios above |
-| 2. Convert | What the company could be worth in 8 years, when investors expect to cash out |
+| 2. Timeline | Collapse the scenarios into one amount on one date: the company's expected worth in 8 years, when investors plan to cash out |
 | 3. Rate | 25%: far higher than for Sam, because the money is far away, locked up and very uncertain |
 | 4. Discount and add | Weight each scenario by its chance, then discount |
 | 5. Best use | Invest in this startup, or in a different one |
