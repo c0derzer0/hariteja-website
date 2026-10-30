@@ -73,6 +73,8 @@ You often hear that "the Fed sets interest rates." It doesn't set your rate or S
 
 At the end of each day, some banks have more reserves than they need and some are short, because their customers moved money around. The ones with extra lend to the ones that are short, just until the next day. The rate on those overnight loans is the **federal funds rate**. That's what people mean by "the Fed rate."
 
+Why would a bank run short? Every time a customer pays someone at a different bank, their bank has to send real reserves to the other bank to settle the payment. On a day when more money flows out than in, its reserves drop. A bank can't simply hold a huge pile to avoid this, because reserves earn less than loans. So each bank keeps enough to cover its payments, plus a cushion regulators require, and borrows overnight when it dips below that. (How banks create money when they lend, and how reserves differ from a bank's capital, gets its own section in a later part.)
+
 The Fed isn't part of those loans. It steers their rate with two rates of its own:
 
 | Rate | Who pays whom | Role |
