@@ -223,4 +223,4 @@ Hold onto the second rule. Since the Fed anchors every rate in the economy, it m
 
 This part covered why money now beats money later, what an interest rate is made of, how the Fed sets the rate everything else builds on, and the two tools for moving money through time: compounding forward and discounting back.
 
-Part 3 puts discounting to work. If anything is worth its future benefits brought back to today, we can price a bond, Sam's whole center, a plot of land, a skill, a stock and a startup with the same method. And we'll see why, when interest rates move, the prices of all of them move together.
+[Part 3](/posts/economics-what-anything-is-worth/) puts discounting to work. If anything is worth its future benefits brought back to today, we can price a bond, Sam's whole center, a plot of land, a skill, a stock and a startup with the same method. And we'll see why, when interest rates move, the prices of all of them move together.
