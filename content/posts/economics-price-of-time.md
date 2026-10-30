@@ -12,7 +12,7 @@ summary: "Why a dollar today is worth more than a dollar tomorrow, what an inter
 
 This part is about time: why money now is worth more than money later, what the interest rate actually measures, and how to move money backward and forward through time. Part 3 uses these tools to work out what anything is worth.
 
-We'll keep using Sam's tutoring center from Part 1. And since these are my notes, wherever I got stuck along the way, I've kept the question I asked and the answer that cleared it up.
+We'll keep using Sam's tutoring center from Part 1. And since these are my notes, wherever I got stuck along the way, I've kept the question I had and what cleared it up.
 
 ---
 
@@ -62,11 +62,11 @@ The three reasons money now beats money later are also the three parts of every 
 That's why different borrowers pay different rates on the same day. The US government is very unlikely to default, so it borrows cheaply. Sam, a small business with no track record, pays more. A credit card charges even more, because many people never pay it back.
 
 {{< stuck "There's no inflation number in a loan contract. So how would I set a rate if I lent someone money?" >}}
-You guess, and build the guess in. Say a friend asks to borrow $1,000 for a year. You'd think it through roughly like this:
+The lender guesses, and builds the guess into the rate. If a friend asked to borrow $1,000 for a year, I'd think it through roughly like this:
 
-1. **What could I get elsewhere?** Whatever a savings account or a government bond pays is your floor. Lending to your friend for less makes no sense.
-2. **Will the money buy less when I get it back?** If you expect prices to rise 3%, getting back exactly $1,000 loses you buying power. The safe rate in step 1 usually covers this already, because savers everywhere make the same guess and won't accept less.
-3. **How likely am I to be paid back?** If there's a real chance you won't be, add extra on top.
+1. **What could I get elsewhere?** Whatever a savings account or a government bond pays is my floor. Lending to a friend for less makes no sense.
+2. **Will the money buy less when I get it back?** If prices rise 3%, getting back exactly $1,000 means losing buying power. The safe rate in step 1 usually covers this already, because savers everywhere make the same guess and won't accept less.
+3. **How likely am I to be paid back?** If there's a real chance I won't be, I'd add extra on top.
 
 Banks do the same thing with more data. Because they compete, rates for similar borrowers end up close together. If one bank charges Sam 15% when others charge 8%, she goes elsewhere. So rates come from many lenders' judgments, pushed together by competition.
 {{< /stuck >}}
@@ -102,7 +102,7 @@ The floor works because no bank will lend to another bank for less than the Fed 
 Banks only borrow from the Fed when they're stuck, which is why it's called the **lender of last resort**. People and ordinary companies can't borrow from it at all.
 
 {{< stuck "Shouldn't the Fed charge more than banks charge each other? Otherwise everyone would just borrow from the Fed." >}}
-Yes, exactly, and that's the point of the ceiling. Because the Fed charges more, banks borrow from each other first and only go to the Fed when they can't get money anywhere else. There's also a social reason: borrowing from the Fed can look like a sign a bank is in trouble, so banks avoid it unless they have to.
+My instinct was right, and it's the whole point of the ceiling. Because the Fed charges more, banks borrow from each other first and only go to the Fed when they can't get money anywhere else. There's also a social reason: borrowing from the Fed can look like a sign a bank is in trouble, so banks avoid it unless they have to.
 
 The floor works the same way in reverse. Why lend to another bank at 3% when the Fed pays 4.2% for doing nothing?
 {{< /stuck >}}
@@ -117,7 +117,7 @@ The floor works the same way in reverse. Why lend to another bank at 3% when the
 So the Fed sets the cheapest, shortest, safest rate in the economy, and every other lender prices off it, adding their own extra for time, risk and inflation.
 
 {{< stuck "If banks just lend to each other and pass reserves around, is the total amount of money fixed unless the Fed prints more?" >}}
-Half right. There are two layers of money, and they behave differently.
+Only partly. What I hadn't separated was that there are two layers of money, and they behave differently.
 
 | | Who creates it | Who uses it | Fixed total? |
 | --- | --- | --- | --- |
@@ -186,9 +186,9 @@ Now suppose the best safe rate Sam can find is only 3%. $1,000 ÷ 1.03¹⁰ = **
 {{< stuck "Why discount at all? Why not grow the $700 forward at 3% and compare in 10 years? And doesn't the 3% compound?" >}}
 It does compound: the 1.03¹⁰ in the formula *is* ten years of compounding, just divided instead of multiplied.
 
-And you can grow it forward. You get the same answer. At 3%, $700 grows to $941 in 10 years, which is less than the $1,000 on offer, so buy. Discounting compares at today; growing forward compares in 10 years. Same decision either way.
+Growing it forward works too, and gives the same answer. At 3%, $700 grows to $941 in 10 years, which is less than the $1,000 on offer, so buy. Discounting compares at today; growing forward compares in 10 years. Same decision either way.
 
-People usually discount to today for two reasons. First, decisions and prices happen today, so discounting tells you the most you should pay, not just yes or no for one price. Second, most things pay many times, not once. A bond pays every year, a business earns every year, a job pays every month. To add up payments made at different times, you need one common point, and today is the natural one.
+People usually discount to today for two reasons. First, decisions and prices happen today, so discounting gives the most worth paying, not just a yes or no for one price. Second, most things pay many times, not once. A bond pays every year, a business earns every year, a job pays every month. To add up payments made at different times, they need one common point, and today is the natural one.
 
 For example, $100 a year for 3 years, at 3%:
 
