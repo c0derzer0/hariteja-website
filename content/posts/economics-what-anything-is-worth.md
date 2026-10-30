@@ -269,6 +269,14 @@ Land and skills are streams of money too, just of different kinds:
 | 4. Discount and add | Perpetuity: $1,000 ÷ 0.05 |
 | 5. Best use | Rent it out, use it for the center, or sell it. It's worth whichever is highest. |
 
+So the lot is worth $1,000 ÷ 0.05 = **$20,000**.
+
+Then the subway station from Part 1 opens nearby. The spot can now earn $2,000 a year in rent: $2,000 ÷ 0.05 = **$40,000**. Nothing about the land changed. The future rents doubled, and the price jumped the moment people expected it, before a single extra dollar of rent was paid.
+
+Now change only the rate. Rents stay at $1,000, but rates fall to 4%: $1,000 ÷ 0.04 = **$25,000**. The land got 25% more valuable with no subway and no new building. That's why housing booms tend to follow low interest rates.
+
+And if rents are expected to grow 2% a year, the growing perpetuity gives $1,000 ÷ (0.05 − 0.02) = **$33,333**.
+
 **Leo's course.** Leo, one of Sam's tutors, is deciding whether to take a $5,000 course that would raise his pay by $200 a month.
 
 | Step | For Leo's course |
@@ -279,15 +287,7 @@ Land and skills are streams of money too, just of different kinds:
 | 4. Discount and add | Discount each of the 20 payments and add them up |
 | 5. Best use | Take the course, or keep the $5,000. Take it if the skill is worth more than it costs. |
 
-**The lot** is worth $1,000 ÷ 0.05 = **$20,000**.
-
-Then the subway station from Part 1 opens nearby. The spot can now earn $2,000 a year in rent: $2,000 ÷ 0.05 = **$40,000**. Nothing about the land changed. The future rents doubled, and the price jumped the moment people expected it, before a single extra dollar of rent was paid.
-
-Now change only the rate. Rents stay at $1,000, but rates fall to 4%: $1,000 ÷ 0.04 = **$25,000**. The land got 25% more valuable with no subway and no new building. That's why housing booms tend to follow low interest rates.
-
-And if rents are expected to grow 2% a year, the growing perpetuity gives $1,000 ÷ (0.05 − 0.02) = **$33,333**.
-
-**Leo's course** is worth $29,909 if the skill stays in demand. Here's how that moves when the forecast changes:
+Discounting each of the 20 payments at 5% and adding them up gives **$29,909**, if the skill stays in demand. Here's how that moves when the forecast changes:
 
 | Scenario | Extra pay | How long | Worth today |
 | --- | --- | --- | --- |
