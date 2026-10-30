@@ -1,0 +1,12 @@
+{{- /*
+  "Where I got stuck" box: a question I actually asked while learning, and the answer that cleared it up.
+  Usage:
+    {{< stuck "Why discount instead of growing the money forward?" >}}
+    Answer in markdown...
+    {{< /stuck >}}
+*/ -}}
+<aside class="stuck">
+  <p class="stuck-label">Where I got stuck</p>
+  <p class="stuck-q">{{ .Get 0 }}</p>
+  <div class="stuck-a">{{ .Inner | .Page.RenderString (dict "display" "block") }}</div>
+</aside>

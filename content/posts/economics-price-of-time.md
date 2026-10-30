@@ -12,7 +12,7 @@ summary: "Why a dollar today is worth more than a dollar tomorrow, what an inter
 
 This part is about time: why money now is worth more than money later, what the interest rate actually measures, and how to move money backward and forward through time. Part 3 uses these tools to work out what anything is worth.
 
-We'll keep using Sam's tutoring center from Part 1.
+We'll keep using Sam's tutoring center from Part 1. And since these are my notes, wherever I got stuck along the way, I've kept the question I asked and the answer that cleared it up.
 
 ---
 
@@ -27,6 +27,14 @@ A parent offers Sam a choice: $1,000 today, or $1,000 a year from now. Same amou
 **Prices may rise.** If things cost more next year, $1,000 then buys less than $1,000 now. Prices in general rising over time is called **inflation**. If Sam's books, supplies and electricity cost $200 this month and $206 a year from now, with nothing else changed, prices rose 3%.
 
 So to get Sam to wait, you'd have to offer her more than $1,000 later. How much more is the subject of the next section.
+
+{{< stuck "If inflation affects interest rates, who sets inflation?" >}}
+Nobody sets it. Inflation isn't a number anyone picks. It's the result of millions of businesses each raising or lowering their own prices.
+
+The government **measures** it. In the US, the Bureau of Labor Statistics tracks the prices of a large basket of everyday things, like groceries, rent, gas and haircuts, every month, and reports how much the total changed. That's the inflation number in the news.
+
+The Federal Reserve tries to **steer** it, mostly by moving interest rates, and aims for about 2% a year. But it can only nudge it, not set it.
+{{< /stuck >}}
 
 ---
 
@@ -53,15 +61,15 @@ The three reasons money now beats money later are also the three parts of every 
 
 That's why different borrowers pay different rates on the same day. The US government is very unlikely to default, so it borrows cheaply. Sam, a small business with no track record, pays more. A credit card charges even more, because many people never pay it back.
 
-### How you'd set a rate yourself
-
-Nobody hands a lender the right rate. Say a friend asks to borrow $1,000 for a year. You'd think it through roughly like this:
+{{< stuck "There's no inflation number in a loan contract. So how would I set a rate if I lent someone money?" >}}
+You guess, and build the guess in. Say a friend asks to borrow $1,000 for a year. You'd think it through roughly like this:
 
 1. **What could I get elsewhere?** Whatever a savings account or a government bond pays is your floor. Lending to your friend for less makes no sense.
-2. **Will the money buy less when I get it back?** If you expect prices to rise 3%, getting back exactly $1,000 loses you buying power. The safe rate usually covers this already, because savers everywhere make the same guess and won't accept less.
-3. **How likely am I to be paid back?** If there's a real chance you won't be, you add extra on top.
+2. **Will the money buy less when I get it back?** If you expect prices to rise 3%, getting back exactly $1,000 loses you buying power. The safe rate in step 1 usually covers this already, because savers everywhere make the same guess and won't accept less.
+3. **How likely am I to be paid back?** If there's a real chance you won't be, add extra on top.
 
-Banks do the same thing with more data. Because they compete, rates for similar borrowers end up close together. If one bank charges Sam 15% when others charge 8%, she goes elsewhere.
+Banks do the same thing with more data. Because they compete, rates for similar borrowers end up close together. If one bank charges Sam 15% when others charge 8%, she goes elsewhere. So rates come from many lenders' judgments, pushed together by competition.
+{{< /stuck >}}
 
 ---
 
@@ -73,7 +81,13 @@ You often hear that "the Fed sets interest rates." It doesn't set your rate or S
 
 At the end of each day, some banks have more reserves than they need and some are short, because their customers moved money around. The ones with extra lend to the ones that are short, just until the next day. The rate on those overnight loans is the **federal funds rate**. That's what people mean by "the Fed rate."
 
-Why would a bank run short? Every time a customer pays someone at a different bank, their bank has to send real reserves to the other bank to settle the payment. On a day when more money flows out than in, its reserves drop. A bank can't simply hold a huge pile to avoid this, because reserves earn less than loans. So each bank keeps enough to cover its payments, plus a cushion regulators require, and borrows overnight when it dips below that. (How banks create money when they lend, and how reserves differ from a bank's capital, gets its own section in a later part.)
+{{< stuck "Why would a bank run short? Why can't it just keep what it has?" >}}
+Every time Sam pays someone who banks somewhere else, her bank has to send real reserves to the other bank to settle the payment. Millions of payments like this flow between banks every day. On a day when more flows out than in, a bank's reserves drop.
+
+Having less than yesterday is fine. The problem is dropping below what it needs. It's like a checking account: a lower balance is fine, but if rent is due and the balance is too low, the payment bounces. A bank needs reserves to settle its customers' payments, to pay anyone who withdraws, and to meet a cushion regulators require.
+
+It can't just hold a huge pile to be safe, because reserves earn less than loans. So each bank keeps enough to be safe, not more, and borrows overnight on the days it dips below that.
+{{< /stuck >}}
 
 The Fed isn't part of those loans. It steers their rate with two rates of its own:
 
@@ -83,9 +97,15 @@ The Fed isn't part of those loans. It steers their rate with two rates of its ow
 | Federal funds rate | Banks pay each other for overnight loans | The headline "Fed rate" |
 | Discount rate | Banks pay the Fed when they borrow from it | Ceiling |
 
-The floor works because no bank will lend to another bank for less than the Fed pays it to do nothing. The ceiling works because no bank will borrow from another bank for more than the Fed charges. So the bank-to-bank rate stays in the corridor between them. When the Fed "raises rates," it moves the whole corridor up.
+The floor works because no bank will lend to another bank for less than the Fed pays it to do nothing. The ceiling works because no bank will borrow from another bank for more than the Fed charges. So the bank-to-bank rate stays in the corridor between them. When the Fed "raises rates," it moves the whole corridor up. The Fed announces this as a **target range**: at its October 2026 meeting, it kept the range at 3.75% to 4.00%.
 
 Banks only borrow from the Fed when they're stuck, which is why it's called the **lender of last resort**. People and ordinary companies can't borrow from it at all.
+
+{{< stuck "Shouldn't the Fed charge more than banks charge each other? Otherwise everyone would just borrow from the Fed." >}}
+Yes, exactly, and that's the point of the ceiling. Because the Fed charges more, banks borrow from each other first and only go to the Fed when they can't get money anywhere else. There's also a social reason: borrowing from the Fed can look like a sign a bank is in trouble, so banks avoid it unless they have to.
+
+The floor works the same way in reverse. Why lend to another bank at 3% when the Fed pays 4.2% for doing nothing?
+{{< /stuck >}}
 
 ### How one overnight rate reaches Sam
 
@@ -95,6 +115,19 @@ Banks only borrow from the Fed when they're stuck, which is why it's called the 
 4. Sam's next loan costs more than 8%, and savings accounts start paying more too.
 
 So the Fed sets the cheapest, shortest, safest rate in the economy, and every other lender prices off it, adding their own extra for time, risk and inflation.
+
+{{< stuck "If banks just lend to each other and pass reserves around, is the total amount of money fixed unless the Fed prints more?" >}}
+Half right. There are two layers of money, and they behave differently.
+
+| | Who creates it | Who uses it | Fixed total? |
+| --- | --- | --- | --- |
+| Reserves and cash | The Fed | Banks paying each other, cash in wallets | Yes, unless the Fed changes it |
+| Deposits | Ordinary banks, by lending | Everyone else | No, grows and shrinks with lending |
+
+Reserves only move around between banks, so their total stays the same unless the Fed adds or removes them. But as Part 1 showed, when a bank lends Sam $5,000, it types new money into her account. When she repays, that money disappears. So the money people actually spend grows and shrinks with lending.
+
+The Fed controls the first layer directly, and the second only indirectly, through interest rates: cheaper borrowing means more loans, which means more new money. How banks can do this, and what stops them doing it without limit, gets its own section in a later part.
+{{< /stuck >}}
 
 ---
 
@@ -150,11 +183,12 @@ You can't compare $700 and $1,000 directly, because they happen at different tim
 
 Now suppose the best safe rate Sam can find is only 3%. $1,000 ÷ 1.03¹⁰ = **$744**. Now the same promise is worth more than its $700 price, so she should buy it. Same offer, opposite answer, because her alternative got worse.
 
-### Why not just grow the $700 forward?
+{{< stuck "Why discount at all? Why not grow the $700 forward at 3% and compare in 10 years? And doesn't the 3% compound?" >}}
+It does compound: the 1.03¹⁰ in the formula *is* ten years of compounding, just divided instead of multiplied.
 
-You can, and you'll get the same answer. At 3%, $700 grows to $941 in 10 years, which is less than the $1,000 on offer, so buy. Discounting compares at today; growing forward compares in 10 years. Same decision either way.
+And you can grow it forward. You get the same answer. At 3%, $700 grows to $941 in 10 years, which is less than the $1,000 on offer, so buy. Discounting compares at today; growing forward compares in 10 years. Same decision either way.
 
-People usually discount to today for two reasons. First, decisions and prices happen today, so discounting gives you the most you should pay, not just a yes or no. Second, most things pay many times, not once. A bond pays every year, a business earns every year, a job pays every month. To add up payments made at different times, you need one common point, and today is the natural one.
+People usually discount to today for two reasons. First, decisions and prices happen today, so discounting tells you the most you should pay, not just yes or no for one price. Second, most things pay many times, not once. A bond pays every year, a business earns every year, a job pays every month. To add up payments made at different times, you need one common point, and today is the natural one.
 
 For example, $100 a year for 3 years, at 3%:
 
@@ -165,7 +199,8 @@ For example, $100 a year for 3 years, at 3%:
 | $100 | 3 years | $91.51 |
 | **Total** | | **$282.86** |
 
-That whole stream of payments is worth $282.86 today.
+That whole stream is worth $282.86 today. That's exactly how a bond or a business gets a price, which is where Part 3 picks up.
+{{< /stuck >}}
 
 ### Two rules
 

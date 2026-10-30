@@ -570,3 +570,33 @@ hr {
 .series-list li { gap: 0; }
 .series-list time { padding-left: 1rem; }
 @media (max-width: 768px) { .series-list time { padding-left: 0; } }
+
+/* ---------- "Where I got stuck" box (layouts/shortcodes/stuck.html) ---------- */
+.stuck {
+    margin: 2rem 0;
+    padding: 1.1rem 1.4rem 0.4rem 1.4rem;
+    background: #f7f6f2;
+    border-left: 3px solid #1f4e79;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.93rem;
+    line-height: 1.6;
+}
+.stuck-label {
+    margin: 0 0 0.3rem 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1f4e79;
+}
+.stuck-q {
+    margin: 0 0 0.8rem 0;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #222;
+}
+.stuck-a p { margin-bottom: 0.9rem; }
+.stuck-a ul, .stuck-a ol { margin: 0 0 0.9rem 1.4rem; }
+.stuck .table-wrap { margin: 0.75rem 0 1rem 0; }
+@media (max-width: 768px) {
+    .stuck { padding: 0.9rem 1rem 0.2rem 1rem; }
+}
