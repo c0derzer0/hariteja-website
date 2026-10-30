@@ -2,7 +2,7 @@
 title: "The Price of Time"
 tags: ["Economics", "First Principles", "Interest Rates"]
 date: 2026-10-30
-draft: true
+draft: false
 series: "Economics from Scratch"
 series_order: 2
 summary: "Why a dollar today is worth more than a dollar tomorrow, what an interest rate really is, how the Fed sets one rate that every other rate builds on, and the two tools that move money through time: compounding and discounting."

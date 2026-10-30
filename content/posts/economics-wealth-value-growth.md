@@ -216,6 +216,6 @@ The **central bank** (the Federal Reserve in the US) steers this mainly through 
 
 This post covered what wealth is, how value gets created and split, how to think about the next step, what growth means, and where money comes from.
 
-The next piece is discounting: why a dollar tomorrow is worth less than a dollar today. It's the idea behind interest rates, bond prices, and how anything gets valued, from a company to a plot of land to a skill. After that come inflation and central banks.
+The next piece, [The Price of Time](/posts/economics-price-of-time/), is about why a dollar tomorrow is worth less than a dollar today. It's the idea behind interest rates, bond prices, and how anything gets valued, from a company to a plot of land to a skill.
 
 Once the fundamentals are in place, I'll come back to the question I started with: what AI does to all of this, and where that leaves gaps and opportunities.
