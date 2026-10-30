@@ -2,7 +2,7 @@
 title: "What Anything Is Worth"
 tags: ["Economics", "First Principles", "Valuation", "Bonds", "Stocks"]
 date: 2026-10-30
-draft: true
+draft: false
 series: "Economics from Scratch"
 series_order: 3
 summary: "One recipe prices everything: list the money it will bring, discount it to today, add it up. Worked through a bond, Sam's tutoring center, land, a skill, a stock and a startup, and then why all of them move together when interest rates change."
