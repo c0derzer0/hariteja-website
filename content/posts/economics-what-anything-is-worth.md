@@ -42,6 +42,8 @@ You'll also hear **book value**: what a company's accounts say its assets are wo
 
 Everything comes down to two inputs: the forecast and the rate. When people disagree about what something is worth, they almost always disagree about one of those two.
 
+Each section below starts by filling in these five steps for its example, so you can see the same recipe at work every time.
+
 {{< stuck "Is something worth only what it earns in the future? Nothing else?" >}}
 In principle, yes, but "what it brings" is broader than profit. Each benefit just has to be turned into an amount of money and a date:
 
@@ -62,7 +64,17 @@ A **bond** is a loan you can buy. You lend money to a government or a company, a
 - **Coupon:** the fixed interest paid each year, say $40, which is 4% of $1,000.
 - **Maturity:** when it ends, say in 3 years.
 
-So this bond pays $40, $40, then $1,040: the last coupon plus the $1,000 back. Discount each payment at 4%, the going rate for similar safe loans:
+So this bond pays $40, $40, then $1,040: the last coupon plus the $1,000 back.
+
+| Step | For this bond |
+| --- | --- |
+| 1. Forecast | $40 of interest a year, plus $1,000 back at the end. Fixed by the contract, so no guessing. |
+| 2. Convert | $40 in year 1, $40 in year 2, $1,040 in year 3 |
+| 3. Rate | 4%, what similar safe loans pay today |
+| 4. Discount and add | The table below |
+| 5. Best use | Hold it or sell it. At a fair price, both are worth the same. |
+
+Discount each payment at 4%:
 
 | Payment | When | Calculation | Worth today |
 | --- | --- | --- | --- |
@@ -146,7 +158,15 @@ So when the news says "the 10-year Treasury yield rose," it means prices of 10-y
 
 Sam's center earns $600 a month in profit, so $7,200 a year. A buyer wants to purchase the whole business. What's a fair price?
 
-Same recipe: discount every future year's profit and add them up. A small business is risky, so a buyer might use 8%. If the profit continues indefinitely, there's a shortcut for an endless stream:
+| Step | For Sam's center |
+| --- | --- |
+| 1. Forecast | Profit of $7,200 a year, assumed to continue indefinitely. Unlike the bond, this is a guess. |
+| 2. Convert | $7,200 at the end of every year, forever |
+| 3. Rate | 8%: a safe rate plus extra, because a small business is risky |
+| 4. Discount and add | The shortcut below |
+| 5. Best use | Keep running it ($90,000) or shut it and sell the desks and books ($3,000). Running it wins. |
+
+Adding up an endless stream one year at a time would take forever, so there's a shortcut:
 
 > Value = Yearly amount ÷ Rate
 
@@ -224,11 +244,19 @@ One more thing follows: a price is based on people's **guesses** about future pr
 
 ### Land
 
-Land doesn't produce profit by itself. Its benefit is that someone will pay to use it. So:
+Land doesn't produce profit by itself. Its benefit is that someone will pay to use it. Sam owns the small lot her center sits on.
+
+| Step | For Sam's lot |
+| --- | --- |
+| 1. Forecast | Rent of $1,000 a year if she leased it out. If she uses it herself, that's the rent she doesn't have to pay. |
+| 2. Convert | $1,000 every year, forever, since land doesn't wear out |
+| 3. Rate | 5%: steadier than a small business, riskier than a government bond |
+| 4. Discount and add | $1,000 ÷ 0.05 = **$20,000** |
+| 5. Best use | Rent it out, use it for the center, or sell it. It's worth whichever is highest. |
+
+So:
 
 > Land worth = Yearly rent it can earn ÷ Rate
-
-Sam's lot could be rented out for $1,000 a year. At 5%, a fairly safe stream, it's worth $1,000 ÷ 0.05 = **$20,000**.
 
 Then the subway station from Part 1 opens nearby. The spot can now earn $2,000 a year in rent: $2,000 ÷ 0.05 = **$40,000**. Nothing about the land changed. The future rents doubled, and the price jumped the moment people expected it, before a single extra dollar of rent was paid.
 
@@ -238,7 +266,17 @@ And if rents are expected to grow 2% a year, the growth formula gives $1,000 ÷ 
 
 ### A skill
 
-Leo, one of Sam's tutors, is deciding whether to take a $5,000 course that would raise his pay by $200 a month, $2,400 a year, for the 20 years he plans to keep teaching. At 5%:
+Leo, one of Sam's tutors, is deciding whether to take a $5,000 course that would raise his pay by $200 a month.
+
+| Step | For Leo's course |
+| --- | --- |
+| 1. Forecast | $2,400 a year of extra pay, for the 20 years he plans to keep teaching |
+| 2. Convert | $2,400 at the end of each year, years 1 to 20 |
+| 3. Rate | 5% |
+| 4. Discount and add | $29,909 in the first row below |
+| 5. Best use | Take the course or keep the $5,000. Take it if the skill is worth more than it costs. |
+
+Here is how the answer moves when the forecast changes:
 
 | Scenario | Extra pay | How long | Worth today |
 | --- | --- | --- | --- |
@@ -254,7 +292,17 @@ This is the human capital point from Part 1, now with numbers. A skill is worth 
 
 ## Stocks
 
-A company's stock is divided into shares. Owning a share means owning a slice of the company's future profits, which the company either pays out (as **dividends**) or reinvests to grow. So:
+A company's stock is divided into shares. Owning a share means owning a slice of the company's future profits, which the company either pays out (as **dividends**) or reinvests to grow.
+
+| Step | For a stock |
+| --- | --- |
+| 1. Forecast | The company's profits for years to come, including how fast they'll grow |
+| 2. Convert | Profit in each future year, per share |
+| 3. Rate | A safe rate plus extra for the risk of owning stocks (below) |
+| 4. Discount and add | Usually a few years forecast in detail, then a growth shortcut for the rest |
+| 5. Best use | Hold the share for its profits, or sell it to someone who'll pay more |
+
+So:
 
 > Company worth = All future profits, discounted to today
 > Share worth = Company worth ÷ Number of shares
@@ -317,7 +365,17 @@ Sources: [FactSet](https://insight.factset.com/sp-500-earnings-season-update-oct
 
 A startup usually has no profit and often little revenue, so there's no steady stream to forecast. Investors think in **scenarios** instead.
 
-Say a startup is building an AI tutor, a direct competitor to Sam. An investor might picture where it could be in 8 years:
+Say a startup is building an AI tutor, a direct competitor to Sam.
+
+| Step | For the startup |
+| --- | --- |
+| 1. Forecast | Several possible futures, each with a chance (table below) |
+| 2. Convert | What the company could be worth when investors expect to cash out, in 8 years |
+| 3. Rate | 25%: far higher than for Sam, because the money is far away, locked up and very uncertain |
+| 4. Discount and add | Weight each future by its chance, then discount |
+| 5. Best use | Invest, or put the money into a different startup |
+
+An investor might picture where it could be in 8 years:
 
 | Outcome | Chance | Company worth then |
 | --- | --- | --- |
@@ -383,6 +441,21 @@ If they rise because the economy is booming, the rate dial goes up but so does t
 
 And not everyone loses. Higher yields are good for anyone putting money to work now: savers earn more, and new bond buyers lock in better returns. Rising rates shift value from people who already own assets to people buying them fresh.
 {{< /stuck >}}
+
+---
+
+## The Recipe, Side by Side
+
+| | Forecast | Rate | Worth today |
+| --- | --- | --- | --- |
+| Bond | $40, $40, $1,040, fixed by contract | 4% | $1,000 |
+| Sam's center | $7,200 a year, forever | 8% | $90,000 |
+| Sam's lot | $1,000 a year of rent, forever | 5% | $20,000 |
+| Leo's course | $2,400 a year for 20 years | 5% | $29,909 |
+| A stock | Growing profits, forever | Safe rate plus risk premium | P/E = 1 ÷ (rate − growth) |
+| AI tutor startup | 5% chance of $2B, 20% of $100M, in 8 years | 25% | About $20M |
+
+Moving down the table, the forecast becomes less certain and the rate goes up to match.
 
 ---
 
