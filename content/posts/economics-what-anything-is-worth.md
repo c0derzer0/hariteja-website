@@ -16,21 +16,19 @@ The whole part rests on one idea:
 
 Bonds, businesses, land, skills, stocks and startups all get priced with that same recipe. Only the stream of money changes.
 
-Each section follows the same pattern: first the terms, then an example, then working through it with numbers. As before, I've kept the questions I had along the way and what cleared them up.
+As before, I've kept the questions I had along the way and what cleared them up.
 
 ---
 
 ## Value, Worth and Price
 
-### Terms
+These words get used loosely, but each means something specific:
 
 - **Willingness to pay:** the most a particular person would give up for something. This is the "value" from Part 1, set at the margin, and it differs from person to person.
 - **Intrinsic value:** what something is worth based on everything it will bring in the future, discounted to today. This is what finance means by "what it's worth."
 - **Discounted cash flow (DCF):** the method for working out intrinsic value. List the money something will bring, discount each amount to today, and add them up.
 - **Market price:** what someone actually pays.
 - **Book value:** what the accounts say something is worth, mostly based on what it cost.
-
-### The example
 
 Sam decides to sell her tutoring center. Four different numbers describe it:
 
@@ -40,8 +38,6 @@ Sam decides to sell her tutoring center. Four different numbers describe it:
 | Intrinsic value to a buyer | $90,000 | The buyer's estimate of all future profits, discounted (worked out later in this post) |
 | Sam's lowest acceptable price | $80,000 | What the center is worth to Sam if she keeps running it herself |
 | Market price | $85,000 | What they agree on |
-
-### Working through it
 
 **Book value barely matters.** The desks cost $4,000, but nobody pays $85,000 for desks. The buyer pays for the profits the center will earn.
 
@@ -59,7 +55,7 @@ That's the general pattern: intrinsic value is an estimate each person makes, an
 4. **Discount** each amount to today and add them up.
 5. If there's more than one way to use the thing, it's worth the **best** one.
 
-Everything comes down to two inputs: the forecast and the rate. When people disagree about what something is worth, they almost always disagree about one of those two. Each section below fills in these five steps for its example.
+Everything comes down to two inputs: the forecast and the rate. When people disagree about what something is worth, they almost always disagree about one of those two.
 
 {{< stuck "Is something worth only what it earns in the future? Nothing else?" >}}
 In principle, yes, but "what it brings" is broader than profit. Each benefit just has to be turned into an amount of money and a date:
@@ -75,7 +71,7 @@ What doesn't count is the past: what it cost, how hard it was to build, what it 
 
 ## A Bond
 
-### Terms
+Bonds come with their own vocabulary:
 
 - **Bond:** a loan you can buy. You lend money to a government or a company, and they promise a fixed schedule of payments back.
 - **Face value:** the amount repaid at the end.
@@ -83,8 +79,6 @@ What doesn't count is the past: what it cost, how hard it was to build, what it 
 - **Maturity:** when the bond ends and the face value is repaid.
 - **Going rate:** what new, similar bonds pay today. It's the discount rate for valuing a bond, and it moves with the market.
 - **Yield:** the return you'd earn by buying a bond at today's price and holding it to the end.
-
-### The example
 
 A 3-year US government bond with a face value of $1,000 and a 4% coupon. It pays $40 at the end of year 1, $40 at the end of year 2, and $1,040 at the end of year 3: the last coupon plus the $1,000 back.
 
@@ -95,8 +89,6 @@ A 3-year US government bond with a face value of $1,000 and a 4% coupon. It pays
 | 3. Rate | 4%, what similar safe loans pay today |
 | 4. Discount and add | The table below |
 | 5. Best use | Hold it or sell it. At a fair price, both are worth the same. |
-
-### Working through it
 
 **At a 4% going rate:**
 
@@ -173,14 +165,12 @@ So when the news says "the 10-year Treasury yield rose," it means prices of 10-y
 
 ## A Business
 
-### Terms
+Valuing a business takes a few more terms:
 
 - **Profit:** what a business earns after paying all its costs. For valuing a business, it's the stream of money the owner receives.
 - **Perpetuity:** a stream of equal payments that goes on forever. Its value is the yearly amount ÷ the rate.
 - **Growth rate:** how fast the yearly amount is expected to rise.
 - **Growing perpetuity:** a stream that goes on forever and grows each year. Its value is next year's amount ÷ (rate − growth rate).
-
-### The example
 
 Sam's center earns $600 a month in profit, so $7,200 a year. A buyer wants to purchase the whole business. What's a fair price?
 
@@ -191,8 +181,6 @@ Sam's center earns $600 a month in profit, so $7,200 a year. A buyer wants to pu
 | 3. Rate | 8%: a safe rate plus extra, because a small business is risky |
 | 4. Discount and add | The perpetuity shortcut below |
 | 5. Best use | Keep running it, or shut it and sell the desks and books for $3,000 |
-
-### Working through it
 
 Adding up an endless stream one year at a time would take forever, so use the perpetuity shortcut:
 
@@ -266,12 +254,10 @@ And since a price rests on people's guesses about future profits, which can be o
 
 ## Land and Skills
 
-### Terms
+Land and skills are streams of money too, just of different kinds:
 
 - **Rent:** what someone pays to use land or a building for a period of time. It's land's stream of money.
 - **Human capital:** skills and knowledge that raise what a person can earn (from Part 1). Its stream of money is the extra pay it brings.
-
-### The examples
 
 **Sam's lot.** Sam owns the small lot her center sits on.
 
@@ -292,8 +278,6 @@ And since a price rests on people's guesses about future profits, which can be o
 | 3. Rate | 5% |
 | 4. Discount and add | Discount each of the 20 payments and add them up |
 | 5. Best use | Take the course, or keep the $5,000. Take it if the skill is worth more than it costs. |
-
-### Working through it
 
 **The lot** is worth $1,000 ÷ 0.05 = **$20,000**.
 
@@ -319,7 +303,7 @@ That's the human capital point from Part 1, now with numbers. A skill is worth t
 
 ## A Stock
 
-### Terms
+Stocks add some vocabulary of their own:
 
 - **Share:** one slice of ownership in a company. It entitles you to a slice of the company's future profits.
 - **Dividend:** profit the company pays out to shareholders. Profit it doesn't pay out gets reinvested to grow the business.
@@ -327,8 +311,6 @@ That's the human capital point from Part 1, now with numbers. A skill is worth t
 - **Earnings per share (EPS):** the company's yearly profit ÷ number of shares.
 - **Equity risk premium:** the extra return investors demand for owning stocks instead of safe government bonds.
 - **P/E ratio:** share price ÷ earnings per share. How many dollars investors pay for each dollar of yearly profit.
-
-### The example
 
 Brightpath Learning is a made-up chain of tutoring centers, like hundreds of Sam's. It's listed on the stock market.
 
@@ -344,8 +326,6 @@ Brightpath Learning is a made-up chain of tutoring centers, like hundreds of Sam
 | 3. Rate | 8%: 4% safe rate plus 4% equity risk premium |
 | 4. Discount and add | Growing perpetuity |
 | 5. Best use | Hold the shares for the profits, or sell them to someone who'll pay more |
-
-### Working through it
 
 **The whole company:** $50 million ÷ (0.08 − 0.03) = **$1 billion**.
 
@@ -397,14 +377,12 @@ Sources: [FactSet](https://insight.factset.com/sp-500-earnings-season-update-oct
 
 ## A Startup
 
-### Terms
+Startups need a different approach, and a few new terms:
 
 - **Scenario:** one possible future, with a chance of happening.
 - **Expected value:** the average outcome across scenarios, each weighted by its chance.
 - **Funding round:** when a startup sells a slice of itself to investors for cash.
 - **Valuation:** the price for the whole company implied by a funding round. If an investor pays $4 million for 20%, the valuation is $20 million.
-
-### The example
 
 A startup is building an AI tutor, a direct competitor to Sam. It has no profit and little revenue, so there's no steady stream to forecast. An investor pictures where it could be in 8 years:
 
@@ -422,8 +400,6 @@ A startup is building an AI tutor, a direct competitor to Sam. It has no profit 
 | 4. Discount and add | Weight each scenario by its chance, then discount |
 | 5. Best use | Invest in this startup, or in a different one |
 
-### Working through it
-
 **Expected value in 8 years:** 5% × $2 billion + 20% × $100 million + 75% × $0 = **$120 million**.
 
 **Worth today:** $120 million ÷ 1.25⁸ ≈ **$20 million**.
@@ -440,16 +416,12 @@ Three things stand out:
 
 ## Why Everything Moves When Rates Change
 
-### Terms
+Two terms help describe what happens next:
 
 - **Repricing:** when the market changes what it will pay for something, even though nothing about the thing itself changed.
 - **Interest rate sensitivity:** how much a price moves when rates move. The further away most of the money is, the more sensitive the price.
 
-### The example
-
 The Fed raises rates, and every discount rate in this post goes up by one point. Nothing else changes: same payments, same profits, same rents, same forecasts.
-
-### Working through it
 
 | | Rate before → after | Worth before | Worth after | Change |
 | --- | --- | --- | --- | --- |
