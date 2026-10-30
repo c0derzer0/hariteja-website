@@ -444,26 +444,77 @@ It works in reverse too. When rates fall, all of these rise together, often with
 
 **A real example:** in 2022, the Fed raised rates very quickly to fight inflation. Bonds had one of their worst years in decades, stocks fell, fast-growing tech stocks fell the most, and startup funding dried up. For most of those companies, nothing about their products changed that year. The discount rate did.
 
-{{< stuck "Why do yields go up when inflation rises or the Fed tightens? And why would a booming economy raise them?" >}}
-What connected it for me: yields are set by the people buying and selling bonds. A yield goes up whenever lenders demand a better return before they'll lend. They show it by paying less for bonds, and a lower price means a higher yield. Each case pushes up one part of the interest rate from Part 2.
+{{< stuck "When the Fed \"raises rates\", is that a borrowing rate or a lending rate?" >}}
+Both, because they're the same payment seen from two sides: a cost for the borrower, income for the lender. The Fed moves all of its rates up together: what it pays banks on reserves, what it charges banks to borrow, and so the rate banks charge each other.
 
-**The Fed tightens.** If banks and big savers can earn 5% overnight with no risk, nobody will lend to the government for a year at 4%. They sell those bonds, the price falls, and the yield rises until it's competitive. Longer bonds also move on what people expect the Fed to do over the coming years, so even a hint of future hikes pushes yields up.
+What I had backward is that the Fed's rate isn't separate from the "safe rate" in these valuations. It *is* the safe rate, at the very bottom. Parking money at the Fed overnight is about the safest thing there is, so other safe options can't pay much less:
 
-**Inflation rises.** A bond paying 4% loses buying power if prices rise 5% a year. Lenders demand a yield that covers expected inflation plus something extra. And since the Fed fights inflation by raising rates, rising inflation also makes people expect hikes.
+| Safe option | Why it moves with the Fed |
+| --- | --- |
+| Short-term government bonds | If banks can earn 5% at the Fed, nobody lends to the government for 3 months at 4% |
+| Savings accounts and money market funds | They hold those bonds and deposits, so they pay more too |
+| Longer government bonds | They follow what people expect the Fed's rate to be over the coming years |
 
-**The economy booms.** More businesses and households want to borrow, which lets lenders charge more. Investors sell safe bonds to buy stocks that could earn more, which pushes bond prices down. And a hot economy makes people expect inflation and Fed hikes.
+So a Fed hike works through two channels:
 
-In one line: yields rise when lenders demand more to lend, because safe money pays more elsewhere, because money will buy less, or because money has better uses.
+| Channel | Which dial it moves | When |
+| --- | --- | --- |
+| Safe returns rise | The **rate**: future money is discounted more steeply | Right away, which is why markets move the afternoon of an announcement |
+| Borrowing costs more, so people and companies spend less | The **forecast**: profits and rents may shrink | Over the following months |
+
+Long-term rates don't always follow one for one. If the Fed raises rates but people expect cuts soon, 10-year yields may barely move.
+{{< /stuck >}}
+
+{{< stuck "Why do yields go up when the Fed tightens, inflation rises, or the economy booms?" >}}
+What finally made it click: **nobody sets a bond's yield.** The bond's payments are fixed at $40, $40, $1,040. The only thing that moves is the price people will pay, and the yield is just what those fixed payments work out to at that price: 4% at $1,000, 6% at $946.54.
+
+So the real question is why buyers would suddenly pay less for the exact same bond. A buyer always compares two things: what else could my money do, and what will these payments actually buy? Each case changes one of them.
+
+**The Fed tightens: the alternative pays more.** A safe account used to pay 4%, the same as the bond, so buyers paid $1,000. The Fed raises rates and the safe account now pays 6%. Nobody pays $1,000 for 4% when 6% is available safely. Anyone selling the bond has to drop the price until it competes: $946.54, a 6% yield.
+
+**Inflation rises: the payments will buy less.** With prices expected to rise 1% a year, $1,040 back on $1,000 lent buys about 3% more than before. If people start expecting 3% inflation, the same $1,040 buys only about 1% more. To keep a 3% gain in actual stuff, buyers now want about 6%, so again they'll only pay about $946.54.
+
+**The economy booms: the money has better uses.** Stocks look likely to return 10%, and companies offer new bonds at 6% to fund expansion. Holders of the old 4% bond sell it to move their money, few want to buy it, and its price falls until it's attractive again, around a 6% yield.
+
+| Case | What changed for the buyer | Result |
+| --- | --- | --- |
+| Fed tightens | Safe alternatives pay more | Pays less for the same bond |
+| Inflation rises | The fixed payments will buy less | Pays less for the same bond |
+| Boom | The money has better uses | Pays less for the same bond |
+
+Same story every time: buyers pay less, so the yield goes up.
+{{< /stuck >}}
+
+{{< stuck "What does inflation have to do with interest rates?" >}}
+Two things.
+
+**Lenders build it into the rate.** What a lender really cares about is how much more *stuff* they can buy when they're paid back. The **nominal rate** is the rate in dollars, the one quoted. The **real rate** is roughly the nominal rate minus inflation:
+
+| | Nominal rate | Expected inflation | Real rate |
+| --- | --- | --- | --- |
+| Before | 4% | 1% | about 3% |
+| Inflation picks up | 4% | 3% | about 1% |
+| What lenders now demand | 6% | 3% | about 3% |
+
+So when people expect more inflation, yields rise even if the Fed does nothing.
+
+**It's what the Fed reacts to.** The Fed aims to keep inflation around 2%. When it runs higher, the Fed raises rates: borrowing costs more, people and companies spend less, sellers can't raise prices as easily, and inflation slows. That's why rising inflation and Fed hikes usually arrive together.
+
+Inflation hurts fixed payments most. A bond's $40 never changes, so it just buys less. A business or a landlord can often raise prices and rents along with inflation, which partly offsets the higher discount rate. That's why bonds tend to suffer most when inflation surprises upward.
 {{< /stuck >}}
 
 {{< stuck "So when yields go up, everything is worth less?" >}}
-Mostly, but only all else equal. It depends on why yields rose.
+Only if nothing else improves at the same time. The yield on government bonds is the bottom layer of every discount rate here. Brightpath's 8% was 4% safe plus 4% for risk, so if the safe rate goes to 5%, its rate goes to 9%. What happens next depends on why yields rose:
 
-If they rise because of inflation worries or the Fed tightening, the rate dial goes up and nothing else improves, so things fall. That's 2022.
+| Why yields rose | Rate | Expected growth | Brightpath's P/E |
+| --- | --- | --- | --- |
+| Before | 8% | 3% | 1 ÷ 0.05 = 20 |
+| Fed tightening or inflation | 9% | 3% | 1 ÷ 0.06 = 16.7 |
+| A boom | 9% | 4% | 1 ÷ 0.05 = 20 |
 
-If they rise because the economy is booming, the rate dial goes up but so does the growth dial, since companies are expected to earn more. The two can cancel out, and stocks can even rise alongside yields.
+When the Fed tightens or inflation rises, the rate goes up and the forecast doesn't improve, so the price falls. That was 2022. In a boom, the rate goes up but so do expected profits, and the two can cancel out.
 
-And not everyone loses. Higher yields are good for anyone putting money to work now: savers earn more, and new bond buyers lock in better returns. Rising rates shift value from people who already own assets to people buying them fresh.
+And not everyone loses. Higher yields help anyone putting money to work now: savers earn more, and new bond buyers lock in better returns. Rising rates shift value from people who already own assets to people buying them fresh.
 {{< /stuck >}}
 
 ---
