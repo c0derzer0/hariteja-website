@@ -16,7 +16,7 @@ I also looked at who else is working on memory with probabilities, and three que
 2. Is the confidence honest?
 3. Who decides what to track, and keeps it organized?
 
-This post covers how beliefs work, my design, and how I'd test it.
+This post covers how beliefs work, my design, how an agent should act on its beliefs, and how I'd test it.
 
 ---
 
@@ -217,6 +217,69 @@ So the loop is: collect the organizer's mistakes, have a model propose revised i
 
 ---
 
+## Acting on a Belief
+
+A belief says how sure the assistant is. It doesn't say what to do about it: send the gift, check another source, or ask you.
+
+Decision theory has a model for this, the [POMDP](https://en.wikipedia.org/wiki/Partially_observable_Markov_decision_process). The truth is hidden, you hold a belief about it, you choose actions, and what you see next updates the belief. Solving one means computing a policy: the best action for every possible belief, across every future step.
+
+That can't be computed here. Questions appear as evidence arrives, nobody can write down how likely a particular message is, and costs differ by person. It also isn't needed. The agent only has to choose its next step from the belief it holds now, and when something new arrives, it can update the belief and choose again.
+
+### Deciding one step at a time
+
+At each decision, the agent asks whether anything it could do next is worth its cost. If something is, it does that, updates the belief with what comes back, and asks again. If nothing is, it acts.
+
+The score for each next step is its [value of information](https://en.wikipedia.org/wiki/Value_of_information): how good would the final decision be after this step, minus what the step costs?
+
+Say Maya's gift has to go out this week and the assistant holds 0.7 on her new address. The right address is worth +10 and the wrong one costs 30. Using the track records from earlier (all illustrative numbers):
+
+| Next step | Cost | Expected value |
+|---|---|---|
+| Check order confirmations | 0 | 8.0 |
+| Ask you | 1 | 7.4 |
+| Ask Maya | 6, it spoils the surprise | 1.2 |
+| Read the contact card | 0 | -2.0 |
+| Send it now | 0 | -2.0 |
+
+The confirmations are free and nearly as reliable as you, so the assistant checks them first. The contact card is free too and worth nothing: right only 63% of the time, it can't overturn a 0.7, so the assistant would send to the new address whatever the card said.
+
+What happens next depends on the answer. If the confirmations say the new address, the belief rises to about 0.98 and the assistant sends the gift, because asking you can no longer repay the interruption. If they say the old address, it holds 0.89 on the old one, and asking you is worth 7.4 against 5.6 for sending.
+
+A reply can take days, and the truth can change during the wait. Most of the time that takes care of itself: the reply says what changed, the belief updates, and the assistant decides again. It can also run several steps at once and drop any that are no longer needed. Three cases need more. Waiting has a price, so deadlines go into the costs. Silence sends no message, so a wait needs a timer. And a fact can change without anyone mentioning it, which is why beliefs fade and get rechecked before the assistant relies on them.
+
+### What this changes
+
+I'd expect this to improve an agent's decisions in five ways:
+
+- **It asks fewer questions.** Your time is one of the costs, so it looks in its own records first and comes to you when they can't settle the matter.
+- **The stakes set the bar.** If holding the gift back were an option worth 0, sending would only beat it above 0.75. A cheaper mistake lowers that line and a costlier one raises it. A single rule like "act above 0.9" treats a wrong lunch booking and a lost wedding gift the same way.
+- **It skips work that can't change the outcome.** There's no reason to read the contact card, however cheap it is.
+- **It knows when to stop.** It keeps looking while another check is worth its cost, and stops when none is.
+- **Its decisions can be explained.** "I checked your order confirmations because I was only 0.7 sure of the address and a wrong one would lose the gift." You can see the belief and the cost, and disagree with either.
+
+### Using the agent's own reasoning
+
+The agent is a language model, and it can already reason about all of this. It should use that reasoning alongside the numbers, because each covers what the other can't.
+
+A table only ranks the options someone thought of. The model is what notices that Sam would know the new address, that asking Maya spoils the surprise, or that the confirmations are for an order from last year. It can also plan several steps ahead and see that two checks are only useful together, which a one-step score misses.
+
+The numbers cover where reasoning is weak. A model can talk itself into an answer, and a persuasive email can talk it into one too. It also has no reliable way to tell how much three weak messages add up to. The arithmetic does that the same way every time, and it shows when a check can't change the decision.
+
+So the ranking is advice the model reasons with. It can go against the ranking when it knows something the table doesn't, and it says why. Two limits hold. It can't change a probability: if it thinks a belief is wrong, it has to go and find evidence. And your instructions aren't up for reasoning, so anything you've ruled out never reaches the ranking.
+
+| Job | Done by |
+|---|---|
+| Think of what could be done next | The model |
+| Judge what each step would cost here | The model, within your instructions |
+| Say how sure to be | Arithmetic over the evidence |
+| Score what each step is worth | Arithmetic |
+| Make the call and explain it | The model |
+| Set the limits | You |
+
+The costs are rough, so I'd trust the order of the options more than their exact scores.
+
+---
+
 ## A Paper I'd Like to Write
 
 Everything above is a design. Here's how I'd test it, written down before running anything so the results can't shape the questions.
@@ -277,7 +340,7 @@ Because it's generated, the true answers and the true reliability of every sourc
 
 ### What I'd leave for later
 
-The first version would take its questions from a single extraction pass, as Nous does, to isolate the belief and learning parts. Letting the model discover and reorganize questions is a second experiment. Comparing instruction search with reinforcement learning for that organizer is a third.
+The first version would take its questions from a single extraction pass, as Nous does, to isolate the belief and learning parts. Letting the model discover and reorganize questions is a second experiment. Comparing instruction search with reinforcement learning for that organizer is a third. Comparing a fixed threshold, the model's reasoning alone, and the model reasoning with these scores, on the cost of mistakes and questions asked, is a fourth.
 
 ---
 
