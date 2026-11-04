@@ -600,3 +600,68 @@ hr {
 @media (max-width: 768px) {
     .stuck { padding: 0.9rem 1rem 0.2rem 1rem; }
 }
+
+/* ---------- HTML charts (layouts/shortcodes/chart.html) ---------- */
+.chart {
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+.chart figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: #666;
+}
+.chart-key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.1rem;
+    margin-bottom: 0.9rem;
+    font-size: 0.82rem;
+    color: #444;
+}
+.chart-key span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.chart-key i { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 2px; }
+.bar-row { margin-bottom: 0.8rem; }
+.bar-row.best .bar-name { font-weight: 600; }
+.bar-name { margin-bottom: 0.2rem; }
+.bar-stack { display: flex; gap: 2px; height: 1.5rem; }
+.bar-stack span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.3rem;
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+}
+.bar-stack span:first-child { border-radius: 3px 0 0 3px; }
+.bar-stack span:last-child { border-radius: 0 3px 3px 0; }
+.is-right { background: #1f4e79; color: #fff; }
+.is-wrong { background: #b4532a; color: #fff; }
+.is-open { background: #dedcd5; color: #333; }
+.step { padding: 0.9rem 0; border-top: 1px solid #ddd; }
+.step:first-of-type { border-top: 0; padding-top: 0; }
+.step-source { font-size: 0.82rem; color: #666; }
+.step-text { margin: 0.2rem 0 0.7rem 0; }
+.step-read {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr;
+    gap: 0.3rem 0.7rem;
+    align-items: center;
+    font-size: 0.84rem;
+}
+.step-track { background: #efede7; border-radius: 3px; }
+.step-fill {
+    min-height: 1.45rem;
+    padding: 0 0.45rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    border-radius: 3px;
+    font-variant-numeric: tabular-nums;
+}
+.step-fill.is-open { background: transparent; }
+@media (max-width: 768px) {
+    .step-read { grid-template-columns: 1fr; }
+    .step-track { margin-bottom: 0.3rem; }
+}

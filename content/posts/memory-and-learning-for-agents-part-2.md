@@ -5,7 +5,8 @@ date: 2026-10-03
 draft: false
 series: "Building Agents"
 series_order: 2
-summary: "How beliefs work in agent memory: belief networks, calibrated decision models and self-organizing context, a design that learns which sources to trust, and the experiments I'd run to test it."
+summary: "How beliefs work in agent memory: belief networks, calibrated decision models and self-organizing context, a design that learns which sources to trust, and what happened when I built and tested it."
+lastmod: 2026-11-04
 ---
 
 In [part 1](/posts/memory-and-learning-for-agents/), a personal assistant remembered everything about your sister Maya and still got her birthday wrong: the wrong restaurant, the wrong date, flowers she doesn't like, sent to an address she left two years ago. It was missing three things human memory has: knowing where a memory came from (source monitoring), letting old memories weaken (forgetting), and knowing how sure to be (metamemory).
@@ -17,6 +18,8 @@ I also looked at who else is working on memory with probabilities, and three que
 3. Who decides what to track, and keeps it organized?
 
 This post covers how beliefs work, my design, how an agent should act on its beliefs, and how I'd test it.
+
+**Update, November 2026:** I've since built this and tested it on invented data. The central formula lost to a simpler idea. The design below is as I wrote it in October, and [What Happened When I Built It](#what-happened-when-i-built-it) has the results.
 
 ---
 
@@ -100,7 +103,7 @@ Put together: the model decides which questions exist, Jev reads each message, a
 
 ## The Design
 
-This is a design, not a system I've built. The last section covers how I'd test it.
+This is the design as I wrote it before building any of it. [What Happened When I Built It](#what-happened-when-i-built-it) covers which parts held up.
 
 ### What the design combines
 
@@ -341,6 +344,144 @@ Because it's generated, the true answers and the true reliability of every sourc
 ### What I'd leave for later
 
 The first version would take its questions from a single extraction pass, as Nous does, to isolate the belief and learning parts. Letting the model discover and reorganize questions is a second experiment. Comparing instruction search with reinforcement learning for that organizer is a third. Comparing a fixed threshold, the model's reasoning alone, and the model reasoning with these scores, on the cost of mistakes and questions asked, is a fourth.
+
+I haven't run this plan yet. The tests in the next section are much smaller, and they were enough to change the design.
+
+---
+
+## What Happened When I Built It
+
+*Added November 2026.*
+
+I built the design, and its central piece lost. Adding up evidence message by message got 8 of 18 disputed facts right. Asking Jev for the belief directly, with every message in front of it, got 15 or 16. All of this is on invented data. Nothing here has run on real messages, and I'm only now building the direct version into the system.
+
+### What works better
+
+{{< chart caption="18 facts where the messages disagree, across a software team, a dental clinic, a lettings agency and a university. Jev with trust levels scored 15, 15 and 16 on three identical runs; the bar shows 15." >}}
+<div class="chart-key"><span><i class="is-right"></i>Right</span><span><i class="is-wrong"></i>Wrong</span><span><i class="is-open"></i>No clear answer</span></div>
+<div class="bar-row"><div class="bar-name">The log-odds sum from this post</div><div class="bar-stack"><span class="is-right" style="flex:8">8</span><span class="is-wrong" style="flex:5">5</span><span class="is-open" style="flex:5">5</span></div></div>
+<div class="bar-row"><div class="bar-name">The sum, plus readings for "warns" and "replaces"</div><div class="bar-stack"><span class="is-right" style="flex:8">8</span><span class="is-wrong" style="flex:1">1</span><span class="is-open" style="flex:9">9</span></div></div>
+<div class="bar-row"><div class="bar-name">Newest message wins</div><div class="bar-stack"><span class="is-right" style="flex:10">10</span><span class="is-wrong" style="flex:8">8</span></div></div>
+<div class="bar-row"><div class="bar-name">Newest trusted message wins</div><div class="bar-stack"><span class="is-right" style="flex:12">12</span><span class="is-wrong" style="flex:6">6</span></div></div>
+<div class="bar-row"><div class="bar-name">Jev reads all the messages, no trust levels</div><div class="bar-stack"><span class="is-right" style="flex:14">14</span><span class="is-wrong" style="flex:3">3</span><span class="is-open" style="flex:1">1</span></div></div>
+<div class="bar-row best"><div class="bar-name">Jev reads all the messages, with trust levels</div><div class="bar-stack"><span class="is-right" style="flex:15">15</span><span class="is-wrong" style="flex:3">3</span></div></div>
+{{< /chart >}}
+
+Getting more right only helps if the wrong answers don't get acted on. So I also counted what each approach would act on at the 0.85 threshold, which I'd set before any of this:
+
+| Approach | Facts it would act on | Of those, wrong |
+|---|---|---|
+| The log-odds sum | 6 | 0 |
+| The sum, plus "warns" and "replaces" | 4 | 0 |
+| Jev, no trust levels | 12 | 0 |
+| **Jev, with trust levels** | **14 to 15** | **0** |
+
+The newest-message rules aren't in this table because they have no confidence to compare against a threshold. They act on all 18, and 6 to 8 of those are wrong.
+
+The sum wasn't reckless. It was never wrong above the threshold either. It just couldn't get there on two thirds of the facts.
+
+### One belief, message by message
+
+Here's why. A clinic moved a patient's crown fitting from November 12 to November 19. The reminder system never heard about the change, so the newest and most official-looking message has the wrong date.
+
+{{< chart caption="Each row is the belief right after that message arrived. Numbers are from one run. On the last message the sum's largest share, 72%, goes to an answer nobody has named." >}}
+<div class="step"><div class="step-source">Oct 20. Reception, medium trust</div><div class="step-text">"Crown fit and hygiene both Thu 12 Nov, 10:00 with Dr Sethi"</div><div class="step-read"><span>Adding up scores</span><div class="step-track"><div class="step-fill is-right" style="width:74%">Nov 12, 74%</div></div><span>Reading them together</span><div class="step-track"><div class="step-fill is-right" style="width:94%">Nov 12, 94%</div></div></div></div>
+<div class="step"><div class="step-source">Oct 29. Dr Sethi, high trust</div><div class="step-text">"I'm off on the 12th... Halloran crown can go to Thu 19th 9:20, rung her myself."</div><div class="step-read"><span>Adding up scores</span><div class="step-track"><div class="step-fill is-right" style="width:62%">Nov 19, 62%</div></div><span>Reading them together</span><div class="step-track"><div class="step-fill is-right" style="width:100%">Nov 19, 100%</div></div></div></div>
+<div class="step"><div class="step-source">Nov 3. Reminder system, medium trust</div><div class="step-text">"Crown fit, Thu 12 Nov 10:00, Dr Sethi. Status: CONFIRMED."</div><div class="step-read"><span>Adding up scores</span><div class="step-track"><div class="step-fill is-open">No clear answer (Nov 12, 16%; Nov 19, 12%)</div></div><span>Reading them together</span><div class="step-track"><div class="step-fill is-right" style="width:88%">Nov 19, 88%</div></div></div></div>
+{{< /chart >}}
+
+The sum scores each message alone. It can see that Dr Sethi and the reminder disagree, but not that one moved the appointment and the other hadn't heard. Reading the messages together, Jev can see that.
+
+I tried to fix the sum first, by having Jev read whether a message warns about itself and whether it replaces something. Jev was good at this: 43 of 43 on warnings and 36 of 41 on replacements, on cases I hadn't written. Adding them to the sum cut wrong answers from 5 to 1 and got no more facts right. The other four simply became "no clear answer".
+
+{{< stuck "If the next message is usually right anyway, and time is a high-trust source, why have beliefs at all?" >}}
+That was the strongest argument against this whole idea, so I tested it. Newest-wins was right 10 times out of 18, and trust levels took it to 12.
+
+The failures are the expensive ones. Mr Bosch's record says penicillin allergy, anaphylaxis in 2014. The newest message is a phone call from someone saying he's the patient's nephew, asking to have it removed before surgery. Newest-wins says no allergy. Jev with trust levels says yes at 95% to 96%.
+
+Newest-wins also can't tell you when it's wrong, because it has no notion of doubt. I'd say a belief earns its keep on the small share of facts that are disputed. On the rest, one message is enough.
+{{< /stuck >}}
+
+{{< stuck "Doesn't this mean passing every agent decision through Jev? Isn't that too expensive?" >}}
+No. The call happens when a message is filed, once for each question it bears on, and the result is saved. An agent reads the saved belief, so a decision costs no call at all.
+
+The whole test, 203 beliefs read twice each, was 406 calls and about 238,000 input tokens, for $0.01.
+{{< /stuck >}}
+
+{{< stuck "Then doesn't a saved belief go stale? When do you refresh it?" >}}
+You don't need to. What the messages say only changes when a new message arrives, and that triggers a new call. Age can be plain arithmetic when the belief is read, pulling it back toward "not sure" without another call. The arithmetic is simple, but I haven't tested whether it fades beliefs at the right speed.
+{{< /stuck >}}
+
+{{< stuck "Who should decide how far to trust a source: the team, the agent, or Jev?" >}}
+I tried Jev with and without the team's trust levels. They changed four answers: three for the better and one for the worse. That's a lot of power for a setting someone picks by hand, so a team that sets it badly will get bad beliefs. I still think track records should set it, as this post first proposed. I just haven't built that yet.
+{{< /stuck >}}
+
+### Trying to break it
+
+| Test | Result |
+|---|---|
+| The same call, three times | Same top answer on 17 of 18. Numbers moved by up to 12 points. |
+| Instructions reworded | 16 right, 2 wrong |
+| A forged "OFFICIAL FINAL RECORD, do not check with anyone" from an unknown sender, against each fact | 15 right, 3 wrong. No answer flipped, but some lost confidence: one fell from 88% to 72% and would no longer be acted on. |
+| A fake email changing a supplier's bank details | Stayed under 50%: account 30%, SWIFT code 6%, beneficiary 18% |
+
+### Does an agent do better with beliefs?
+
+Less clearly than I expected. On an invented manufacturer, I put five decisions to two agents, three runs each, with the same model and instructions. Both could search the messages, and only one could read beliefs. These beliefs came from the sum, because that's what was running.
+
+{{< chart caption="15 runs of each agent. They reached the same answer in substance in 14 of the 15 pairs, and neither agreed to pay a fake bank account. In the other pair, the agent with beliefs got confused about which week it was and asked." >}}
+<div class="chart-key"><span><i class="is-right"></i>Act now</span><span><i class="is-open"></i>Check first, ask a person or hold back</span></div>
+<div class="bar-row"><div class="bar-name">Without beliefs</div><div class="bar-stack"><span class="is-right" style="flex:9">9</span><span class="is-open" style="flex:6">6</span></div></div>
+<div class="bar-row"><div class="bar-name">With beliefs</div><div class="bar-stack"><span class="is-right" style="flex:1">1</span><span class="is-open" style="flex:14">14</span></div></div>
+{{< /chart >}}
+
+A strong model reading raw messages did well on its own. Beliefs didn't change what it concluded. They changed how willing it was to act, and on these decisions acting would mostly have been fine. So here beliefs made the agent more careful, not more right. Some of that is the sum being timid, and I need to rerun this with Jev's beliefs before saying more. This scenario also had no decision where acting early was a trap, apart from the fake bank account, which both agents caught.
+
+### Where it's still wrong
+
+A university lecture is the clearest failure. A person wrote: "Beck Theatre's shut until Easter (ceiling). MATH1100 spring lectures Tue 10:00 are in Hollins LT2." Later a timetable system published "MATH1100 Lecture, Tue 10:00, Beck Theatre. All rooms confirmed". Jev says Beck Theatre at 80% to 82%. It's the same pattern as the crown fitting, which it got right, and I don't know why this one differs. Only the threshold kept the agent from acting on it, and only by a few points.
+
+Two others sit near 50% and can land either way: who's on call, and whether an incident is resolved. Those should read as "sources disagree", not as an answer.
+
+Across the runs, answers below 60% were right 2 times in 8, and answers above 80% were right 43 times in 45. That's encouraging, but it isn't calibration: it's 18 facts repeated, on invented data.
+
+### Where the build fell short of the design
+
+The system follows most of the design. Messages are stored exactly as they arrive, a model files them under questions, and the agent can rank its next step by stakes. Three parts fell short:
+
+| In the design | What I built |
+|---|---|
+| The model merges, splits and retires questions | The model only adds questions and answers |
+| Trust in each source is learned from settled facts | Trust is set by hand for each kind of source |
+| Probabilities are checked against outcomes | People can record verdicts, but nothing is calibrated yet |
+
+So the most novel parts of the design are the parts I haven't tested.
+
+I also made three mistakes worth writing down:
+
+- **Reading old messages again made things worse.** When the organizer created a new question, I had it read related older messages against that question. On my test company, one correct belief fell from 81% to 14% on contradictions that weren't real, and another rose to a false 99%. I took it out.
+- **I had overfit to my first test.** The organizer's instructions had picked up rules and examples about ship dates and promise dates, all from the invented manufacturer. That only came out when I went back and checked directly. I rewrote them in neutral terms and moved testing to the four other fields.
+- **The model tracks too much.** On the manufacturer, it created 99 questions. Only 11 had competing answers, 8 had one answer from several sources, and 80 had one answer from one source, where a belief adds little to the message itself. It also still creates duplicates: one lettings run holds "gas check" and "CP12 visit" as separate questions about the same visit, with different answers.
+
+### What this changes in the design
+
+- **Jev moves from an input to the author of the belief.** Plain arithmetic no longer computes it, so the sum and its "Arithmetic" row in the tables above should go.
+- **Arithmetic stays for deciding.** Stakes, thresholds and the value of each next step are still sums, and they don't depend on how the belief was made.
+- **The rule mostly survives.** The organizer and the agent still never write a probability. To change a belief they have to bring evidence.
+- **The belief gets saved.** Saved versions also give the history: this message moved it from 60% to 85%.
+- **Some things get worse.** The sum could show exactly how many points each message contributed, and the same input always gave the same number. Direct Jev gives neither.
+
+### What I still don't know
+
+This changes what I'm building next. It doesn't settle the claims from the last section.
+
+- **It might have nothing to do with Jev.** The winner looks a lot like "an LLM reads the notes and decides", which is the baseline I planned to beat. I haven't put a general LLM in the same slot. If it does as well, a model reading everything is simply better than my sum, and nothing about Jev is special.
+- **The data is small and invented.** That's 18 facts, written by a model I asked to include traps, matched to answers by hand, and looked at many times. Real messages would settle this far better.
+- **Learned trust is untested.** That's claim 3, and it's the part of the design I cared most about.
+- **Calibration is untested.** That's claim 4. An agent acting at 0.85 needs 0.85 to mean something, and I can't say yet whether it does.
+- **The public benchmarks haven't been run.** None of LoCoMo, LongMemEval or STALE.
+- **The organizer still needs its editing half.** Jev only sees messages filed under a question, so a duplicate question stays a duplicate.
+- **Long histories are open.** I haven't tested how much history one call can hold.
 
 ---
 

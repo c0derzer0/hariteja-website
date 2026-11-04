@@ -1,0 +1,11 @@
+{{- /*
+  A small chart written in HTML, so its text stays readable at any width.
+  Usage:
+    {{< chart caption="What this shows" >}}
+    <div class="bars">...</div>
+    {{< /chart >}}
+*/ -}}
+<figure class="chart">
+  {{ .Inner | safeHTML }}
+  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
