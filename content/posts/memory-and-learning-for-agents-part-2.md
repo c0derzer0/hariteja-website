@@ -466,15 +466,16 @@ I tried these on the first test's facts, with Jev.
 
 ### Does an agent do better with beliefs?
 
-Less clearly than I expected. On an invented manufacturer, I put five decisions to two agents, three runs each, with the same model and instructions. Both could search the messages, and only one could read beliefs. These beliefs came from the sum, because that's what was running.
+Less clearly than I expected. On an invented manufacturer, I put five decisions to two agents, three runs each, with the same model and instructions. Both could search the messages, and only one could read beliefs. I ran it twice: once with beliefs from the sum, and once with beliefs from Jev.
 
-{{< chart caption="15 runs of each agent. They reached the same answer in substance in 14 of the 15 pairs, and neither agreed to pay a fake bank account. In the other pair, the agent with beliefs got confused about which week it was and asked." >}}
+{{< chart caption="15 runs per agent, except the last row, where one run failed on a dropped connection. The agents reached the same answer in substance nearly every time, and none agreed to pay a fake bank account." >}}
 <div class="chart-key"><span><i class="is-right"></i>Act now</span><span><i class="is-open"></i>Check first, ask a person or hold back</span></div>
-<div class="bar-row"><div class="bar-name">Without beliefs</div><div class="bar-stack"><span class="is-right" style="flex:9">9</span><span class="is-open" style="flex:6">6</span></div></div>
-<div class="bar-row"><div class="bar-name">With beliefs</div><div class="bar-stack"><span class="is-right" style="flex:1">1</span><span class="is-open" style="flex:14">14</span></div></div>
+<div class="bar-row"><div class="bar-name">Without beliefs, both runs</div><div class="bar-stack"><span class="is-right" style="flex:9">9</span><span class="is-open" style="flex:6">6</span></div></div>
+<div class="bar-row"><div class="bar-name">With beliefs from the sum</div><div class="bar-stack"><span class="is-right" style="flex:1">1</span><span class="is-open" style="flex:14">14</span></div></div>
+<div class="bar-row"><div class="bar-name">With beliefs from Jev</div><div class="bar-stack"><span class="is-right" style="flex:10">10</span><span class="is-open" style="flex:4">4</span></div></div>
 {{< /chart >}}
 
-A strong model reading raw messages did well on its own. Beliefs didn't change what it concluded. They changed how willing it was to act, and on these decisions acting would mostly have been fine. So here beliefs made the agent more careful, not more right. Some of that is the sum being timid, and I need to rerun this with Jev's beliefs before saying more. This scenario also had no decision where acting early was a trap, apart from the fake bank account, which both agents caught.
+A strong model reading raw messages did well on its own. Beliefs didn't change what it concluded. They changed how willing it was to act: the sum's low numbers made it hesitate almost everywhere, and Jev's high numbers took that away. On these decisions acting would mostly have been fine, so that looks like an improvement. But an agent that repeats 99.8% back to you is only as good as that number, and the fresh test showed it can be badly wrong. This scenario also had no decision where acting early was a trap, apart from the fake bank account, which every agent caught. So I can't yet say beliefs make an agent more right.
 
 ### Where it's still wrong
 
