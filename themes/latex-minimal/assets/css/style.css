@@ -639,6 +639,10 @@ hr {
 .is-right { background: #1f4e79; color: #fff; }
 .is-wrong { background: #b4532a; color: #fff; }
 .is-open { background: #dedcd5; color: #333; }
+.is-absent {
+    background: repeating-linear-gradient(45deg, #efede7, #efede7 3px, #dedcd5 3px, #dedcd5 6px);
+    color: #333;
+}
 .step { padding: 0.9rem 0; border-top: 1px solid #ddd; }
 .step:first-of-type { border-top: 0; padding-top: 0; }
 .step-source { font-size: 0.82rem; color: #666; }

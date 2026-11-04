@@ -353,9 +353,9 @@ I haven't run this plan yet. The tests in the next section are much smaller, and
 
 *Added November 2026.*
 
-I built the design, and its central piece lost. Adding up evidence message by message got 8 of 18 disputed facts right. Asking Jev for the belief directly, with every message in front of it, got 15 or 16. All of this is on invented data. Nothing here has run on real messages, and I'm only now building the direct version into the system.
+I built the design, and its central piece lost. Having a model read all of a question's messages together beats adding up evidence message by message, in two separate tests. But the model doesn't seem to matter the way I thought. On a fresh test, general LLMs did at least as well as Jev, and Jev was the one confidently wrong. All of this is on invented data, and nothing here has run on real messages.
 
-### What works better
+### What works better: the first test
 
 {{< chart caption="18 facts where the messages disagree, across a software team, a dental clinic, a lettings agency and a university. Jev with trust levels scored 15, 15 and 16 on three identical runs; the bar shows 15." >}}
 <div class="chart-key"><span><i class="is-right"></i>Right</span><span><i class="is-wrong"></i>Wrong</span><span><i class="is-open"></i>No clear answer</span></div>
@@ -378,11 +378,48 @@ Getting more right only helps if the wrong answers don't get acted on. So I also
 
 The newest-message rules aren't in this table because they have no confidence to compare against a threshold. They act on all 18, and 6 to 8 of those are wrong.
 
-The sum wasn't reckless. It was never wrong above the threshold either. It just couldn't get there on two thirds of the facts.
+That looked decisive. I had seen this data many times, though, so I built the direct version into the system and tested it on something new.
+
+### What works better: a fresh test
+
+A separate agent that had seen neither the design nor these results wrote four new organizations: a hospital pharmacy, a construction site, a touring theatre company and a water utility. It wrote 24 facts, spread across seven kinds of trap, including ones where the newest message is right and ones where a low-trust sender is right. Every message went through the full system with real models. I wrote the scoring rules before running anything, and another agent matched facts to answers without seeing any probabilities.
+
+I also put two general LLMs in Jev's place, with the same messages and instructions, which is the test I'd said I still owed.
+
+{{< chart caption="24 fresh facts. The system never tracked 4 of them, and on 3 more it never named the true answer, so no method could get those 3 right." >}}
+<div class="chart-key"><span><i class="is-right"></i>Right</span><span><i class="is-wrong"></i>Wrong</span><span><i class="is-open"></i>No clear answer</span><span><i class="is-absent"></i>Not tracked</span></div>
+<div class="bar-row"><div class="bar-name">The log-odds sum</div><div class="bar-stack"><span class="is-right" style="flex:5">5</span><span class="is-wrong" style="flex:8">8</span><span class="is-open" style="flex:7">7</span><span class="is-absent" style="flex:4">4</span></div></div>
+<div class="bar-row"><div class="bar-name">Newest trusted message wins</div><div class="bar-stack"><span class="is-right" style="flex:7">7</span><span class="is-wrong" style="flex:10">10</span><span class="is-open" style="flex:3">3</span><span class="is-absent" style="flex:4">4</span></div></div>
+<div class="bar-row"><div class="bar-name">Newest message wins</div><div class="bar-stack"><span class="is-right" style="flex:8">8</span><span class="is-wrong" style="flex:12">12</span><span class="is-absent" style="flex:4">4</span></div></div>
+<div class="bar-row"><div class="bar-name">Jev reads all the messages</div><div class="bar-stack"><span class="is-right" style="flex:9">9</span><span class="is-wrong" style="flex:7">7</span><span class="is-open" style="flex:4">4</span><span class="is-absent" style="flex:4">4</span></div></div>
+<div class="bar-row best"><div class="bar-name">Claude Sonnet 5.5 reads all the messages</div><div class="bar-stack"><span class="is-right" style="flex:10">10</span><span class="is-wrong" style="flex:5">5</span><span class="is-open" style="flex:5">5</span><span class="is-absent" style="flex:4">4</span></div></div>
+<div class="bar-row best"><div class="bar-name">GPT-6.1 reads all the messages</div><div class="bar-stack"><span class="is-right" style="flex:11">11</span><span class="is-wrong" style="flex:6">6</span><span class="is-open" style="flex:3">3</span><span class="is-absent" style="flex:4">4</span></div></div>
+{{< /chart >}}
+
+And what each would act on at 0.85:
+
+| Approach | Facts it would act on | Of those, wrong |
+|---|---|---|
+| Newest message wins | 19 | 12 |
+| Newest trusted message wins | 16 | 10 |
+| The log-odds sum | 7 | 6 |
+| Jev | 9 | 4 |
+| GPT-6.1 | 6 | 2 |
+| **Claude Sonnet 5.5** | **4** | **0** |
+
+Here's what I take from it:
+
+- **Reading everything together wins again.** The three models that did so got 9 to 11 right, against 5 for the sum. That held in both tests, so I trust it.
+- **Jev isn't the reason.** I can't separate 9, 10 and 11 on 20 tracked facts, but the general LLMs certainly didn't do worse. This was on my list of things that would change my mind, and it has.
+- **Jev's confidence wasn't honest here.** "None wrong above the threshold" from the first test didn't survive. Of the 9 answers Jev held at 0.85 or above, 4 were wrong. It put 100% on the wrong survey date, where the general LLMs were wrong too but at 77% and 80%. It put 95% on the wrong concrete grade, where one LLM got it right and the other was split. I'd assumed a model built for calibrated decisions would be the safe choice, and on this test it was the least careful of the three.
+- **Repetition fooled everything.** When several messages copied one original mistake against one correct source, the three models got 1 of 12 between them. Reading the messages together doesn't help if nothing tells you they share a single origin. The design's "each independent source counts once" didn't catch it either: the sum got 0 of 4, because a copy from a new sender looks like a new source.
+- **The organizer limits everything.** On 7 of the 24 facts, no method had a chance, because the question was never tracked or the true answer never named. One untracked fact was a fake change of bank details.
+
+Jev still has real advantages: it's faster and much cheaper per token, and it answers in a fixed shape. I'd also be careful with these numbers. It's 20 tracked facts, written by a model to be hard, and some matches between a fact and an answer took judgment. My first scoring run was also wrong, because a bug in my script had dropped the LLM results for three of the four scenarios. I only caught that because the LLM rows looked strange.
 
 ### One belief, message by message
 
-Here's why. A clinic moved a patient's crown fitting from November 12 to November 19. The reminder system never heard about the change, so the newest and most official-looking message has the wrong date.
+Here's why reading the messages together wins, from the first test. A clinic moved a patient's crown fitting from November 12 to November 19. The reminder system never heard about the change, so the newest and most official-looking message has the wrong date.
 
 {{< chart caption="Each row is the belief right after that message arrived. Numbers are from one run. On the last message the sum's largest share, 72%, goes to an answer nobody has named." >}}
 <div class="step"><div class="step-source">Oct 20. Reception, medium trust</div><div class="step-text">"Crown fit and hygiene both Thu 12 Nov, 10:00 with Dr Sethi"</div><div class="step-read"><span>Adding up scores</span><div class="step-track"><div class="step-fill is-right" style="width:74%">Nov 12, 74%</div></div><span>Reading them together</span><div class="step-track"><div class="step-fill is-right" style="width:94%">Nov 12, 94%</div></div></div></div>
@@ -395,7 +432,7 @@ The sum scores each message alone. It can see that Dr Sethi and the reminder dis
 I tried to fix the sum first, by having Jev read whether a message warns about itself and whether it replaces something. Jev was good at this: 43 of 43 on warnings and 36 of 41 on replacements, on cases I hadn't written. Adding them to the sum cut wrong answers from 5 to 1 and got no more facts right. The other four simply became "no clear answer".
 
 {{< stuck "If the next message is usually right anyway, and time is a high-trust source, why have beliefs at all?" >}}
-That was the strongest argument against this whole idea, so I tested it. Newest-wins was right 10 times out of 18, and trust levels took it to 12.
+That was the strongest argument against this whole idea, so I tested it. Newest-wins was right 10 times out of 18, and trust levels took it to 12. On the fresh test it was right 8 times and wrong 12.
 
 The failures are the expensive ones. Mr Bosch's record says penicillin allergy, anaphylaxis in 2014. The newest message is a phone call from someone saying he's the patient's nephew, asking to have it removed before surgery. Newest-wins says no allergy. Jev with trust levels says yes at 95% to 96%.
 
@@ -418,6 +455,8 @@ I tried Jev with and without the team's trust levels. They changed four answers:
 
 ### Trying to break it
 
+I tried these on the first test's facts, with Jev.
+
 | Test | Result |
 |---|---|
 | The same call, three times | Same top answer on 17 of 18. Numbers moved by up to 12 points. |
@@ -439,11 +478,13 @@ A strong model reading raw messages did well on its own. Beliefs didn't change w
 
 ### Where it's still wrong
 
+These are from the first test, and the fresh test's failures are above.
+
 A university lecture is the clearest failure. A person wrote: "Beck Theatre's shut until Easter (ceiling). MATH1100 spring lectures Tue 10:00 are in Hollins LT2." Later a timetable system published "MATH1100 Lecture, Tue 10:00, Beck Theatre. All rooms confirmed". Jev says Beck Theatre at 80% to 82%. It's the same pattern as the crown fitting, which it got right, and I don't know why this one differs. Only the threshold kept the agent from acting on it, and only by a few points.
 
 Two others sit near 50% and can land either way: who's on call, and whether an incident is resolved. Those should read as "sources disagree", not as an answer.
 
-Across the runs, answers below 60% were right 2 times in 8, and answers above 80% were right 43 times in 45. That's encouraging, but it isn't calibration: it's 18 facts repeated, on invented data.
+Across the runs, answers below 60% were right 2 times in 8, and answers above 80% were right 43 times in 45. That looked encouraging, and the fresh test showed why it shouldn't have.
 
 ### Where the build fell short of the design
 
@@ -465,7 +506,7 @@ I also made three mistakes worth writing down:
 
 ### What this changes in the design
 
-- **Jev moves from an input to the author of the belief.** Plain arithmetic no longer computes it, so the sum and its "Arithmetic" row in the tables above should go.
+- **A model reading the whole history writes the belief.** Plain arithmetic no longer computes it, so the sum and its "Arithmetic" row in the tables above should go. Today that model is Jev, and the fresh test says that choice is open.
 - **Arithmetic stays for deciding.** Stakes, thresholds and the value of each next step are still sums, and they don't depend on how the belief was made.
 - **The rule mostly survives.** The organizer and the agent still never write a probability. To change a belief they have to bring evidence.
 - **The belief gets saved.** Saved versions also give the history: this message moved it from 60% to 85%.
@@ -475,10 +516,11 @@ I also made three mistakes worth writing down:
 
 This changes what I'm building next. It doesn't settle the claims from the last section.
 
-- **It might have nothing to do with Jev.** The winner looks a lot like "an LLM reads the notes and decides", which is the baseline I planned to beat. I haven't put a general LLM in the same slot. If it does as well, a model reading everything is simply better than my sum, and nothing about Jev is special.
-- **The data is small and invented.** That's 18 facts, written by a model I asked to include traps, matched to answers by hand, and looked at many times. Real messages would settle this far better.
+- **Which model should write the belief.** The winner looks a lot like "an LLM reads the notes and decides", which is the baseline I planned to beat. What beliefs add on top is saving the answer, its history and its doubt, so an agent can use them. That may still be worth it, but it's a smaller claim than the one I started with.
+- **The data is small and invented.** That's 38 tracked facts across two tests, all written by models asked to include traps. Real messages would settle this far better.
+- **How to spot copies of one mistake.** Nothing I tested handled it.
 - **Learned trust is untested.** That's claim 3, and it's the part of the design I cared most about.
-- **Calibration is untested.** That's claim 4. An agent acting at 0.85 needs 0.85 to mean something, and I can't say yet whether it does.
+- **Calibration looks like a real problem.** That's claim 4. An agent acting at 0.85 needs 0.85 to mean something, and on the fresh test Jev's didn't. Checking it against outcomes now matters more than I thought.
 - **The public benchmarks haven't been run.** None of LoCoMo, LongMemEval or STALE.
 - **The organizer still needs its editing half.** Jev only sees messages filed under a question, so a duplicate question stays a duplicate.
 - **Long histories are open.** I haven't tested how much history one call can hold.
