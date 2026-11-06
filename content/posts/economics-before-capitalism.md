@@ -2,7 +2,7 @@
 title: "Before Capitalism"
 tags: ["Economics", "First Principles", "History", "Economic Systems"]
 date: 2026-11-06
-draft: true
+draft: false
 series: "Economics from Scratch"
 series_order: 7
 summary: "How economies were organized for the thousands of years before capitalism: sharing bands, temple and palace economies, Rome, Mauryan India and Han China, then feudal Europe, the Islamic world, Song China and India's village economies, then mercantilism, the East India Companies and colonial extraction. The arguments about state and market turn out to be very old."

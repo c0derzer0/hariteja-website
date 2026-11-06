@@ -2,7 +2,7 @@
 title: "Why Prices Rise"
 tags: ["Economics", "First Principles", "Inflation", "Interest Rates"]
 date: 2026-11-06
-draft: true
+draft: false
 series: "Economics from Scratch"
 series_order: 5
 summary: "What inflation is and how it's measured, the four things that cause it, who wins and who loses, why the Fed aims for 2% instead of zero, how hyperinflation happens, and how all of it came together in 2021 to 2023."

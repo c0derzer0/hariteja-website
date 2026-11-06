@@ -2,7 +2,7 @@
 title: "Who Owns What"
 tags: ["Economics", "First Principles", "Capitalism", "Socialism", "Ownership"]
 date: 2026-11-06
-draft: true
+draft: false
 series: "Economics from Scratch"
 series_order: 6
 summary: "The problems every economy has to solve, the two dials that separate capitalism from socialism, what owning a firm actually means, and how owner-run businesses, corporations, cooperatives and state firms trade off incentives, investment and risk. Then why capitalism is the most common system, what goes wrong with it, and how mixed economies try to fix it."

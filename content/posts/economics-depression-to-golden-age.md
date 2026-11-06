@@ -2,7 +2,7 @@
 title: "Crisis, Revolution and the Mixed Economy"
 tags: ["Economics", "First Principles", "History", "Economic Systems", "Keynes"]
 date: 2026-11-06
-draft: true
+draft: false
 series: "Economics from Scratch"
 series_order: 9
 summary: "1900 to 1975: wartime planning, the Russian Revolution and the socialist calculation debate, the Great Depression and Keynes, fascism, the New Deal and Gandhi, then Bretton Woods, the Western Golden Age, East Asia's developmental states, India's License Raj, Mao's China, Soviet stagnation, and the stagflation that ended the era."

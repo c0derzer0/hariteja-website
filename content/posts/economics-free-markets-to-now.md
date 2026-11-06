@@ -2,7 +2,7 @@
 title: "The Free-Market Turn and After"
 tags: ["Economics", "First Principles", "History", "Economic Systems", "Globalization"]
 date: 2026-11-06
-draft: true
+draft: false
 series: "Economics from Scratch"
 series_order: 10
 summary: "1975 to now: Volcker breaks inflation, Thatcher and Reagan, China's reforms under Deng, India's 1991 opening, the Soviet collapse and shock therapy, globalization and the currency crises it brought, then the 2008 crash, the eurozone crisis, the tech giants, China's state capitalism, the backlash against trade, the pandemic inflation and the AI boom."

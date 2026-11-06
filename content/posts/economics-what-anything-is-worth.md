@@ -538,4 +538,4 @@ Moving down the table, the forecast becomes less certain and the rate goes up to
 
 This part used one recipe for everything: list the money something will bring, discount it to today, and add it up. Bonds, a business, land, a skill, a stock and a startup differ only in their stream of money. Three dials drive the answer: what it pays, how fast that grows, and the discount rate. And because the Fed anchors every discount rate, a change in rates reprices all of them at once.
 
-Part 4 is about markets: how buyers and sellers actually arrive at a price through supply and demand, what stock, bond, commodity and currency markets do, and what's really happening when people say "the market is up."
+[Part 4](/posts/economics-markets/) is about markets: how buyers and sellers actually arrive at a price through supply and demand, what stock, bond, commodity and currency markets do, and what's really happening when people say "the market is up."

@@ -2,7 +2,7 @@
 title: "Smith, Marx and the Factory"
 tags: ["Economics", "First Principles", "History", "Capitalism", "Socialism"]
 date: 2026-11-06
-draft: true
+draft: false
 series: "Economics from Scratch"
 series_order: 8
 summary: "The Industrial Revolution, and the two thinkers who explained it: Adam Smith's case for markets and its critiques, Marx's theory of history, surplus value and crisis and its critiques, the labor theory of value done fairly, how Marx thought socialism and communism would arrive, and how capitalism changed in response."

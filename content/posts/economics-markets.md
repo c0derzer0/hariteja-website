@@ -2,7 +2,7 @@
 title: "How Markets Set a Price"
 tags: ["Economics", "First Principles", "Markets", "Stocks", "Bonds", "Commodities", "Currencies"]
 date: 2026-11-06
-draft: true
+draft: false
 series: "Economics from Scratch"
 series_order: 4
 summary: "How buyers and sellers arrive at a price nobody chose, what makes prices move, and how the same idea runs the stock, bond, commodity and currency markets. Then one oil shock traced through all of them at once."
