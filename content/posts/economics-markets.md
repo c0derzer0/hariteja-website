@@ -240,13 +240,13 @@ When the whole market moves, it's usually one of those shared dials. When one st
 **Index funds.** Most people's retirement savings sit in index funds. Instead of guessing which companies will do best, they buy the whole index. It's very hard to pick winners better than the market as a whole, consistently and after costs, so owning everything cheaply is a strong default. It also means that as money flows into index funds, the biggest companies get the biggest share of it, just because of weighting.
 
 {{< stuck "So the skill investing needs is forecasting growth and adjusting for risk?" >}}
-Yes, with a twist. Investing does come down to two skills: forecasting what something will pay and how fast that grows, and pricing risk by choosing the discount rate. But the market price already includes everyone else's forecast. Buying Brightpath at $100 when you think it's worth $110 only pays off if you're right *and* the crowd is wrong. So the real skill is forecasting **better than the consensus**, and the first step is reading what the price already assumes.
+Mostly, with one twist I hadn't thought about. Investing does come down to two skills: forecasting what something will pay and how fast that grows, and pricing risk by choosing the discount rate. But the market price already includes everyone else's forecast. Buying Brightpath at $100 when you think it's worth $110 only pays off if you're right *and* the crowd is wrong. So the real skill is forecasting **better than the consensus**, and the first step is reading what the price already assumes.
 
 It's humbling too: most professional fund managers fail to beat a plain index fund over long periods. That's why index funds are the default, and why the real edge usually comes from knowing one area far better than the market does.
 {{< /stuck >}}
 
 {{< stuck "The price and the profit are today's numbers. Are growth and the rate just forecasts, so the price is the only thing that moves?" >}}
-Yes. A company's **P/E ratio** is its share price divided by its earnings per share, where earnings is another word for profit. It answers: how many dollars are investors paying for each $1 of yearly profit? Brightpath's is $100 ÷ $5 = 20. For a company whose profits grow steadily forever, it works out to:
+They are, and that's the key. A company's **P/E ratio** is its share price divided by its earnings per share, where earnings is another word for profit. It answers: how many dollars are investors paying for each $1 of yearly profit? Brightpath's is $100 ÷ $5 = 20. For a company whose profits grow steadily forever, it works out to:
 
 > P/E = 1 ÷ (Rate − Growth)
 
@@ -359,7 +359,7 @@ The contract says $6.20 rather than $6 because buying wheat now and holding it u
 An oil field is different, because it produces oil every year. Say it pumps 100,000 barrels a year for 10 years, sold at about $70 a barrel with $30 a barrel in costs. That's $4 million of profit a year. Discounting each year's $4 million at 10%, since oil prices swing a lot, and adding them up gives about **$24.6 million**. So the field can be valued, but its value still depends on the oil price, which is why oil companies' stocks move when oil does.
 
 {{< stuck "So a commodity isn't valuable, but the thing producing it is?" >}}
-The commodity *is* valuable. A barrel of oil is worth about $70 because people need it to drive, heat homes and make plastic. What differs is where the value comes from:
+I had it slightly wrong: the commodity *is* valuable. A barrel of oil is worth about $70 because people need it to drive, heat homes and make plastic. What differs is where the value comes from:
 
 - **A commodity is valuable because you use it up.** You burn the oil, eat the wheat. Its price is set by how much people need it versus how much is available.
 - **The thing producing it is valuable because it keeps producing.** The oil field gives you barrels year after year, so its value is that whole future stream, discounted and added up.
@@ -370,7 +370,7 @@ Gold is the odd one out. It's barely used up; most gold ever mined still exists.
 {{< /stuck >}}
 
 {{< stuck "Is oil as valuable as the things made with it?" >}}
-In price, less. Each step that turns oil into something useful adds value:
+It helped to split price from importance. In price, oil is worth less. Each step that turns oil into something useful adds value:
 
 | Step | What it's worth | Value added |
 | --- | --- | --- |
@@ -384,7 +384,7 @@ In importance, often more. A price is set at the margin: it's what the *next* ba
 {{< /stuck >}}
 
 {{< stuck "Then why isn't oil's importance in its price?" >}}
-It is, but it's hidden until supply gets tight. People can't easily do without oil, so they barely cut back when the price rises:
+What I'd missed is that it *is* in the price, just hidden until supply gets tight. People can't easily do without oil, so they barely cut back when the price rises:
 
 | Price per barrel | Oil people still want to buy |
 | --- | --- |
@@ -489,7 +489,7 @@ Each advantage has a matching risk. When Thailand's peg broke in 1997, the baht 
 {{< /stuck >}}
 
 {{< stuck "No economy is the same as the US. Won't a pegged currency always drift away from the dollar?" >}}
-Conditions always drift a little. A peg doesn't need the economies to match. It needs the differences to get absorbed somewhere other than the exchange rate.
+They do drift a little. What I'd missed is that a peg doesn't need the economies to match. It needs the differences to get absorbed somewhere other than the exchange rate.
 
 US states are the proof. Mississippi and Massachusetts are very different economies, yet one Mississippi dollar always equals one Massachusetts dollar. When Texas was hit by the oil bust in the 1980s, it couldn't devalue a "Texas dollar." Instead, workers moved to other states, federal taxes fell and unemployment insurance flowed in, and Texas wages and house prices fell until new businesses came. The economist Robert Mundell worked out in 1961 what a shared currency needs, in what's called the theory of **optimum currency areas**. For a pegging country, that means:
 
@@ -504,7 +504,7 @@ Pegs break when nothing else bends. When the gap can't close any other way, it c
 {{< /stuck >}}
 
 {{< stuck "If wages and prices end up adjusting anyway, why not just let currencies float?" >}}
-That's what most big economies concluded. Milton Friedman made the case in 1953 with daylight saving time. If everyone wants an extra hour of evening light in summer, you could ask every business, school and person to change their schedule, or you could just move the clocks. The exchange rate is the clock. A currency can fall 15% in a few weeks. Getting the same effect through wages and prices takes years of recession, as Greece found after 2010.
+Most big economies reached exactly that conclusion. Milton Friedman made the case in 1953 with daylight saving time. If everyone wants an extra hour of evening light in summer, you could ask every business, school and person to change their schedule, or you could just move the clocks. The exchange rate is the clock. A currency can fall 15% in a few weeks. Getting the same effect through wages and prices takes years of recession, as Greece found after 2010.
 
 Some countries peg anyway because floating has costs of its own:
 
@@ -518,7 +518,7 @@ So big, diversified economies with trusted central banks float. Small, trade-hea
 {{< /stuck >}}
 
 {{< stuck "Why manage a currency's price at all? Doesn't the underlying economy decide it?" >}}
-In the long run it does, and when a central bank fights that, it loses. What it can do is smooth the ride, because the currency often moves for reasons unrelated to the underlying economy.
+In the long run it does, and a central bank that fights it loses. What it can do is smooth the ride, because the currency often moves for reasons unrelated to the underlying economy.
 
 In May 2013, the US Fed hinted it would slow its bond buying. US interest rates looked set to rise, so investors pulled money out of countries like India to chase higher US returns. The rupee fell from about ₹55 to about ₹68 per dollar by late August, around 20% in three months. Nothing about India's farms, factories or software firms changed 20% in three months. The money passing through changed.
 
@@ -530,7 +530,7 @@ The limit is like a car's shock absorbers: they smooth the bumps but can't chang
 {{< /stuck >}}
 
 {{< stuck "India is growing fast but the rupee keeps falling. Does that mean its growth is lower than it looks?" >}}
-Not necessarily. India's reported growth is real GDP growth in rupees: how much more stuff it produces after removing inflation. Most of what Indians buy is made in India and priced in rupees, so the currency doesn't change that answer much.
+Not necessarily, once I saw what the growth number measures. India's reported growth is real GDP growth in rupees: how much more stuff it produces after removing inflation. Most of what Indians buy is made in India and priced in rupees, so the currency doesn't change that answer much.
 
 The rupee falls mostly because Indian inflation runs higher than American inflation. If Indian prices rise 5% a year and American prices 3%, a rupee loses about 2% a year of buying power relative to a dollar. Over long periods, exchange rates tend to drift to offset inflation gaps, which economists call **purchasing power parity**.
 

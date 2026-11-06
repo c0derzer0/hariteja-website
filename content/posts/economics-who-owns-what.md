@@ -55,7 +55,7 @@ Socialism is defined by **ownership**. How an economy is **coordinated**, by mar
 The planned corner shows the core argument against it. Say the planner fixes tutoring at $75 a month because it seems fair. At $75, 160 families want spots but only 80 exist. Nothing rises to signal "make more," so you get waitlists, and someone has to decide who gets the spots. This is the **knowledge problem**, made famous by Friedrich Hayek: prices carry information about what people want and what things cost that no planner can gather.
 
 {{< stuck "What does \"capital\" mean here? The resources?" >}}
-Not quite. Capital is things made to make other things. It's different from natural resources, and different from money, though people use the word loosely for both:
+Capital is narrower than I thought: it's things made to make other things. It's different from natural resources, and different from money, though people use the word loosely for both:
 
 | Term | What it means | At Sam's center |
 | --- | --- | --- |
@@ -219,7 +219,7 @@ Two limits. Some risk can't be diversified away: in a recession, every center ha
 In theory, state ownership is the **best** at carrying risk, because the whole society shares it. It's the **worst** at incentives, because no decision-maker feels the result. Almost every arrangement is a trade-off between spreading risk widely and making the people who decide feel the consequences.
 
 {{< stuck "What's a cooperative, then? Isn't it the same as employee stock options?" >}}
-Related, but not the same. A **cooperative** is a business owned and run by its members, one vote each, however much money they put in. The members can be workers; customers, as with credit unions and the outdoor retailer REI; or producers, like the cranberry growers who own Ocean Spray. A **stock option** is the right to buy a company's shares later at a price fixed today. If Brightpath gives Leo the option to buy 100 shares at $100 and the price rises to $150, he gains $50 a share. If it stays below $100, the option is worthless.
+They're related, but the difference is ownership and control. A **cooperative** is a business owned and run by its members, one vote each, however much money they put in. The members can be workers; customers, as with credit unions and the outdoor retailer REI; or producers, like the cranberry growers who own Ocean Spray. A **stock option** is the right to buy a company's shares later at a price fixed today. If Brightpath gives Leo the option to buy 100 shares at $100 and the price rises to $150, he gains $50 a share. If it stays below $100, the option is worthless.
 
 | | Capitalist | With employee equity | Worker cooperative |
 | --- | --- | --- | --- |

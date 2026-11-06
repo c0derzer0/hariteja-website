@@ -107,8 +107,8 @@ It seemed right because over the long run, competition does push prices toward t
 
 In the 1870s, three economists, William Stanley Jevons, Carl Menger and Léon Walras, independently replaced it with a different idea: **value comes from what the next unit is worth to people.** Water is essential and takes effort to supply, yet it's cheap because there's plenty. Diamonds are useless and expensive because they're rare. This is the **marginal theory of value**, and mainstream economics has used it since. Labor affects value mainly through supply: things that take more work to make are scarcer.
 
-{{< stuck "Isn't the usual critique of the labor theory a strawman? Marx didn't mean any labor creates value, and at the margin, the value of the next unit does depend on the specific labor that makes it." >}}
-Yes, the usual critique was partly a strawman, and the relative version is much stronger. Marx's socially necessary labor time already excludes wasted effort, so "spending a week making mud pies doesn't make them valuable" mostly misses his theory.
+{{< stuck "Isn't that critique unfair? Marx didn't say any labor creates value. And at the margin, isn't the next unit's value tied to the specific labor that makes it?" >}}
+The usual critique is partly a strawman, and the relative version is much stronger. Marx's socially necessary labor time already excludes wasted effort, so "spending a week making mud pies doesn't make them valuable" mostly misses his theory.
 
 And in a competitive market, the marginal view says much the same thing at the margin: prices tend toward the cost of making one more unit, and wages tend toward what the last worker adds to output, the **marginal product of labor**. So output's value and labor's value line up at the margin. That's exactly why the labor theory seemed right to Smith, Ricardo and Marx.
 
@@ -137,10 +137,10 @@ In each system, one class owns the means of production, another does the work, a
 | Feudalism | Lords own the land | Serfs, tied to the land | Openly: part of the crop, or work on the lord's fields |
 | Capitalism | Capitalists own factories and companies | Workers, legally free | Hidden: workers are paid wages, but less than the value they produce |
 
-What moves history from one system to the next: technology keeps improving, the old ownership setup eventually holds it back, and the class that benefits from the new technology overthrows the old ruling class. Under feudalism, merchants and early factory owners grew rich from trade and manufacturing, but lords controlled the land, serfs couldn't leave to work in factories, and guilds restricted production. So this new class, the **bourgeoisie**, overthrew the old order, with the French Revolution as the classic case.
+What moves history from one system to the next: technology keeps improving, the old ownership setup eventually holds it back, and the class that benefits from the new technology overthrows the old ruling class. Under feudalism, merchants and early factory owners grew rich from trade and manufacturing, but lords controlled the land, serfs couldn't leave to work in factories, and guilds restricted production. So this new class, the **bourgeoisie**, Marx's word for the owners of capital, overthrew the old order, with the French Revolution as the classic case.
 
 {{< stuck "Aren't slavery, feudalism and capitalism all the same thing?" >}}
-That's essentially Marx's argument. They share one structure: one group owns the means of production, another does most of the work, and the owners end up with part of what the workers produce. But they differ in ways that matter:
+That's essentially Marx's own argument, and it's half right. They share one structure: one group owns the means of production, another does most of the work, and the owners end up with part of what the workers produce. But they differ in ways that matter:
 
 | | Slavery | Feudalism | Capitalism |
 | --- | --- | --- | --- |
@@ -207,7 +207,7 @@ Keynes later made a related argument, that slumps happen when total spending fal
 And competition pushes wages up: if Leo can earn more at a private school, Sam has to match it or lose him.
 
 {{< stuck "So is there exploitation or not, when the market is competitive?" >}}
-It depends on whose definition. With many centers competing for tutors, and the third tutor adding less because of diminishing returns:
+What cleared it up was seeing that both sides look at the same numbers and name them differently. With many centers competing for tutors, and the third tutor adding less because of diminishing returns:
 
 | Tutor | Extra students | Value they add |
 | --- | --- | --- |
@@ -259,7 +259,7 @@ So the disagreement underneath everything is whether capital itself produces val
 3. **Society splits into two big classes.** Crises wipe out small firms and big ones absorb them, so fewer people own the means of production. Shopkeepers, craftsmen and small farmers get squeezed into wage work.
 4. **Workers become aware of their position.** Marx distinguished between workers sharing a situation and workers *acting* as a class, organized and aware of shared interests. He thought they'd get there through strikes, unions and parties, with crises speeding it up.
 5. **Workers take political power.** Often, he expected, by revolution, since owners would resist. But in an 1872 speech he said that in countries with democratic institutions, like England, the US and the Netherlands, workers might win power peacefully. It would be international: "Workers of the world, unite!"
-6. **A transitional workers' state.** Workers would run the state for a period, to defend the revolution and reorganize the economy: his "dictatorship of the proletariat," meaning rule by the working class as a whole, not by one dictator. His model was the **Paris Commune** of 1871, whose officials were elected, could be recalled at any time and were paid ordinary workers' wages.
+6. **A transitional workers' state.** Workers would run the state for a period, to defend the revolution and reorganize the economy: his "dictatorship of the proletariat," the **proletariat** being his word for the industrial working class. He meant rule by that class as a whole, not by one dictator. His model was the **Paris Commune** of 1871, whose officials were elected, could be recalled at any time and were paid ordinary workers' wages.
 
 The *Communist Manifesto* (1848) listed first measures for advanced countries. Several are now normal in capitalist ones:
 
@@ -272,7 +272,12 @@ The *Communist Manifesto* (1848) listed first measures for advanced countries. S
 | Abolition of private property in land | Not adopted outside socialist states |
 | Abolition of inheritance | Not adopted, though most countries tax it |
 
-**What actually happened.** The revolution didn't come where Marx expected. Workers in Britain and Germany won the vote, formed unions and saw wages rise. It came instead in Russia in 1917, a mostly peasant country, and his followers split. **Lenin** argued workers left alone would only fight for better wages, so they needed a **vanguard party** of professional revolutionaries to lead them, and that rich countries avoided revolution by exploiting colonies. **Eduard Bernstein** argued the opposite: capitalism wasn't collapsing, so socialists should win power through elections and gradual reform, which became **social democracy**, the root of today's welfare states. **Rosa Luxemburg** argued against Bernstein that reforms alone could never end capitalism, but also warned that Lenin's vanguard party could become a dictatorship *over* workers rather than *of* them, a warning that proved accurate. **Antonio Gramsci** asked why workers in rich countries didn't revolt at all, and answered that the ruling class shapes culture, schooling and common sense so thoroughly that its rule feels natural: **hegemony**.
+**What actually happened.** The revolution didn't come where Marx expected. Workers in Britain and Germany won the vote, formed unions and saw wages rise. It came instead in Russia in 1917, a mostly peasant country, and his followers split:
+
+- **Lenin** argued workers left alone would only fight for better wages, so they needed a **vanguard party** of professional revolutionaries to lead them, and that rich countries avoided revolution by exploiting colonies.
+- **Eduard Bernstein** argued the opposite: capitalism wasn't collapsing, so socialists should win power through elections and gradual reform, which became **social democracy**, the root of today's welfare states.
+- **Rosa Luxemburg** argued against Bernstein that reforms alone could never end capitalism, but also warned that Lenin's vanguard party could become a dictatorship *over* workers rather than *of* them, a warning that proved accurate.
+- **Antonio Gramsci** asked why workers in rich countries didn't revolt at all, and answered that the ruling class shapes culture, schooling and common sense so thoroughly that its rule feels natural: **hegemony**.
 
 So Marx's path split into two roads: revolution led by a party, which produced the Soviet model, and reform through democracy, which produced the mixed economies.
 

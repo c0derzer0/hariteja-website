@@ -36,7 +36,7 @@ Sharing made sense as insurance. A hunter might catch a large animal one week an
 Two things will sound familiar. Loans with interest were common, and the **Code of Hammurabi**, around 1750 BCE, set maximum rates: roughly 20% a year on silver and about 33% on grain. And farmers who borrowed after a bad harvest often fell into debt they could never repay, sometimes into slavery, so Mesopotamian kings periodically **cancelled debts** and freed debt slaves, partly to keep enough free farmers and soldiers. It's an early answer to a problem that keeps coming back: debt compounding faster than people can repay it.
 
 {{< stuck "Really? They had that kind of math then?" >}}
-Yes, and record-keeping is probably why writing was invented. The earliest writing we know of, from Mesopotamian cities like Uruk around 3300 BCE, is mostly economic records: how much grain, beer, sheep or labor came in or went out of a temple. Before that, people used small clay tokens to keep count, and scholars think writing grew out of those tallies. The first thing people wrote down was, essentially, a ledger.
+They did, and record-keeping is probably why writing was invented. The earliest writing we know of, from Mesopotamian cities like Uruk around 3300 BCE, is mostly economic records: how much grain, beer, sheep or labor came in or went out of a temple. Before that, people used small clay tokens to keep count, and scholars think writing grew out of those tallies. The first thing people wrote down was, essentially, a ledger.
 
 By around 1800 BCE, Babylonian scribes counted in base 60, which is why there are 60 minutes in an hour and 360 degrees in a circle. They worked with fractions and reciprocal tables, solved what we'd now write as quadratic equations, and calculated the square root of 2 to about six decimal places on a tablet now called YBC 7289. Interest rates were written as fractions: 1/5 on silver, 1/3 on grain.
 
@@ -163,7 +163,7 @@ This is where voluntary exchange, the idea that people trade only when both side
 | State-granted monopolies enrich insiders | The East India Companies; Smith's critique |
 
 {{< stuck "These ideas are centuries old. So why does everyone talk about Adam Smith and Karl Marx?" >}}
-Four reasons.
+It comes down to four reasons.
 
 **They built whole systems, not single insights.** Ibn Khaldun saw that specialization makes cities rich. The Han scholars argued about state monopolies. Smith explained how an *entire* market economy organizes itself through prices, specialization and competition, and why that makes nations richer over time. Marx built a complete theory of how capitalism works, where it came from, why it would fail and what should replace it. Complete systems are easier to build on, argue with and teach.
 

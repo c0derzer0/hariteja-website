@@ -101,23 +101,6 @@ An exchange rate is a price set by supply and demand, so holding it means the ce
 Defending a weak currency drains reserves, and reserves run out. If a country kept importing more than it exported, or its inflation ran higher than America's, its central bank kept spending dollars. Eventually it had to reset the rate lower, a **devaluation**, which the rules allowed only for a "fundamental" imbalance with IMF approval. Britain cut the pound from $2.80 to $2.40 in 1967. [Part 4](/posts/economics-markets/) goes through pegs, floating and why countries choose each.
 {{< /stuck >}}
 
-{{< stuck "Were these countries socialist or capitalist democracies?" >}}
-Bretton Woods wasn't a system inside any one country. It was the plumbing between the market economies. 44 Allied nations met there in July 1944. The Soviet Union attended but never joined, and the Soviet bloc set up its own trading arrangement, Comecon, in 1949.
-
-The countries plugged into it varied a lot, and "capitalist democracy" bundles two separate questions: the economic system and the political one.
-
-| Country | Economy | Politics |
-| --- | --- | --- |
-| US, West Germany, France, Nordics, Japan | Capitalist, with big welfare states | Democracy |
-| Britain | Capitalist, with major industries nationalized; Labour called itself democratic socialist | Democracy |
-| India | Mixed, with heavy state control | Democracy |
-| South Korea, Taiwan | Capitalist, state-guided | Authoritarian until the late 1980s |
-| USSR, Eastern Europe, Mao's China | State socialism: public ownership and central planning | One-party communist state |
-| Yugoslavia | Market socialism: worker-managed firms in markets | One-party communist state |
-
-Economics and politics don't come as a fixed bundle. South Korea grew fast as a capitalist dictatorship. India was a democracy with a heavily controlled economy. Sweden was a democracy with markets, private firms and very high taxes. The only true state socialisms were the communist party states. Everything in the Western Golden Age was capitalism with the dials turned toward the state, to different degrees.
-{{< /stuck >}}
-
 **The West: the Golden Age.** From the late 1940s to the early 1970s, Western Europe, the US and Japan grew faster than ever before, and the gains were shared more widely than in almost any other period. France calls it *les Trente Glorieuses*, "the thirty glorious years," and West Germany the *Wirtschaftswunder*, the economic miracle. The recipe was markets and private ownership plus a much bigger state:
 
 | Country | What they built |
@@ -164,7 +147,7 @@ New competitors couldn't enter, existing firms didn't need to improve, and the r
 {{< /stuck >}}
 
 {{< stuck "So was India half socialist and half capitalist?" >}}
-Roughly, but it's clearer with the two dials: who **owns** things, and who **coordinates** them.
+Roughly, but the two dials made it much clearer: who **owns** things, and who **coordinates** them.
 
 Ownership was mostly private. Most Indians were farmers on privately held land, and shops, workshops and big groups like Tata and Birla were private. The state owned steel, heavy machinery, power and railways, and later 14 major banks in 1969, plus insurance.
 
@@ -173,7 +156,11 @@ Coordination was heavily by the state. Even private firms couldn't decide what t
 Politically, it was a democracy with free elections. Nehru called the goal a "socialistic pattern of society," and in 1976 the word "socialist" was added to the constitution's preamble. In fact it was a mixed economy, private ownership with heavy state control layered on top: nothing like the Soviet system, but far more controlled than the US or West Germany.
 {{< /stuck >}}
 
-**China under Mao.** After the Communist victory in 1949, China redistributed land from landlords to peasants, then moved to collective farms and state industry. Then came two catastrophes. In the **Great Leap Forward (1958 to 1962)**, Mao tried to industrialize overnight. Peasants were organized into huge communes and pushed to make steel in backyard furnaces, much of it useless. Local officials, afraid to report failure, wildly exaggerated harvests, so the state took grain that didn't exist. The famine killed tens of millions of people, one of the deadliest in history. It's the knowledge problem at its most extreme: when the only information flowing upward is what officials think leaders want to hear, planning goes blind. The **Cultural Revolution (1966 to 1976)** then threw the country into political chaos, closing universities and persecuting experts.
+**China under Mao.** After the Communist victory in 1949, China redistributed land from landlords to peasants, then moved to collective farms and state industry. Then came two catastrophes.
+
+In the **Great Leap Forward (1958 to 1962)**, Mao tried to industrialize overnight. Peasants were organized into huge communes and pushed to make steel in backyard furnaces, much of it useless. Local officials, afraid to report failure, wildly exaggerated harvests, so the state took grain that didn't exist. The famine killed tens of millions of people, one of the deadliest in history. It's the knowledge problem at its most extreme: when the only information flowing upward is what officials think leaders want to hear, planning goes blind.
+
+The **Cultural Revolution (1966 to 1976)** then threw the country into political chaos, closing universities and persecuting experts.
 
 **The Soviet Union: success, then stagnation.** The USSR grew quickly through the 1950s and launched Sputnik, the first satellite, in 1957, which shocked the West. By the 1970s growth slowed sharply. Adding more workers and factories had run its course, and productivity barely improved: growth from more inputs runs into diminishing returns, and only productivity keeps it going. A 1965 attempt to give firms profit incentives was largely abandoned, and the Brezhnev years became known as the **era of stagnation**.
 
@@ -187,6 +174,23 @@ Bretton Woods was a chain of promises. The US promised central banks they could 
 In the 1960s, the US spent heavily on the Vietnam War and new social programs, and inflation rose. Dollars piled up overseas, until foreign central banks held far more than the US had gold to cover. It's like a store that issues more gift cards than it has goods on the shelves: once people notice, they rush to redeem. So in August 1971, Nixon closed the gold window.
 
 A fixed rate is a promise about a price. If the economics underneath move, because one country inflates faster or runs persistent deficits, the market eventually tests that promise and it breaks.
+{{< /stuck >}}
+
+{{< stuck "Were these countries socialist or capitalist democracies?" >}}
+Bretton Woods wasn't a system inside any one country. It was the plumbing between the market economies. 44 Allied nations met there in July 1944. The Soviet Union attended but never joined, and the Soviet bloc set up its own trading arrangement, Comecon, in 1949.
+
+The countries plugged into it varied a lot, and "capitalist democracy" bundles two separate questions: the economic system and the political one.
+
+| Country | Economy | Politics |
+| --- | --- | --- |
+| US, West Germany, France, Nordics, Japan | Capitalist, with big welfare states | Democracy |
+| Britain | Capitalist, with major industries nationalized; Labour called itself democratic socialist | Democracy |
+| India | Mixed, with heavy state control | Democracy |
+| South Korea, Taiwan | Capitalist, state-guided | Authoritarian until the late 1980s |
+| USSR, Eastern Europe, Mao's China | State socialism: public ownership and central planning | One-party communist state |
+| Yugoslavia | Market socialism: worker-managed firms in markets | One-party communist state |
+
+Economics and politics don't come as a fixed bundle. South Korea grew fast as a capitalist dictatorship. India was a democracy with a heavily controlled economy. Sweden was a democracy with markets, private firms and very high taxes. The only true state socialisms were the communist party states. Everything in the Western Golden Age was capitalism with the dials turned toward the state, to different degrees.
 {{< /stuck >}}
 
 | What this era teaches | Where it shows up |

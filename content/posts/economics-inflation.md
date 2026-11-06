@@ -338,7 +338,7 @@ US inflation peaked at **9.1%** in June 2022, the highest in four decades. The F
 Unlike under Volcker, inflation came down without a recession. Unemployment stayed low through 2022 and 2023. Economists call that a **soft landing**. Inflation fell to around 3% by mid-2023, but it has stayed above the 2% target since, and new tariffs have added to prices.
 
 {{< stuck "So is all of economics just expectations?" >}}
-A lot of it, but not all. It helps to think in two layers.
+A lot of it, but not all. What made it clear was thinking in two layers.
 
 **The real layer is what actually gets made:** workers, machines, land, oil, know-how, and how well they're combined. If a drought destroys the wheat, there's less bread, whatever anyone expects. Expectations can't conjure tutoring spots that don't exist.
 
