@@ -81,24 +81,6 @@ The government corrects for some of this. After a 1996 review called the Boskin 
 Housing counts for less in PCE, because its broader scope includes things like healthcare paid by others. So when rents are rising fast, CPI looks worse. PCE usually runs about 0.3 to 0.5 points below CPI, mainly because it handles substitution better. The Fed prefers PCE because it covers more of what people actually consume. CPI gets the headlines because it comes out first, and it's the one used to adjust Social Security payments and tax brackets.
 {{< /stuck >}}
 
-{{< stuck "If my pay went from $80,000 in 2021 to $100,000 now, how much of that is a real raise?" >}}
-The CPI averaged about 271 across 2021 and was about 337 in September 2026:
-
-> 337 ÷ 271 = 1.243
-
-So prices are about 24% higher. Anything that cost $100 in 2021 costs about $124 now. To keep up, $80,000 would need to become $80,000 × 1.243 = **$99,440**.
-
-| | Amount |
-| --- | --- |
-| Pay in 2021 | $80,000 |
-| Pay now | $100,000 |
-| Raise on paper | +25% |
-| Today's pay in 2021 dollars | $100,000 ÷ 1.243 = $80,450 |
-| **Real raise** | **about +0.6%** |
-
-A 25% raise that felt big was almost entirely inflation. Pay that tripled on paper over the same years would be up about 2.4 times in real terms. Two caveats: local prices can rise faster than the national average, as they did in the New York area, and higher pay falls into higher tax brackets, so take-home pay grows less than salary.
-{{< /stuck >}}
-
 ---
 
 ## What Causes It
@@ -194,28 +176,6 @@ In a boom, the cure is clear. In stagflation, every option hurts. The classic ca
 The pattern: **inflation moves wealth from lenders and savers to borrowers.** It often hits poorer households hardest. They spend a bigger share of income on food, energy and rent, which tend to rise fast, and hold more of their savings in cash rather than in homes or stocks that keep up.
 
 There's also a cost nobody wins from: uncertainty. When nobody knows what prices will be next year, it's harder to sign contracts, plan investments or set wages, and people spend energy protecting themselves instead of producing things.
-
-{{< stuck "If you earn in dollars and repay a loan in rupees, which inflation counts?" >}}
-The one where you spend your money. A real cost measures how much actual stuff you give up to repay. If you earn and spend dollars, two steps: convert the loan's cost into dollars, which accounts for the rupee's moves, then adjust for **US** inflation. India's inflation is the right one for someone who earns and spends in rupees.
-
-Dividing money by a price tells you how many things it buys: $10 at $2 an apple buys 5 apples. So measure in "baskets": whatever $1 buys in the US today. Borrow ₹95 when ₹95 = $1. That's $1, or 1 basket. The loan charges 11%, Indian inflation is 6%, and the rupee falls by the gap between Indian and US inflation:
-
-| Step | US inflation 2% | US inflation 3% | US inflation 4% |
-| --- | --- | --- | --- |
-| Owed in a year at 11% | ₹105.45 | ₹105.45 | ₹105.45 |
-| Rupee falls by the inflation gap | 4% | 3% | 2% |
-| Rupees per dollar next year | ₹98.80 | ₹97.85 | ₹96.90 |
-| Dollars needed to repay | **$1.067** | **$1.078** | **$1.088** |
-| Cost of one basket next year | $1.02 | $1.03 | $1.04 |
-| Baskets given up | **1.046** | **1.046** | **1.046** |
-| **Real cost** | **4.6%** | **4.6%** | **4.6%** |
-
-The dollar cost changes, but the real cost doesn't. Higher US inflation means a smaller gap with India, so the rupee falls less and you need more dollars. But each of those dollars is worth less. The two cancel, and what's left is India's real rate: 11% minus 6% inflation.
-
-Compare a $1 loan at a fixed 7% in the US. It always repays $1.07, so its real cost is 1.07 ÷ 1.02 = 4.9% at 2% US inflation, 3.9% at 3% and 2.9% at 4%. Higher US inflation favors the fixed dollar loan, because inflation eats away at a fixed dollar debt.
-
-All of this assumes the rupee falls by exactly the inflation gap. Indian loan rates are higher partly because Indian inflation is higher, and if the rupee tracks the gap, the higher rate just pays the lender back for the currency it expects to lose. You only really come out ahead or behind when the rupee does something different from what the gap predicts. From 2019 to 2026 it fell faster than the gap, which made rupee loans unusually cheap for dollar earners. That isn't guaranteed to continue, and currency risk runs both ways.
-{{< /stuck >}}
 
 ---
 
